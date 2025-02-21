@@ -1,0 +1,92 @@
+
+RECAP: 
+control-flow statements or conditional statements
+By using if- else ==> we'll control the flow of the program, different 
+blocks of codes will be executed depending on conditions 
+
+if(condition){
+    // block - runs if condtion is TRUE
+}
+else{
+    // block - runs if condition is FALSE 
+}
+(depends on how you set up your condition)
+
+let winner; 
+
+if (a > b){
+    winner is a; 
+}
+else {
+    winner is b; 
+}
+
+if (a > b) winnder = a; 
+else winner = b; 
+
+
+let loser = a > b ? b : a; 
+
+let gameResult; 
+
+if(x > y){
+    gameResult = 'X won'; 
+}
+else  if (y > x){
+    gameResult = 'Y won'; 
+}
+else{
+    gameResult = 'Tie'
+}
+SAME IDEA --> let gameResult = x > y ? 'X Won' : y > x ? 'Y won' : 'Tie'; 
+
+
+NESTED if else 
+if(5 > 10){
+if (true){
+    console.log('Good Morning!'); 
+}
+else{
+    console.log('Hello'); 
+}
+}
+else {
+    if (undefined) console.log('Hi');
+    else if(null) console.log('Good evening!');
+    else console.log('Yay!'); 
+    } 
+
+FALSY = undefined, null, 0 , Empty String, NaN, FALSE
+
+let referrerFullName = student5.getReferrer(); // null OR empty string OR undefined
+
+if(referrerFullName){
+    console.log('This student has a referrer'); 
+}
+else{
+    console.log('this student DOES NOT have a referrer'); 
+}
+
+
+const date = new Date(); 
+// DATE METHODS: 
+console.log(date.getFullYear()); // 2025
+console.log(date.getDay()); // 0 --> current day (0 = Sunday)
+console.log(date.getHours()); // 11 - current hour
+console.log(date.getMinutes()); // 20 - current minutes
+console.log(date.getSeconds()); // 28 - current seconds
+console.log(date.getMonth()); // 1 - current months --> counts by 0 --> so we're in 1 = Feb.
+console.log(date.getTime()); // calclates time from Jan 1, 1970??
+console.log(date.getDate()); // 9 --> current day = 9th day of Feb.
+
+
+function oddEven(number){
+    if(number % 2 === 0){
+        return 'EVEN'
+    }
+    else {
+        return 'ODD'; 
+    }
+}
+
+

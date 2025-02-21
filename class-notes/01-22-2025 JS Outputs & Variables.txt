@@ -1,0 +1,106 @@
+// Below line just prints Hello
+console.log('Hello');
+console.log('Hi'); // This is a single line comment
+
+OUTPUT STATEMENTS: 
+console.log() function==> this function is used to debug your code
+Debug: monitor the code to find issues in your program
+- This function can take text data like String in single/double quotes ==> [('Hello')] or [("Hello")]
+- This function can also take data variables 
+
+
+// Single-line comments --> used to give yourself notes and does not show up in code
+
+/*
+multi-line
+comments
+*/
+
+
+/**
+ * JS doc
+ * JS documentation
+ */
+
+
+// Escape Sequences [imagine \ is backslash and it's a guy falling backward + / is forwardslash and it's a guy falling forwardslash]
+    1. \' ==> single quotes
+    2. \" ==> double quotes
+    3. \\ ==> represents a backslash
+    4. \n ==> new line
+    5. \t ==> tab 
+
+' ' ' ' ==> not allowed [CAN'T have single quotes within single quotes]
+" " " " ==> not allowed [CAN'T have double quotes within double quotes]
+       BUT
+' " " ' ==> is allowed [CAN have double quotes within single quotes]
+" ' ' " ==> is allowed [CAN have single quotes within double quotes]
+
+
+// I like 'Apple' and "Banana".
+console.log('I like \'Apple\' and "Banana".'); ==> \' is for single quotes
+console.log("I like 'Apple' and \"Banana\"."); ==> \" is for double quotes
+
+console.log(`I like 'Apple' and "Banana".`); // ES6 feature 
+
+
+console.log('\tHello, today is a good day.\n\nI enjoy it so far!'); ==> Tab and New Line
+
+console.log(` Hello, today is a good day.
+
+I enjoy it so far!`); // ES6 feature
+
+// My file can be found at C:\Users\John\Documents\Project
+console.log('C:\\Users\\John\\Documents\\Project');
+console.log("C:\\Users\\John\\Documents\\Project");
+
+console.log('Hello\\\\\\World'); // Hello\\\World
+
+
+*** JavaScript will read from left --> right & up --> down *** [Unless if there's some PEMDAS action]
+
+String data - values
+ - They are also stored in single or double quotes
+ 'John'
+ "John"
+
+ Number data - values
+   - They should NOT be stored with quotes
+   - let number = 45
+
+undefined data type: 
+    default type when you declare a variable but without assigning a value
+
+1. Intialization (giving a variable value)
+let name = 'John';
+let age = 45; 
+
+2. Declaring a variable   ---> creating a variable (use const, let, or var declare a variable)
+let name;  (Variable name = name)
+let age;   (Variable name = age)
+
+3. Assignment or re-assignment [only let var or let to re-assign, NOT const]
+name = 'John'; 
+age = 45; 
+
+    Declare ==> creates a variable w/o assigning value [so let x; ]
+    Initialize ==> creates/assigns value [ let y = 10; ]
+    Re-Assign ==> changes the value (only for var and let) [ y = 20; ] + don't need to use let all over again to re-assign
+
+    Constant ==> values CAN'T be changed 
+
+
+RULES; syntax rules you MUST follow (error)
+Conventions: Good to follow - unwritten rules 
+
+= is the assignment operator 
+    let city = 'Chicago'; 
+
+const name, age; ==> false, because it's constant and you need value
+let n1 = 45, n2; ==> true, we can declare multiple variables [let, and no others]
+const num1 = 45, num2; ==> false, constant and num2 isn't assigned a value
+let x, let y; ==> false, if you're using comma, don't repeat yourself(let)
+let a; let b; ==> true, because semi-colon is seperating [not preferred]
+let i1; i2; ==> false, because i2 is not defined
+
+Don't declare variables in one line --> use one in every line (seperate lines)

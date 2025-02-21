@@ -1,0 +1,16 @@
+*** What is JavaScript and what are its features? *** 
+
+- JavaScript is a high-level,interpreted programming languages, primarily 
+used for web development. 
+- It's key feature ==> lightweight +  easy to learn + designed to add 
+interactivity to web pages. 
+- JS is supported by all modern web browsers and can be used on both the
+client-side(in browser) && server-side(with Node.JS)
+
+*** What are the diffrences between var, let, and const? 
+
+They are all used to assign values to variables. However, they all have slightly different functions.
+The var keyword was used mostly from 1995 to 2015. It's still used today, however, it has been replaced
+by let. 
+Let is  
+

@@ -1,0 +1,68 @@
+RECAP: 
+
+GIT: software use to track files/versions and collaborate with others 
+GitHub: Hosting website (repository) 
+
+Git is distrubted VCS (Version Control System)
+Distributed vs. Centralized 
+
+Bitbucket, GitLab, Azure DevOps 
+
+2 different flows
+local master branch --> we did changes --> stage/commit/push --> remotr master directory
+
+LOCAL: our laptops/PCs/etc. 
+REMOTE: Cloud (GitHub, etc.)
+
+
+local master branch --> local task branch --> we make changes --> stage/commit/push 
+--> goes to REMOTE task branch --> Pull request (PR) or Merge request (MR) --> Reviewers review/approve the request
+
+
+Cloning remote repositories to your local: [First thing a company would do and you'll do] --> They'll ask you to 
+clone their repository
+1. You'll be provided repository url
+2. Copy the cloning address
+3. Open your terminal/CLI/cmd and run below code in the CORRECT path 
+    git clone <url>
+
+For Cloning: 
+    1. Go to green Code<> button --> click arrow and pick SSH --> copy SSH url
+    2. Open Terminal and figure out which directory you'd like to put your result
+    3. Enter [git clone url] --> will already be initialized, SO, you don't need to use [git init] 
+     ** When you clone, you'll automatically be in the master branch ==> DONT work/change anything in master
+     branch 
+        - To fix this --> just make another branch [git checkout -b branchName]
+
+[.gitignore] ==> a file where you include all the files that you don't want GIT to track 
+
+** REMEMBER: the last thing you need to do in your local --> [git pull] **
+Also --> make sure to delete branch off of LOCAL as well as REMOTE 
+
+
+If you have a lot of changes throughout your local: 
+One Way(off of VSCode/using GUI); 
+    1. Press on source control button in VSCode [third option on the left menu, under magnifying glass]
+    2. Look at your changes 
+        - M ==> Modified
+        - U ==> Unstaged (you just created it and haven't staged it yet)
+    3. You can add a message above (just like on GitHub)
+    4. In the blue button "Commit", press on the down arrow to "Commit & Push" --> will stage if it isn't staged
+    5. Go check out your changes in GitHub --> MR/PR --> Delete branch [will have changes in Remote Master]
+    6. Go back to VSCode --> delete other branch again 
+    7. Make sure to [git pull]
+
+
+Merge Conflict:
+It happens when two or more collaborators contribute to the same file 
+
+1. Resolve inline in GitHub
+
+2. Resolve on VSCode
+    - Go to VSCode
+    - Switch to master 
+    - pull the changes into master from remote master (git pull)
+    - switch back to your local branch which caused conflict
+    - merge local master into your local branch (git merge master)
+You should see same conflicts in VSCode
+Resolve them and commit your changes one more time. 

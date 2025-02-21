@@ -1,0 +1,100 @@
+- sense the other side of the interview --> feel out their personality 
+- answers should be detailed + use their own syntax/diction within your own answer 
+
+- push your code to GitHub repositories from now on for homework 
+
+
+02 - Create a GitHub Account 
+
+    UserName: aelkossei-tech
+    Email: ayahelkossie@gmail.com
+
+Here's the GitHub "Manual" --> https://git-scm.com/book/en/v2 
+git config --global user.name "aelkossei-tech"
+git config --global user.email ayahelkossie@gmail.com
+git config --global init.defaultBranch main
+
+Run below command to check global information
+git config --list 
+
+
+03 - Generating SSH Public Key 
+    SSH = Secure Shell used for authentication 
+
+
+
+
+
+** Highly recommend to read the different pages on GitHub Docs **
+
+- Get to HOME directory ==> Command + Shift + H
+- Reveal hidden folders ==> Command + Shift + . 
+
+TASK - A: 
+
+pushing code: publishing/sharing your code with others
+pulling code: retrieving/getting others code into your local 
+
+GIT (Global Information Tracker)
+    - software for tracking changes in any set of files and usually used for coordinating work
+    among programmers to collaboratively develop the source code
+VCS (Version Control System) [Umbrella term]
+    - system of records' changes to a file/set of files over time so that you can recall specfic
+    versions later 
+    - Distrubted VS. Centralized 
+        - main difference between the two --> one has everything centralized in the server [centralized] + 
+        we'd have a copy within local (we'd be working with local copy before staging it and pushing code)
+        - Distrubted ==> local repositories added for each user
+            - you have a local copy 
+            --> commit your changes to a local repository (staging area)
+                - git commit -m "notes"
+            --> and THEN push to the master branch [NEVER work directly in master branch]
+        - Centralized ==> one central server and many users 
+            - repository not locally available + always needs to be connected to a network
+            to perform any action 
+            - not preferred because you'd need a constant connection between server and workspace/
+            PC in order to push code
+
+
+*** NOTE: ***
+When creating new repositories on GitHub and linking them with your local
+projects/folders/etc. --> Do NOT use HTTPS
+
+We will use SSH for authentication
+
+Creating a SSH (Secure Shell): 
+    - Another way for authentication
+    - How to create SSH: 
+        1. ssh-keyen 
+            - Private SSH file is in your local 
+
+
+HOW TO CREATE AND PUSH A NEW PROJECT FROM LOCAL TO REMOTE: 
+1. Create a project on local (laptop)
+
+2. Create a remote repo (GitHub repo)
+
+3. Initialize your local project with GIT 
+    git init 
+
+4. Link your local project with remote repo 
+    git remote add origin <remote-url>
+
+5. Stage the changes
+    git add <file-name> 
+    git add . 
+
+6.  Commit the changes with a meaningful message 
+    git commit - m "message"
+
+7. Publish your changes/ push 
+    git push 
+
+GIT PUSH - existing local repository 
+First time for the branch: Use one of the below 
+git ush --set-upstream origin master
+git push -u origin master
+
+Later: git push 
+
+- Figure out how to solve on your own first before asking other people 

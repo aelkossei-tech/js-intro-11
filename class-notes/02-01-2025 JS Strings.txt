@@ -1,0 +1,132 @@
+JS Strings ==> useful for holding data that can be represented in text form 
+    - is zero or more characters written within quotes [either ' ' OR (||) " "  ]; 
+    - are an essential data type in: 1. programming/representing sequences of characters + are used 
+    extensively in web development/data processing/various other applications 
+    - backticks (` `) are ALSO used for Strings [ES6 update] ==> mostly used for code embedding purposes (makes it easier for string operations)
+    
+String Templates Terminology [also known as: Backticks Syntax + Temperate Literals + Template strings]
+    - string templates use ==? backticks (` `) rather than single/double quotes to define a string 
+    - template literals make it easier tp embed single/double quotes
+    - also allows to make multi-line strings 
+
+String Interpolation ==> replacing variables/expressions w/ real values [what we've doing with ${}]
+    - template literals --> provides an easy way to interpolate variables/expression into strings 
+    - this is the method of string interpolation ==> console.log ( ${ } ); 
+    - variable substitution ==> template literals allow variables in strings -->       ${variable}
+    - expression substitution ==> template literals also allows variables in strings --> ${expression}
+
+JS provides a variety of String functions --> manipulate/analyze/work w/ strings more effectively 
+    - String - length property: 
+        - length ==> property that's used to find the length of a string 
+        - length of a string ==> total # of characters in a string including the whitespaces
+    - String - changing cases: 
+        - toUpperCase() ==> returns a string w/ all characters converted to UPPER CASE 
+        - toLowerCase() ==> returns a string w/ all characters converted to lower case 
+    - String - extracting cases: 
+        - charAt() ==> returns the character at a specified index (position) in a string [similar to .toFixed for #'s]
+        - charCodeAt() ==> returns the unicode 
+
+String: 
+    - Text data 
+    - Stored using single or double quotes
+    - String Templates [ES6 update] - Backticks (` `)
+
+    let fullname = fname + ' ' lname; // 'John Doe' 
+
+    let full name `${fname} ${lname}`; // 'John Doe' 
+
+Static vs Instance Methods
+
+    How do I invoke the method? 
+
+By Built-in Object                By creating a value and with value 
+static                            Instance method 
+Math.max ();                      let num = 25.99;   
+Number.parseInt();                num.toFixed(10)
+
+
+class Account {
+    static method1 () {
+        console.log('I am a static method'); 
+    }
+}
+
+method2() {
+    console.log('I am an instance method'); 
+}
+
+Account.method1(); // 'I am a static method' 
+
+let myAccount = new Account (); 
+myAccount.method2(); // I am an instance method
+
+
+
+/*
+TASK: 
+ARGUMENTS:
+RETURN (what data type it gives when it runs): 
+DOES IT CHANGE ORIGINAL VALUE: 
+IS IT STATIC or INSTANCE: 
+*/
+
+
+const arr = [10, 20, 30, 40]; 
+
+arr[2]
+
+
+
+Deprecation ==> name was once a reserced keyword and it was used for a specific task, 
+but now it it deprecated 
+
+let str = ''; 
+First char: str[0]
+Second char: str[1]
+Third cahr: str[2]
+
+Last char: str.at(-1) ==> since it's new people are still using --> str[str.length - 1]
+Second from the last: str.at(-2)
+
+
+function includes(substring) {
+return this.indexOf(substring) >= 0; 
+}
+
+indexOf() method
+if the result of this method is 0 or positive index --> we have the substring found in the original string 
+if the result of this method is -1 --> we DON'T have the substring found in the original string
+
+
+if(city.trim().length === 7) {
+    console.log('Test PASSED!'); 
+}
+else{
+    console.log('Test FAILED!'); 
+}
+
+NOTE: We'll always use slice() to extract substrings 
+If you have 2 positive index: 
+    if startIndex , endIndex. then the result is a substring including 
+    'Hello'.slice(1, 3); // 'el' 
+   
+   if endIndex is not provided, the result is substring including startIndex
+    EX: 'Hello'.slice(2); // 'llo' 
+
+
+    if startIndex >= endIndex, then your result is always ' ' (empty string)
+    EX: 'Hello'.slice(3, 2); // ' '
+        'Hello'.slice(3, 3); // ' ' 
+
+slice() methods also works with negative indices (indexes)
+In this case, you'll go backwards
+'Hello'.slice(-1); // 'o'
+'Hello'.slice(-2); // 'lo'
+'Hello'.slice(-3); // 'llo'
+
+'Chicago'.slice(-5, -2); // 'ica' 
+'Chicago'.slice(-1, -4); // ' ' 
+
+'Miami'.substring(-2, -4); // ' ' 
+'Miami'.substring(2, 0); // 'Mi'; 
+

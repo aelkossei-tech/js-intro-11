@@ -1,0 +1,60 @@
+
+
+Number methods
+Math methods
+String methods 
+
+
+Additional Methods or Functions 
+1. Libraries 
+2. Custom methods/functions 
+
+When we create our custom functions or methods, we should always have below 
+defined before stating. 
+
+TASK: 
+ARGS - PARAMS: 
+RETURN: 
+
+BENEFITS OF CREATING CUSTOM FUNCTIONS-METHODS: 
+- It makes programming easier, creating programs-apps easier
+- REUSABILITY: create once, use everywhere whenever needed 
+- READIBILITY, MAINTAINIBILITY 
+
+getRandomNumber(start, end); 
+
+How do we create functions: 
+1. We use function keyword to declare a function
+2. We give our function always a meaningful name
+3. Decide if you will have args or not 
+4. Implement the body of the function: block of code will be exceuted
+each time you invoke the fucntion 
+
+// Function Declaration ==> Function FunctionName{ Body }
+function printHi() {
+ console.log ('Hi'); 
+}
+
+printHi()
+
+prepare coffee
+take a shower
+drink coffee
+head to school 
+
+void methods-functions: they don't return any value 
+return methods-functions: they return a value 
+
+RETURN TYPE FUNCTIONS
+These are functions returning a value-data when invoked 
+
+function multiply (num1, num2) {
+   let result = num1 * num2; 
+   return result; 
+}
+
+utils (utilities)/helpers, support 
+
+MODULES: used to import/export reusable functions, classes, componenets 
+1. Before ES6: CommonJS (module.export and require)
+2. After ES6: ES6 Modules (export and import)

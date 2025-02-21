@@ -1,0 +1,91 @@
+
+GIT CONFLICT
+==> When 2 or more team members work on same files and they push their codes and merge it to remote/main OR remote/master 
+- Conflict happens because you didn't pull the latest 
+remote/master OR remote/main changes 
+
+
+CONFLICTs happen and we need to resolve them.
+1. If it is a small conflict --> just resolve it inline (Github, etc.)
+2. If it is complex --> pull the last changes to your local, merge it to your branch 
+    ==> this will create same conflicts in your local, resolve them and push the changes
+    once again
+
+sprint: a period of time (2 weeks)
+3-5 branches 
+7-10 commits
+3-5 PRs
+3-5 Pull changes 
+
+Miscellaneous 
+1. Can I rename my branch? How to name branches? 
+    TASKID-description 
+    TASKID-description-jdoe 
+    EX: TGM123 [depends on company's preference + project management tools]
+    EX: 456346-dashboard-tests 
+
+    EX: git branch 456347-dashboard-tests 
+        git checkout 456347-dashboard-tests 
+        git branch -m 45637-dashboard-smoke(edit)-tests ==> git branch -m editedBranchName
+
+2. Can I switch to another branch without committing my changes?
+    - Yes, you techinically can (it will still show up)--> HOWEVER it's better for you to commit anyways
+    - It's recommended to commit your changes and then switch 
+
+3. Can I merge my local branches? 
+    - Yes 
+     --> first switch to your branch that you want to merge all the changes 
+     --> Then use below command to merge the other branch into current branch
+                 - [git merge] intendedBranchName
+      - Visual Editor (VI) --> i , escape + :wq ==> Commit message 
+
+4. Can I switch to my team member's branch?
+    Yes, you can. 
+    You'd use [git fetch] --> it updates your local with all the remote branches 
+
+5. Can I pull my team member's changes without PR into master?
+    git fetch 
+    git checkout origin/</banch-name>
+        - You can do changes in this branch
+        - Then you can commit and push changes 
+
+6. What happens if I forget to commit message?
+    - You'll get Visual Editor (VI) to add your commit message
+    - You can type your commit messgae while in insert mode and then exit 
+        - insert mode: i
+        - Exit insert mode: press escape
+        - Command mode: press ":"
+        w --> save
+        q --> quit
+        wq --> sabe & quit
+
+7. Can I change the commit message before I push?
+    - Yes, you can. --> [git commit --amend] OR [git ammend -m "New commit message"]
+
+8. What is git stash and git stash apply?
+    - It's a way to resolve conflicts that are obvious 
+        1. I did some changes with a local branch
+        2. Then someone updated remote master and I know if I push my code, it will create 
+        3. Stash my changes: [git stash]
+        4. Switch to master in your local 
+        5. Pull the changes from remote master: [git pull]
+        6. Swtich back to your own local branch (your stashed changes)
+        7. Merge locla master changes into your local branch
+        8. Retrieve stashed changes: [git stash apply]
+        9. This is going to create conflicts
+        10. Resolve them, and puclish your branch
+
+
+9. What is git fetch, git merge, and git pull? Their differences?  [** INTERVIEW QUESTION **]
+    - There are 2 ways to update your local branches with remote branches 
+    - Case of master branch 
+        1. switch to master in your local and run [git pull]
+        2. switch to master in your local and run [git fetch] to retrive all the changes without merge + And 
+        then [run git merge origin.master] to update your local master with
+
+
+10. What else I should know about GIT commands?
+    - [git log] ==> command that will show all the history of commits and branches
+    - [git merge] vs. [git rebase] ==> INTERVIEW QUESTION 
+
+What happens if I forgot to commit the message?

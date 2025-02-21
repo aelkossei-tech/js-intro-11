@@ -1,0 +1,104 @@
+JS Arrow Function (==>) ==> allows a short syntax for writing function expressions 
+    - in this case, we DON'T need --> function, 'return'keyword, or the curly braces 
+    - using const is safer/more preferred --> b/c functions are usually constant values 
+    - can only omit the 'return' keyword + {} --> if the function body has a single statement 
+    - ALSO --> skip the () if we have only 1 parameter 
+IIFE (Immediately Invoked Function Expression) ==> a common JS design pattern used to create a function 
+expression + execute it immediately after its declaration 
+    - typically wrapped in parantheses to distinguish it as an expression + to prevent its variables from polluting 
+    the global scope
+
+RECAP: 
+
+Function: block of code used to run a specific task which can be exceuted repeatedly. 
+    - It can take parameters (arguments). 
+    - can be return (return a value-data back when invoked) or void (it doesn't return anything but just runs a task)
+
+VOID METHODS EXAMPLE: 
+function launchChrome() {
+    // body
+}
+
+function loginToApp(username, password) {
+    // 
+}
+
+function goToTechGlobalTrainingApp(){
+    //
+}
+
+launchChrome();  --> just invoking it
+goToTechGlobalTrainingApp(); 
+loginToApp();
+
+let actualTitle = getTitle(); // 'Apple' 
+let expectedTitle = 'Welcome to TechGlobal School Training' 
+
+if (actualTitle === expectedTitle) {
+    // TEST PASSED
+}
+else {
+    // FAILED 
+}
+
+
+function getTitle() {
+    return "Wiki"; 
+}
+
+
+1. Function Declaration
+    - function functionName(){
+        // body
+    }
+    - function functionName(param1, param2){
+        // body
+    }
+
+let fname[0] = 'John'; 
+
+fname.charAt(0); // better than slice BUT we never use it 
+
+Use slice() for extracting multiple character/substrings from a string
+Use property acesss [] to get a single character 
+at() is recommended to be used when getting last characyers using negative indexes 
+
+let fullname = 'Alexander Mark' 
+fullname[0] + fullname[indexOf(' ') + 1]
+
+let fullnameArr = fullname.split(' '); // ['Alexander', 'Mark']
+(fullnameArr[0][0] + fullnameArr[1][0]).toUpperCase(); 
+
+ARROW FUNCTIONS: 
+const sum3 = (num1, num2) =>  return num1 + num2; 
+const initials = (fname, lname) => return `${fname[0]}. ${lname[0]}.`; 
+const isEven = number ==>  number % 2 === 0; // can take away parantheses because it's a single-line function 
++ multiple arguments should use parantheses ()
+
+** IF ELSE STATEMENTS ** 
+if (condition){
+    // body
+}
+else{
+    // body
+}
+
+HOISTING: moving variable declarations to the top of the file 
+1. Function Declaration
+2. Function Expression
+3. Arrow Functions 
+
+[let and const are NOT hosited ]
+
+*EXAMPLE:* 
+How it looks: 
+console.log(y); 
+var y = 5; 
+
+How JS would see this: 
+var y; 
+console.log(y)
+y = 5; 
+
+if-else ==> DONT forget logical operators + Math functions + String functions ==> they're going to stack on top
+of each other 

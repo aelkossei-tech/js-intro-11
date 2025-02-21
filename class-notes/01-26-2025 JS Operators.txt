@@ -1,0 +1,86 @@
+
+
+RECAP: 
+
+Data Types
+
+1. primitives
+    - String: used to store text data [single or double quotes and only backtick(``) if it's multi-line]
+    - Number : used to store decimal or absolute/whole unumbers up to or about 64 bits (15-16 digits)
+    - Boolean: used to store True or False (expressions that evaluates to true or false)
+    - Undefined: used as a default data type for variables declared but not assigned with value
+    - Null: intentional absence of value for a variable 
+    - BigInt (least important): used to store decimal or absolute/whole unumbers above 64 bits 
+    - Symbol (least important): 
+
+2. reference types (objects)
+    Arrays: used to store multiple simialr data (it's a list or a collection) --> data types of these values are the same
+        const arr1 = [5, 10, 10.5]; 
+        const arr1 = [true, false, true]; 
+
+
+    Object: used to store key-value pairs (properties) of one entity/variable/object
+        const obj1 = {
+            fname: 'John'
+            lname: 'Doe', 
+            age: 25
+        }; 
+
+        const creditCardInfo = {
+            fullname: 'John Doe' 
+            number: '1234-1234-1234-1234' 
+            expirationDate: '04/28' 
+            securityCode: 123
+        }; 
+
+        credirCardInfo.expirationDate = '04/33'; 
+        creditCardInfo.securityCode = 456; 
+        creditCardInfo.bankName = 'Chase'; 
+
+OPERATORS: 
+1. Assignment 
+    = --> is used fr assignment 
+    let name = 'John'; 
+
+    let age; 
+    age = 45; 
+    age = 46; 
+
+Orders of Operations
+    1. Exponentiation 
+    2. Parantheses 
+    3. Multiplication/Division
+        3.5 Remainder 
+    4. Addition/Substraction 
+
+Modulus (Remainder)
+ 1. If the number on the left is smaller than the one on the right 
+    Remainder will be the left number itself
+    8 % 9 = 8 
+    100 % 200 = 100 
+2. If the number on the left is divisible by the one of the right 
+    Remainder is always 0 
+    20 % 5 = 0 
+    30 % 10 = 0 
+    1000 % 500 = 0 
+3. If the number on the left is bigger than the right and not divisible by the one on the right 
+    Remainder will be more than 0 but less than the number on the right 
+    23 % 7 = 2 
+    27 % 7 = 6 
+    28 % 7 = 0 
+
+
+JS is an interpretive language 
+
+
+Increment and decrement operators are used to increase/decrease the value of a variable by one (1)
+
+
+*** Differences between == and ==== ***
+
+== --> used to compare only values (loose comparison)
+=== --> used to compare BOTH values and data types of the variables (strict comparison)
+
+
+1 == true --> true 
+1 === true --> false 

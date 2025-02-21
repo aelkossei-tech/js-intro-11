@@ -1,0 +1,83 @@
+
+CLI --> Command Line Interface
+GUI --> Graphical User Interface
+
+Linux 
+
+Home Directory or Home Path ==> 
+MAC: /Users/{username}
+Windows: C:\Users\{username}
+
+Root Directory or Root Path
+MAC: / 
+Windows: C:\
+
+Directory: Folder
+
+Path: String representation of where to find a specific folder/file in your local 
+
+Path of the first-program.js on my local: 
+
+1. pwd (MAC) vs cd ==> Print Working Directory(where you are/ which path you're on)
+2. ls (MAC) vs dir ==> lists the exiting folders/files in the current folder
+
+List all items including hidden ones: 
+ls -a (MAC)
+
+MAC Users: 
+Navigate to Home Directory GUI: cmd + shift + H
+Show/hide hiden folders/iles: cmd + shift + .
+
+3. clear (MAC) vs. cls (Windows)
+Clear working CLI (Terminal or CMD)
+
+4. cd directotyName 
+It changes the directory
+
+5. cd / (MAC and Windows)
+It changes the directory to root directory
+
+6. cd ~ (MAC) 
+It changes the directory to home directory
+
+7. cd .. (MAC and Windows)
+It changes the directory to one parent directory
+
+cd ../../../
+
+8. mkdir directoryName (MAC and Windows)
+Makes a new directory
+NOTE: If  your directory name has multiple spaces --> use "directoryName" 
+
+9. rmdir directoryName (MAC and Windows)
+Removes directory
+NOTE: If  your directory name has multiple spaces --> use "directoryName" 
+NOTE: This command will only delete empty directories 
+
+10. rm - rf directoryName (MAC)
+    rm  /s (Windows with confirmation Y/N)
+    rm  /s /q (Windows without confirmation)
+Removes non-empty directory
+
+
+
+GIT COMMANDS
+NPM COMMANDS
+CYPRESS COMMANDS
+PLAYWRIGHT
+
+11. touch fileName.ext (MAC)
+    echo. > fileName.ext (Windows)
+Creates an empty file 
+
+12. cat fileName.ext (MAC)
+    type fileName.ext (Windows)
+Write file content (to see it )
+
+13. rm fileName.ext (MAC)
+    del fileName.ext (Windows)
+Removes the file 
+
+Are you familiar with Linux?
+Are you familiar with Linux commands?
+Can you tell me some Linux commands you use daily/frequently?

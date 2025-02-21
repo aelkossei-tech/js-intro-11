@@ -1,0 +1,25 @@
+
+// ALWAYS read W3 Schools & MDN right next to each other 
+
+'Hello, today is Monday and we learn regex'; 
+5 character followed with a space []
+
+/e/.test('Hello'); ==> does this pattern match "Hello"
+/apple/.test('Apple is recognized world wide.'); // false, bc. there's no 'i' 
+/apple/i.test('Apple is recognized world wide.'); // true 
+
+/[abc]/.test('Hello'); // false
+/[abc]/.test('apple'); // true
+
+/[0-9]/.test('ab1c); // true  ==> same thing as /\d/ [all digits]
+/[a-z]/                       ==> same thing as /\W/ [all the words]
+/[A-Z]/
+/[0-9a-zA-z]/ 
+
+/\s/ --> anything matching one space
+/\s+/ --> anything matching more than one space
+
+e_g       -> egg eng 
+/e.g/     --> . is like saying I don't care about these characters 
+
+Call out specific function ==> CharacterHelper.(whatever function from the object --> isDigit, etc.)

@@ -1,0 +1,97 @@
+JS Strings ==> useful for holding data that can be represented in text form 
+    - is zero or more characters written within quotes [either ' ' OR (||) " "  ]; 
+    - are an essential data type in: 1. programming/representing sequences of characters + are used 
+    extensively in web development/data processing/various other applications 
+    - backticks (` `) are ALSO used for Strings [ES6 update] ==> mostly used for code embedding purposes (makes it easier for string operations)
+String Templates Terminology [also known as: Backticks Syntax + Temperate Literals + Template strings]
+    - string templates use ==? backticks (` `) rather than single/double quotes to define a string 
+    - template literals make it easier tp embed single/double quotes
+    - also allows to make multi-line strings 
+String Interpolation ==> replacing variables/expressions w/ real values
+    - template literals --> provides an easy way to interpolate variables/expression into strings 
+    - this is the method of string interpolation ==> console.log ( ${ } ); 
+    - variable substitution ==> template literals allow variables in strings --> ${variable}
+    - expression substitution ==> template literals also allows variables in strings --> ${expression}
+JS provides a variety of String functions --> manipulate/analyze/work w/ strings more effectively 
+    - String - length property: 
+        - length ==> property that's used to find the length of a string 
+        - length of a string ==> total # of characters in a string including the whitespaces
+    - String - changing cases: 
+        - toUpperCase() ==> returns a string w/ all characters converted to UPPER CASE 
+        - toLowerCase() ==> returns a string w/ all characters converted to lower case 
+    - String - extracting cases: 
+        - charAt() ==> returns the character at a specified index (position) in a string [similar to .toFixed for #'s]
+        - charCodeAt() ==> returns the unicode
+
+QUIZ: 
+25 Kahoot Questions ==> how many correct questions you get 
+
+RECAP: 
+Method  vs.  Function 
+
+Static Methods; These are the methdos invoked with class or object itself
+Instance Methods (Non-Static Methods); methods invoked with an intance of the class or object 
+
+Number.isFinite(5); //static methods 
+Math.max(3, 5); // 
+
+ vs. 
+
+let num1 = 10.234; 
+num1.toFixed(1); //10.2 
+
+number vs bigint 
+
+Number object: will have additional features --> properties and methods 
+
+properties: information/state/instance variable of the object
+    gets data about the object [what's the max value that number can have]
+    - they're like characteristics/details of an object [think of an object as a box that holds related data]
+   
+    - Example ==> let car = {
+                color: "red",
+                brand: "Toyota",
+                year: 2022
+            };
+
+console.log(car.color);  // Output: "red"
+console.log(car.year);   // Output: 2022
+
+    - The color + brand + year ==> properties of the car
+
+methods: behaviors/functions of the object 
+    runs a task for the object
+    - 
+
+MAX_VALUE
+MIN_VALUE
+MAX_SAFE_INTEGER 
+
+isFinite()
+isSafeInteger()
+toFixed()
+
+Example: 
+Account 
+    porperties: acountNumber, pinCode
+    methods: createAccount(), deleteAccount(), updateAccount()
+
+
+*** Interview Question ==> JavaScript Math Objects --> know them b/c they probably will ask about them  ***
+
+
+5 - 17 (both inclusive); 
+5 6 7 8 9 10 11 12 13 14 15 16 17 ==> 13 
+How to figure out how many number between the range: biggerNumber - smallerNumber + 1
+
+5 - 17 (5 is inclusive + 17 is exclusive)
+5 - 16 
+
+const orders = [order1, order2, order3, order4, order5]
+orders []
+
+1. External Libraries 
+2. Create your own library and functions
+
+getRandomNumber(5, 15);
+getRandomNumber(15, 5);

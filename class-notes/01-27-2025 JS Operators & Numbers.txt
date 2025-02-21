@@ -1,0 +1,105 @@
+
+
+JS Operators 
+    1. Assignment Operators = Equal (=) sign 
+    2. Shortand Assignment Operators: +=, -=, *=, %=, **=, /=
+
+    let num = 10; 
+    num % = 4; 
+    console.log(num); // 2
+
+    3. Arithmetic Operators: +, -, *, /, **, ++, --
+
+    post vs pre increment/decrement
+    int i =10 
+    i++; // 10 
+
+    int j =10; 
+    ++j; // 11
+
+    4. Comparison Operators: ==, ===, !=, !==, <, >, <=, >=
+    *** All the comparison operators will evaluate to boolean (true or false)
+    == vs === [** interview question! **]
+    == is used for loose comparison, and it checks if only values are equal 
+    === is used for strict comparison and it checks if both values and data types 
+
+'3' === 5 --> false
+5 == 'five' --> false
+5 == '5' --> true 
+5 === '5' --> false
+
+
+3 > 2 && 5 =! 5   --> false, bc ALL conditions have to be true 
+
+&& (AND) Operator
+____ && _____
+true &&  true  --> true   [only time when it come out true]
+true &&  false --> false 
+false && false --> false 
+
+|| (OR) Operator
+____ || ____
+true || false  --> true 
+false || true  --> true 
+true || true   --> true
+false || false --> false  [only time when it will come out false]
+
+! (NOT) Operator
+
+!false  --> true
+!true   --> false
+
+!(5 === '5') --> true 
+
+((3 >= 3 || false) && !true) -->  true
+    (true) && !true [false]
+    !false
+    true 
+
+Another possible interview question ==> Difference between Nullish Coalescing Operator (??) and OR (||)
+  ==> is how they handle 'falsy' values other than null and undefined 
+
+
+REFERENCE TYPES
+ - array, object, function [these are the main, most used ones]
+ - Math, Date, Number, BigInt, String.....
+ - Set, Map [new ones]
+
+
+
+OBJECT; all built-in objects in programming languages have their own properties and functions. 
+
+properties: information about the object - what it has 
+functions: abilities of the object - what it does [should have parantheses --> way to see if it's a function]
+
+Number.MAX_SAFE_INTEGER; //property
+Number.MIN_SAFE_INTEGER; //property 
+
+Math.PI; // 3.14
+
+Math.max(1, 2); // 2 --> function (give numbers only)
+
+smth (); // This is a function
+log (); // log() is a function
+
+double precision (up to 15-16 digits); [both whole and decimal numbers]
+
+integers: 10, 5, 100 (whole numbers w/ no decimals)
+floats/ doubles (in other languages): 10.5, 20.21 (numbers w/ decimals)
+
+
+isNaN( ) ---> global function 
+Number.isNaN() ---> 
+
+let num = 5; 
+
+// non-static 
+num.toString()
+num.toFixed()
+num.toPrecision()
+
+// static
+Number.isFinite()
+Number.isSafeInteger()
+
+classes --> static methods and non-static methods 

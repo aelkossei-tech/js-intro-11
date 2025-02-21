@@ -1,0 +1,88 @@
+
+
+String 
+
+'John Doe' 
+"Chicago"
+'      ' ==> still a string 
+' '  ===> still a string [empty string]
+
+
++ operator
+1. concatenation (string) --> EX: '3" + 3 = 33
+2. addition (arithmatic operator )
+
+let price = ('2149.99')/2 ; // would get NaN; can't work because the first number is a string -> so you'd need to convert it to a number using parseFloat
+let price = parseFloat('2149.99')/ 2; 
+            OR 
+let price = Number('2149.99')/2 // would get the same thing as parseFloat
+
+
+Booelan 
+- has two values: true and false
+
+
+TRUTHY and FALSY statements: 
+
+true
+
+false, null, undefined, 0, ' '(empty string), NaN(not a number)
+
+*** What's the difference between null and undefined? ***
+Undefined is for variables that are declared, but not assigned with a value yet. 
+Null is used intentionally to point absence of data. 
+
+Required 
+Street 1
+City
+State
+ZIP 
+
+Optional 
+Apartment 
+Street 2 (mostly for unit or apt #)
+
+
+What are primitives?
+Number, String, Null, Undefined, Boolean ==> DON"T intitally say an exact number 
+
+Array --> considered a collection [similar things in a group]
+Collection: 
+
+JS is a dynamically typed 
+let smth; // undefined 
+
+smth = 5; // numbers
+
+smth = 'John'; //string 
+
+smth = []; //object
+
+smth = null; //object 
+
+Statically typed languages (complied languages) [TS, Java, C#]
+let name = 'John'; (String)
+name = 'James'; //allowed
+name = 5; //Syntax Error 
+
+Java:
+String name = "John"; 
+name = 5; // Syntax Error 
+
+Getting first-last elements from an array 
+first is --> [0] 
+second is --> [1]
+
+last  --> arr[arr.length - 1 ]
+second from the last --> arr[arr.length - 2]
+
+How to create an array?
+-- We can use array literals with [] or new Array () constructor
+1. const arr = [1, 2, 3, etc.]
+2. const arr = new Array (1, 2, 3); 
+
+Hacker Rank OR LeetCode ==> interviewers would use these websites 
+
+Login for Mock Interview Practice: 
+    TechGlobal
+    Test1234!
