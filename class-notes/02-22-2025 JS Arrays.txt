@@ -1,0 +1,103 @@
+JS Arrays ==> used to store multiple values in a single variable (instead of declaring seperate variables for each value)
+    - makes it so much easier to store info. 
+    - can be create by using an array literal --> more readable/simple to use 
+        - const array_name = [item1, item2, etc.]
+    - no need to use [new Array ()]
+    - typeof = object 
+    - to find the length --> length 
+        - returns the total # of elements stored in an array
+
+Things to Do with Arrays: 
+    ACCESSING: 
+    - Accessing an array element ---> by the index of the item [as usual it starts with 0] 
+        - variable[index #]
+    - Accessing the FIRST & LAST elements --> using length + indexes (very similar to String methods)
+        - variable[0] --> FIRST element 
+        - variable[variable.length - 1]
+
+    POPPING and PUSHING: 
+    - pop() ==> removes/returns the last element from an array (instead of using variable.length - 1) 
+    - push() ==> adds a new element to an array (at the end) + returns the new array's length
+
+    SHIFTING and UNSHIFTING: 
+    - shift() ==> removes the first arra element and "shifts" all other element to a lower index + also returns the removed element 
+    - unshift() ==> adds a new element to an array (at the beginning) + "unshifts" older elements + also returns new length
+
+    SEARCHING: 
+    - indexOf() ==> returns the FIRST index at which a given element can be found in an array OR -1 if not there 
+    - includes() ==> [Boolean response: true or false] checks the array if it includes a certain value 
+    - lastIndexOf() ==> returns the LAST index at which a given element can be found in the array OR -1 if not there 
+
+    MERGING: 
+    - concat() ==> creates a whole new array by merging (concatenating) existing arrays 
+
+    REVERSING: 
+    - reverse() ==> reverses an array () [flips the whole array backwards]
+
+    SLICING and SPLICING: 
+    - slice() ==> slices out a piece of an array + returns a new array 
+        - similar to String function
+    - splice() ==> adds new items to an array 
+        - Structure -->  splice(index of where you want to put new element, # of elements to be removed, "elements to be added")
+    
+    SORTING: 
+    - sort() ==> sorts an array alphabetically
+        - BE CAREFUL w/ Numbers! --> won't arrange numbers correctly because seen as strings 
+    
+    FLATTENING:
+    - flat() ==> reduces the dimensionality of an array 
+        - when you want to convert a multi-dimensional array into an one-dimentional array 
+        - introduced in ES2019
+
+
+
+Data Types: 
+Primitives: 
+    string: used to store text data (quotes)
+    numbers: used to store numbers including decimals 
+    boolean: used to store true or false
+    undefined: it is a variable declared but not assigned with value
+    null: it is a variable declared and intentionally assigned with null stating absence of data 
+    bigint: used to store larger numbers (64 bit)
+    symbol: used to store a symbol 
+
+Reference Types: 
+    Arrays: are used to store multiple same/similar data 
+    Objects: are used to store key-value pairs (properties)
+    Functions: are also objects 
+
+Arrays: 
+
+
+
+*** Constructor in all programming languages ***
+Used to instantiate an object from a blueprint/templates//prototypes 
+
+const arr2 = new Array(); 
+
+arr is the instance of the Array prototype
+Array is the blueprint/prototype
+Array() is the constructor of the Array prototype
+We use constructors with "new" keyword --> helps to create an instance of a blueprint
+
+
+
+*** INTERVIEW QUESTION: Mutable vs Immutable *** 
+String: immutable (original value CANNOT be changed)
+Array: mutable (original value CAN be changed)
+
+Primitive are immutable
+References are mutable 
+
+unshift: add elements to the head of the array - longer array 
+shift: removes eleements from the head of the array - shorter array 
+
+
+
+/*
+TASK: 
+ARGUMENTS: 
+RETURN:
+STATIC or INSTANCE: 
+DOES IT MODIFY ORIGINAL ARRAY:
+*/
