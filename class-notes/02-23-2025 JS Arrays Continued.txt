@@ -1,0 +1,52 @@
+
+
+Array ==>  is a built-in object in JS used to store multiple data. 
+It has properties and methods 
+
+Array() --> array constructor
+
+Constructor ==> it's a special method used to instantiate its blueprints/prototype/class 
+
+Array.isArray()
+
+const arr = new Array(); 
+
+arr.slice()
+
+
+
+INSTANCE vs. STATIC
+class Mercedes {
+    brand = 'Mercedes'; 
+}
+
+const car1 = new Mercedes(); 
+const car2 = new Mercedes(); 
+car1.color = 'Black'; 
+car2.color = 'White'; 
+
+
+SORTING ARRAYS: 
+- w/ string: they will be sorted alphabetically(lexicographically)
+- w/ number: from smallest to largest 
+
+ASCENDING ORDER: smallest to largest (a - b)
+DESCENDING ORDER: largest to smallest (b - a)
+
+// [1, 40, 15, 20, 2]; 
+
+numbers.sort((a, b) => a - b); 
+
+a      b       a - b         result      memory 
+1      40      1 - 40        negative    1 should be listed earlier than 40 
+40     15      40 - 15       positive    40 should be listed later 50 
+
+
+INTERVIEW QUESTION: 
+
+[[2, 4, 56], [2, 100, 5]]
+Math.max(...[[2, 4, 56], [2, 100, 5]].flat()); // 100
+
+
+Primitives: immutable (cannot be changed)
+References: mutable
