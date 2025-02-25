@@ -1,0 +1,74 @@
+Immutability ==> refers to the concept that once an object (like an array or an object) is created + state CANNOT be changed 
+    - core concept in JS 
+    - A princess kisses a frog hoping it will turn into a handsome prince. The concept of immutability says that a frog will always be a frog. 
+    - Whenever we want to make changes to some data (for example to an object or an array) --> we should get a new object back with the updated
+     data instead of directly modifying the original one.  
+    - Immutable = "Save as" [instead of just "Save"] --> b/c you know it returns a newly changed object 
+    - Think of immutability as the human body, which is not affected by the outside world
+    - MUTABLE VS. IMMUTABLE: 
+        - Mutable ==> CAN be changed
+        - Immutable ==> CANNOT be changed 
+    - Primitives are IMMUTABLE by nature --> whereas Reference Objects are MUTABLE by default [even though you can reassign a value, you
+    can't modify the value itself]
+        - Arrays are MUTABLE --> BUT a lot of array methods can be used to create new arrays w/o modifying the OG 
+            - pop() + push() + reverse() + shift() + sort() + splice() + unshift() ==> array methods that ALLOW MUTUABILITY
+            - slice() + from() + map() + filter --> arrays methods that ALLOW IMMUTABILITY b/c it creates a new array WITHOUT mutating info. 
+        - Objects are also MUTABLE --> BUT it can be immutable by creating new objects w/ desired changes 
+
+BENEFITS: 
+    - Immutable data = PREDICTABLE data [you can always count on knowing its value since it can't change]
+    - Immutable data = provides SIMPLICITY --> simplifies the management of multi-threaded/shared data 
+    - Immutable data simplifies the implementation of REDO/UNDO functionalities 
+    - Immutable data is easier for DEBUGGING --> you can trace the origin of a value more consistently 
+
+
+JSON (JavaScript Object Notation) ==> a lightweight data interchange format that is easy for humans to read/write + easy for machines
+to parse/generate
+    - in JS --> it's a common way to represent/exchange data between a server & web application OR between diff. parts of a web 
+    application 
+    - language independent 
+    - universally used to transfer data between server & browser 
+    - is a text format, uses specific syntax --> key-pair values 
+    - [keys = always strings + values = strings/numbers/objects/arrays/booleans/null]
+    
+    - Serialization ==> the process of converting a JS object --> JSON string using [JSON.stringify()]
+        - useful when sending local object as TEXT --> database/server 
+
+    - Deserialization ==> the process of coverstion JSON string --> JS object (so the opposite, shocker) using [JSON.parse()]
+        - allows us to use JSON data in our JS code
+
+DEEP COPY vs. SHALLOW COPY: 
+    - Shallow Copy ==> (of an object/array) creates a new instance of the top-level object/array --> BUT doesn't duplicate
+    nested objects/arrays 
+    - JUST references them 
+    - copies only the outer object --> BUT nested objects/arrays remain linked 
+    
+    - Deep Copy ==> creates a completeley independent duplicate of the original array/object, including all nested objects/arrays
+        - changes made to the copy WON'T affect the original
+        - it copies EVERYTHING, making a complete seperate copy of the original + changes in the copy DOES NOT affect OG 
+
+
+
+JavaScript is single-threaded language ==> JS will execute the code line-by-line
+    - JS can execute one task at a time [can't do multi-tasking]
+
+Mutli-threaded languages --> C++, Java 
+
+
+JavaScript is asynchronous by default --> b/c of this during automatation, you'll inevitably run into issues 
+
+
+CALL STACK ==> it's the area where your functions are called --> is the memory layer 
+    - works with the LIFO (last in, first out) principle 
+Event Loop: In the case of asynchronous programs --> it will help HS to wait for delayed operations 
+
+
+MUTUABILITY & IMMUTABILITY: 
+Mutable ==> changing (References)
+Immutable ==> NOT changing (Primitives)
+
+[EXPECTED ANSWER TO THE INTERVIEW QUESTION OF SHALLOW COPY vs. DEEP COPY]
+Shallow copy ==> is when you use spread operator to create a copy of a JS object (reference type)
+    - the problem w/ spread operator --> will not be ideal when object is nested
+Deep copy ==> is when you use JSON parse and stringify methods to create a copy of a JS object (reference type)
+    - this will completeley create an independent copy, which will not affect the original object 
