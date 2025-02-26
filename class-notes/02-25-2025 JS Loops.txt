@@ -1,0 +1,61 @@
+- Apparently ==> 
+Loops are used to execute a block of code repeatedly (I thought functions/
+if-else statements did the same thing?)
+    - will execute until a termination  conditions is met (break;)
+    - are helpful to eliminate duplicating codes + time-effort saving 
+    - JS supports diff. kinds of loops: 
+        1. for* --> loops through a block of code a number of times; when you know how many times you want to 
+        execute a block of code
+            - use this when the number of iterations are known 
+            - creates a loops w/ 3 expressions
+                SYNTAX: 
+                
+                for (expression 1; expression 2; expression 3){
+                    // code block to be executed
+                }
+
+                - expression 1 --> executed 1 time before the execution of the code block; it INITIALIZES [where we set up ou
+                variable, SO --> let i = 10]
+                - expression 2 --> defines the condition for executing the code block; it's the CONDITION [MUST BE TRUE, for the loop
+                to keep running, SO --> i <= 10 ]
+                - expression 3 --> is executed everytime after the code block has been executed; it's the INCREMENT/DECREMENT [this updates
+                the loop variable (like i++ or i--)]
+                - Loop runs until the conditional part is FALSE --> then terminates
+        2. for/in --> loops through the properties of an object [think IN an object, its key-values]
+            - use this when you want to iterate over object properties
+            - used to iterate OVER the properties of an object [NOT arrays --> b/c it loops over indexes instead of values]
+            - SYNTAX: 
+            
+            for (let "key" in "object") {
+                // code to execute
+            }
+
+        3. for/of** --> loops through the VALUES of an iterable object [so, like array, object]
+            - use this for iterating through iterable objecys 
+            - unlike for/in, it can iterate with ALL iterable objects, not just objects
+            - SYNTAX: 
+            
+            for(let "value" of "iterable"){
+                // code to execute
+            }
+
+        4. while --> loops though a block of code while a specified condition is TRUE [so similar to if-else]
+            - use this when the condition depends on dynamic factors
+            - like a repeating an if statement [it'll keep going unlike if-else]
+            - SYNTAX: 
+            
+            while(condition){
+                // code to execute
+            }
+
+        5. do/while --> also loops through a block of code while a specified condition is TRUE
+            - use this to ensure a block of code executes at least once
+            - simialr to while --> BUT it executes the code block at least once before checking the condition 
+            - SYNTAX: 
+
+            do {
+                // code to execute
+            } while (condition); 
+
+
+LOOPS: 
