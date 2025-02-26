@@ -88,4 +88,4 @@ Miscellaneous
     - [git log] ==> command that will show all the history of commits and branches
     - [git merge] vs. [git rebase] ==> INTERVIEW QUESTION 
 
-What happens if I forgot to commit the message?
+What happens if I forget to commit the message?
