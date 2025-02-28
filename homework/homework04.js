@@ -80,7 +80,7 @@ end: 100
 update: -- 
 what we're trying to do: within the descending range (100 to 50), find numbers that are divisible by 5
 */
-for(let i = 100; i >= 50; i--){
+for(let i = 100; i >= 50; i--){ // since we're trying to count DOWN --> 100 and 50 are swapped 
     if(i % 5 === 0) console.log(i); 
 }
 
@@ -133,7 +133,7 @@ update: ++
 let sum = 0; // doing this because we're adding TO the sum 
 
 for(let i = 1; i <= 10; i++){ // range 1 - 10  and we're increasing 
-    sum += i; // so 0 + whatever i is going to be [if i =1 and ++ --> 2 (0 + 2 = 2)]
+    sum += i; // so 0(sum) + whatever i is going to be [if i = 1 and ++ --> 2 (0 + 2 = 2)]
 }
 console.log(sum); 
 
@@ -152,13 +152,13 @@ For example:
 4! = 4 × 3 × 2 × 1 = 24
 0! (by convention) is defined as 1.
 */
-// To find a factorial ==> you're multiplying the number [in this case, random number] by itself that many time
+// To find a factorial ==> you're multiplying the number [in this case, random number] by itself that many times
 // SO for example --> if we get 5, we're going to multiply it by 5 x 4 x 3 x 2 x 1
 // 0 = 1 
 let ran = Math.floor(Math.random() * 10) + 1; 
 let factorialRandom = 1; // we're doing this [making this 1] since we're multiplying this by whatever number we'll generate
 
-for(i = ran; i > 0; i--){ // for loop structure: the random number is going to be the subject +  non-negative --> SO "i" should be higher than 0 + we're counting down 
+for(i = ran; i > 0; i--){ // for loop structure: the random number is going to be the subject(i) +  non-negative --> SO "i" should be higher than 0 + we're counting down 
     factorialRandom *= i; // whatever our iteration [i] --> we're going to multiply factorialRandom by it [which is the factorial equation]
 }
 console.log(`My random number is: ${ran} and its factorial is: ${factorialRandom}.`); 
@@ -177,6 +177,19 @@ Eventually, print the random number divisible by 5 with the number of attempts a
 Expected Output:
 The random number is {randomNumber} and it took {attempts} attempt/s to generate it.
 */
+/*
+start: 1 
+end: 100
+update: ++
+what we're trying to do: 1.) generate a random number 2.) see if a random number is divisible by 5 3.) count how many times does it take to get that number 
+how are we going to do this: 
+    - well we know that --> if i[your random number] % 5 === 0 
+    - the question is HOW are we going to count the numbers of iterations that it takes to get a number divisible by 5 
+    1.) make a seperate variable that counts the attempts --> input this into our for loop 
+    2.) our attempt # should be --> 
+*/
+let randomNum = Math.floor(Math.random() * 100) + 1; 
+
 
 
 console.log('\n ---------TASK08----------\n');
@@ -217,6 +230,7 @@ true
 const arr2 = ['Scooby Doo', 'Snoopy', 'Blue', 'Pluto', 'Dino', 'Sparky']; 
 console.log(arr2); 
 console.log(arr2.includes('Pluto')); 
+console.log(arr2.includes('Fido')); 
 
 
 console.log('\n ---------TASK10----------\n');
@@ -283,8 +297,8 @@ Pen, notebook, Book, paper, bag, pencil, Ruler
 
 THEN:
 -Output the entire array. --> print out your array 
--Output how many elements starts with 'B' or 'P', ignoring cases.
--Output how many elements has 'book' or 'pen' partial strings, ignoring cases.
+-Output how many elements starts with 'B' or 'P', ignoring cases. --> counting B or P in array
+-Output how many elements has 'book' or 'pen' partial strings, ignoring cases. --> how many times 'book' OR 'pen' show up
 
 Expected Result:
 ['Pen', 'notebook', 'Book', 'paper', 'bag', 'pencil', 'Ruler' ]
@@ -292,7 +306,22 @@ Elements starting with 'B' or 'P' = 5
 Elements having 'book' or 'pen' = 4 
 */
 const arr5 = ['Pen', 'notebook', 'Book', 'paper', 'bag', 'pencil', 'Ruler']; 
-console.log(arr5); 
+console.log(arr5); // 1st part of the answer
+
+let counterB_P = 0; // since we're counting how many elements that starts with (.startsWith()) b or p --> we're starting from 0
+for(let i = 0; i < arr5.length; i++){ // i = 0 --> since indexed at 0 ; i < arr5.length ==> to ensure that we don't go past array's length --> so essentially the range would be 0 to arr.length
+    let letter = arr5[i].toLowerCase(); // even though question says it's ignoring cases ==> we're converting whatever iteration in the array[i] to lower case 
+    if(letter.startsWith('b') || letter.startsWith('p')) counterB_P++ ; // the easy part --> we know we need to find what STARTS WITH b or p --> startsWith()
+}
+console.log(`Elements starting with 'B' or 'P' = ${counterB_P}`);  
+
+let counterBook_Pen = 0; 
+for(let i = 0; i < arr5.length; i++){ // same logic here 
+    let words = arr5[i].toLowerCase(); 
+    if(words.includes('book') || words.includes('pen')) counterBook_Pen++; // this time we should use includes() to find the subarray --> whenever this if statement is true, then we should add to the count [counterBook_Pen]
+}
+
+console.log(`Elements having 'book' or 'pen' = ${counterBook_Pen}`); 
 
 
 console.log('\n ---------TASK13----------\n');
@@ -308,12 +337,109 @@ THEN:
 -Output how many elements are 10
 
 Expected Result:
-[ 3, 5, 7, 10, 0, 20, 17, 10, 23, 56, 78 ]
-Elements that are more than 10 = 5
+[ 3, 5, 7, 10, 0, 20, 17, 10, 23, 56, 78 ] 
+Elements that are more than 10 = 5   --> in order to do this ==> we're COUNTING how many elements are more than 10 
 Elements that are less than 10 = 4
 Elements that are 10 = 2
 */
 const arr6 = [3, 5, 7, 10, 0, 20, 17, 10, 23, 56, 78]; 
-console.log(arr6); 
+console.log(arr6); // First part of answer 
 
-console.log(arr6.sort((a, b) => a - b)); 
+let moreThan10 = 0; 
+let lessThan10 = 0; 
+let equal10 = 0;
+
+for(let i = 0; i < arr6.length; i++){
+    if(arr6[i] > 10) moreThan10++; 
+    else if(arr6[i] < 10) lessThan10++; 
+    else equal10++; 
+}
+console.log(`Elements that are more than 10 = ${moreThan10}`); 
+console.log(`Elements that are less than 10 = ${lessThan10}`); 
+console.log(`Elements that are equal to 10 = ${equal10}`); 
+
+
+console.log('\n ---------TASK14----------\n');
+/*
+Requirement:
+-Create 2 arrays that stores numbers below.
+First array-> 		[ 5, 8, 13, 1, 2 ]
+Second array -> 	[ 9, 3, 67, 1, 0 ]
+
+THEN:
+-Output both arrays
+–Then, create a new array that will take the greatest value of same index from first 2 arrays and output the third array as well.
+
+Expected Result:
+1st array is =  [ 5, 8, 13, 1, 2 ]
+2nd array is = [ 9, 3, 67, 1, 0 ]
+3rd array is =  [ 9, 8, 67, 1, 2 ]
+*/
+const firstArr = [5, 8, 13, 1, 2]; 
+const secondArr = [9, 3, 67, 1, 0]; 
+console.log(`1st array is = ${JSON.stringify(firstArr)}`); 
+console.log(`2nd array is = ${JSON.stringify(secondArr)}`); 
+
+
+let thirdArr = []; // making this an empty array to add the max number/index into it 
+
+for(i = 0; i < firstArr.length; i++){ // since firstArr & secondArr have the same length ==> used firstArr.length for the loop condition
+    firstArr[i] > secondArr[i] ? thirdArr.push(firstArr[i]) : thirdArr.push(secondArr[i]); // here, trying to which value at the given index[i] is greater + whichever one is greater ==> push the greater value 
+}
+console.log(`3rd array is = ${JSON.stringify(thirdArr)}`); 
+
+console.log('\n ---------TASK15----------\n');
+/*
+Requirement:
+Write a function named as firstDuplicate() which takes an array argument and returns the first duplicated number in the array when invoked.
+NOTE: Make your code dynamic that works for any array and return -1 if there are no duplicates in the array. 
+For two elements to be considered as duplicated, value and data types of the elements must be same.
+
+Examples:
+firstDuplicate([ 3, 7, 10, 0, 3, 10 ])		-> 3
+firstDuplicate([ 5, 7, 7, 0, 5, 10 ])		-> 5
+firstDuplicate([ 5, '5', 3, 7, 4 ])		-> -1
+firstDuplicate([ 123, 'abc', '123', 3, 'abc' ])	-> 'abc'
+firstDuplicate([ 1, 2, 3])			-> -1
+firstDuplicate([ 'foo', 'abc', '123', 'bar’ ]) 	-> -1
+*/
+
+
+console.log('\n ---------TASK16----------\n');
+/*
+Requirement:
+Write a function named as getDuplicates() which takes an array argument and returns all the duplicated elements in the array when invoked.
+
+NOTE: Make your code dynamic that works for any array and return empty array if there are no duplicates in the array. For two elements to be considered as duplicated, value and data types of the elements must be same.
+
+Examples:
+getDuplicates([ 0, -4, -7, 0, 5, 10, 45, -7, 0 ])		-> [ 0, -7 ]
+getDuplicates([ 1, 2, 5, 0, 7 ])			-> [ ]
+getDuplicates(['A', 'foo', '12’ , 12, 'bar', 'a', 'a', 'foo' ])	-> [ 'foo', 'a’ ]
+getDuplicates([ 'foo', '12' , 12, 'bar', 'a' ])		-> [ ]
+*/
+
+
+console.log('\n ---------TASK17----------\n');
+/*
+Requirement:
+Write a function named as reverseStringWords() which takes a string as an argument and returns string back with each word 
+separately reversed when invoked.
+
+NOTE: Make your code dynamic that works for any string. Make sure you consider extra spaces before and after words in the given string.
+
+Examples:
+reverseStringWords("Hello World") 		-> "olleH dlroW"
+reverseStringWords("I like JavaScript") 	-> "I ekil tpircSavaJ"
+reverseStringWords("Hello") 		-> "olleH"
+reverseStringWords("") 			-> ""
+reverseStringWords("    ") 		-> ""
+*/
+const reverseStringWords = string => {
+    let reversedStr = string; 
+    for(let i = string.length - 1; i >= 0; i--){
+        reversedStr += string[i]; 
+    }
+    console.log(reversedStr); 
+}
+console.log(reverseStringWords('I like JavaScript')); 
