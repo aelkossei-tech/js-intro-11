@@ -60,3 +60,17 @@ let max = Math.max(ran1, ran2);
 for(let i = min; i <= max; i++){
     console.log(i); 
 }
+
+
+// Print all odd numbers from 1 to 10
+for(i = 1; i <= 10; i++){
+    if(i % 2 !== 0) console.log(i); 
+}
+
+
+// Create a program that sums all even numbers between 1 and 10
+let evenSum = 0; 
+for(i = 2; i <= 10; i+=2){
+    evenSum += i; 
+}
+console.log(evenSum); 
