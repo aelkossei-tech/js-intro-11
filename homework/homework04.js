@@ -51,7 +51,7 @@ update: ++
 what we're trying to do: find a number from that range that is both divisible by 2 AND 3 ==> num % 2 === 0 && num % 3 == 0
 */
 for(let i = 1; i <= 50; i++){
-    if(i % 2 === 0 && i % 3 === 0) console.log(i); 
+    if(i % 6 === 0) console.log(i); // or if(i % 2 === 0 && i % 3 === 0) console.log(i); 
 }
 
 
@@ -130,9 +130,9 @@ start: 1
 end: 10 
 update: ++
 */
-let sum = 0; // doing this because we're adding TO the sum 
+let sum = 0; // doing this because we're ADDING TO the sum 
 
-for(let i = 1; i <= 10; i++){ // range 1 - 10  and we're increasing 
+for(let i = 1; i <= 10; i++){ // range 1 - 10  and we're increasing it by 1 every iteration [++]
     sum += i; // so 0(sum) + whatever i is going to be [if i = 1 and ++ --> 2 (0 + 2 = 2)]
 }
 console.log(sum); 
@@ -181,15 +181,25 @@ The random number is {randomNumber} and it took {attempts} attempt/s to generate
 start: 1 
 end: 100
 update: ++
-what we're trying to do: 1.) generate a random number 2.) see if a random number is divisible by 5 3.) count how many times does it take to get that number 
+what we're trying to do: 
+
+1.) generate a random number 
+2.) see if a random number is divisible by 5 
+2.) count how many times does it take to get that number 
 how are we going to do this: 
-    - well we know that --> if i[your random number] % 5 === 0 
+    - well we know that --> if your randomNumber % 5 === 0 
     - the question is HOW are we going to count the numbers of iterations that it takes to get a number divisible by 5 
-    1.) make a seperate variable that counts the attempts --> input this into our for loop 
+    1.) make a seperate variable that counts the attempts --> input this into our while loop [since we don't know how many attempts it'll take]
     2.) our attempt # should be --> 
 */
-let randomNum = Math.floor(Math.random() * 100) + 1; 
+let attempts = 0; 
+let randomNumber = Math.floor(Math.random() * 100) + 1; 
 
+while(randomNumber % 5 !== 0){
+    randomNumber = Math.floor(Math.random() * 100) + 1; 
+    attempts++; 
+}
+console.log(`The random number is ${randomNumber} and it took ${attempts} attempt/s to generate it.`); 
 
 
 console.log('\n ---------TASK08----------\n');
@@ -276,14 +286,6 @@ Expected Result:
 const arr4 = [10.5, 20.75, 70, 80, 15.75]; 
 console.log(arr4); 
 
-console.log(arr4[0]);
-console.log(arr4[1]);
-console.log(arr4[2]);
-console.log(arr4[3]);
-console.log(arr4[4]);
-
-// OR 
-
 for(let i = 0; i < arr4.length; i++){
     console.log(arr4[i]);  
 }
@@ -320,8 +322,8 @@ for(let i = 0; i < arr5.length; i++){ // same logic here
     let words = arr5[i].toLowerCase(); 
     if(words.includes('book') || words.includes('pen')) counterBook_Pen++; // this time we should use includes() to find the subarray --> whenever this if statement is true, then we should add to the count [counterBook_Pen]
 }
-
 console.log(`Elements having 'book' or 'pen' = ${counterBook_Pen}`); 
+
 
 
 console.log('\n ---------TASK13----------\n');
@@ -380,7 +382,6 @@ const secondArr = [9, 3, 67, 1, 0];
 console.log(`1st array is = ${JSON.stringify(firstArr)}`); 
 console.log(`2nd array is = ${JSON.stringify(secondArr)}`); 
 
-
 let thirdArr = []; // making this an empty array to add the max number/index into it 
 
 for(i = 0; i < firstArr.length; i++){ // since firstArr & secondArr have the same length ==> used firstArr.length for the loop condition
@@ -388,10 +389,13 @@ for(i = 0; i < firstArr.length; i++){ // since firstArr & secondArr have the sam
 }
 console.log(`3rd array is = ${JSON.stringify(thirdArr)}`); 
 
+
 console.log('\n ---------TASK15----------\n');
 /*
 Requirement:
-Write a function named as firstDuplicate() which takes an array argument and returns the first duplicated number in the array when invoked.
+Write a function named as firstDuplicate() which takes an array argument and
+returns the first duplicated number in the array when invoked. --> const firstDuplicate()
+
 NOTE: Make your code dynamic that works for any array and return -1 if there are no duplicates in the array. 
 For two elements to be considered as duplicated, value and data types of the elements must be same.
 
@@ -403,14 +407,26 @@ firstDuplicate([ 123, 'abc', '123', 3, 'abc' ])	-> 'abc'
 firstDuplicate([ 1, 2, 3])			-> -1
 firstDuplicate([ 'foo', 'abc', '123', 'bar’ ]) 	-> -1
 */
+const array = []; 
+const firstDuplicate = (array) => {
+    for(let i = 0; i < array.length; i++){
+        if(array[i] === array[i]) console.log(array[i]); 
+        else console.log(-1); 
+    }
+}
+console.log(firstDuplicate([3, 7, 10, 0, 3, 10])); 
 
+// COME BACK TO THIS 
 
 console.log('\n ---------TASK16----------\n');
 /*
 Requirement:
-Write a function named as getDuplicates() which takes an array argument and returns all the duplicated elements in the array when invoked.
+Write a function named as getDuplicates() which takes an array argument and returns all 
+the duplicated elements in the array when invoked.
 
-NOTE: Make your code dynamic that works for any array and return empty array if there are no duplicates in the array. For two elements to be considered as duplicated, value and data types of the elements must be same.
+NOTE: Make your code dynamic that works for any array and return empty array if there are 
+no duplicates in the array. 
+For two elements to be considered as duplicated, value and data types of the elements must be same.
 
 Examples:
 getDuplicates([ 0, -4, -7, 0, 5, 10, 45, -7, 0 ])		-> [ 0, -7 ]
@@ -418,6 +434,8 @@ getDuplicates([ 1, 2, 5, 0, 7 ])			-> [ ]
 getDuplicates(['A', 'foo', '12’ , 12, 'bar', 'a', 'a', 'foo' ])	-> [ 'foo', 'a’ ]
 getDuplicates([ 'foo', '12' , 12, 'bar', 'a' ])		-> [ ]
 */
+
+
 
 
 console.log('\n ---------TASK17----------\n');
@@ -436,10 +454,95 @@ reverseStringWords("") 			-> ""
 reverseStringWords("    ") 		-> ""
 */
 const reverseStringWords = string => {
-    let reversedStr = string; 
+    let stringArr = string.split(' '); 
     for(let i = string.length - 1; i >= 0; i--){
-        reversedStr += string[i]; 
+        stringArr += stringArr[i];
     }
-    console.log(reversedStr); 
 }
-console.log(reverseStringWords('I like JavaScript')); 
+console.log(reverseStringWords('Hello World')); 
+
+console.log('\n ---------TASK18----------\n');
+/*
+Requirement:
+Write a function named as getEvens() which takes 2 number arguments and returns all the even numbers as 
+an array stored from smallest even number to greatest even number when invoked.
+
+NOTE: Make your code dynamic that works for any numbers and return empty array if there are no even numbers
+in the range of given 2 numbers. 
+
+Assume you will not be given negative numbers.
+
+Examples:
+getEvens(2, 7)	-> [ 2, 4, 6 ]
+getEvens(17, 5)	-> [ 6, 8, 10, 12, 14, 16 ]
+getEvens(4, 4)	-> [ 4 ]
+getEvens(3, 3)	-> [ ]
+*/
+const getEvens = (num1, num2) => {
+    let maxEven = Math.max(num1, num2); 
+    let minEven = Math.min(num1, num2); 
+    let result = [];
+    for(let i = minEven; i <= maxEven; i++){
+        console.log(result.push(minEven, maxEven)); 
+    }
+}
+console.log(getEvens(2, 7)); 
+
+
+console.log('\n ---------TASK19----------\n');
+/*
+Requirement:
+Write a function named as getMultipleOf5() which takes 2 number arguments and returns all the numbers divisible by 5 
+as an array stored from first found match to last found match when invoked.
+
+NOTE: Make your code dynamic that works for any numbers and return empty array if there are no numbers divisible by 5 
+in the range of given 2 numbers. 
+
+Assume you will not be given negative numbers.
+
+Examples:
+getMultipleOf5(3, 17)	-> [ 5, 10, 15]
+getMultipleOf5(23, 5)	-> [ 20, 15, 10, 5 ]
+getMultipleOf5(5, 5)	-> [ 5 ]
+getMultipleOf5(2, 4)	-> [ ]
+*/
+
+
+
+console.log('\n ---------TASK20----------\n');
+/*
+Requirement:
+Write a function named as fizzBuzz() which takes 2 number arguments and 
+returns a string composed with below requirements when invoked.
+
+You need to find all the numbers within the range of given 2 numbers (both inclusive) 
+and store them in a string from smallest to greatest number with a ' | ' separator for each number.
+
+You will need to convert numbers divisible by 3 to 'Fizz'
+
+You will need to convert numbers divisible by 5 to 'Buzz'
+
+You will need to convert numbers divisible by both 3 and 5 to 'FizzBuzz’
+
+The rest will stay the same.
+NOTE: Make your code dynamic that works for any numbers.
+Assume you will not be given negative numbers.
+
+Examples:
+fizzBuzz(13, 18)	-> "13 | 14 | FizzBuzz | 16 | 17 | Fizz" 
+fizzBuzz(12, 5)	-> "Buzz | Fizz | 7 | 8 | Fizz | Buzz | 11 | Fizz"
+fizzBuzz(5, 5)	-> "Buzz"
+fizzBuzz(9, 6)	-> "Fizz | 7 | 8 | Fizz"
+*/ 
+const fizzBuzz = (n1, n2) => {
+    let max = Math.max(n1, n2);
+    let min = Math.min(n1, n2);
+    let result = []; 
+
+    for(let i = min; i < max; i++){
+        if(i % 15 === 0) console.log(result.push('FizzBuzz')); 
+        else if (i % 3 === 0) console.log('Fizz'); 
+        else if(i % 5 === 0) console.log('Buzz')
+}
+}
+console.log(fizzBuzz(13, 18)); 
