@@ -325,7 +325,6 @@ for(let i = 0; i < arr5.length; i++){ // same logic here
 console.log(`Elements having 'book' or 'pen' = ${counterBook_Pen}`); 
 
 
-
 console.log('\n ---------TASK13----------\n');
 /*
 Requirement:
@@ -407,16 +406,7 @@ firstDuplicate([ 123, 'abc', '123', 3, 'abc' ])	-> 'abc'
 firstDuplicate([ 1, 2, 3])			-> -1
 firstDuplicate([ 'foo', 'abc', '123', 'bar’ ]) 	-> -1
 */
-const array = []; 
-const firstDuplicate = (array) => {
-    for(let i = 0; i < array.length; i++){
-        if(array[i] === array[i]) console.log(array[i]); 
-        else console.log(-1); 
-    }
-}
-console.log(firstDuplicate([3, 7, 10, 0, 3, 10])); 
 
-// COME BACK TO THIS 
 
 console.log('\n ---------TASK16----------\n');
 /*
@@ -436,8 +426,6 @@ getDuplicates([ 'foo', '12' , 12, 'bar', 'a' ])		-> [ ]
 */
 
 
-
-
 console.log('\n ---------TASK17----------\n');
 /*
 Requirement:
@@ -453,13 +441,11 @@ reverseStringWords("Hello") 		-> "olleH"
 reverseStringWords("") 			-> ""
 reverseStringWords("    ") 		-> ""
 */
-const reverseStringWords = string => {
-    let stringArr = string.split(' '); 
-    for(let i = string.length - 1; i >= 0; i--){
-        stringArr += stringArr[i];
-    }
-}
+
 console.log(reverseStringWords('Hello World')); 
+console.log(reverseStringWords('I like Javascript')); 
+console.log(reverseStringWords('Hello')); 
+console.log(reverseStringWords('')); 
 
 console.log('\n ---------TASK18----------\n');
 /*
@@ -478,15 +464,20 @@ getEvens(17, 5)	-> [ 6, 8, 10, 12, 14, 16 ]
 getEvens(4, 4)	-> [ 4 ]
 getEvens(3, 3)	-> [ ]
 */
-const getEvens = (num1, num2) => {
-    let maxEven = Math.max(num1, num2); 
-    let minEven = Math.min(num1, num2); 
-    let result = [];
+const getEvens = (num1, num2) => {  // our parameters are numbers
+    let maxEven = Math.max(num1, num2); // we don't know the given range --> BUT we're trying to return the SMALLEST even number first 
+    let minEven = Math.min(num1, num2); // SO --> we need to use MAX and MIN 
+    let finalArr = []; // we're pushing into an empty array ==> final result is an array 
     for(let i = minEven; i <= maxEven; i++){
-        console.log(result.push(minEven, maxEven)); 
+        if(i % 2 === 0) finalArr.push(i); 
     }
+    
+    return finalArr; 
 }
 console.log(getEvens(2, 7)); 
+console.log(getEvens(17, 5)); 
+console.log(getEvens(4, 4)); 
+console.log(getEvens(3, 3)); 
 
 
 console.log('\n ---------TASK19----------\n');
@@ -506,8 +497,27 @@ getMultipleOf5(23, 5)	-> [ 20, 15, 10, 5 ]
 getMultipleOf5(5, 5)	-> [ 5 ]
 getMultipleOf5(2, 4)	-> [ ]
 */
-
-
+const getMultipleOf5 = (n1, n2) => { // 2 numbers arguments [without knowing its range] --> SO we should make our own range from our parameters
+    let numMax = Math.max(n1, n2); 
+    let numMin = Math.min(n1, n2);
+    let arrResult = []; // since our result should be an array ==> we need to push our results into an empty array 
+    
+    if(n1 > n2){ // since we don't now what our number range will be --> we need to think of the possibility of having n1 being larger than n2 
+        for(let i = numMax; i >= numMin; i--){ // if that's the case, we would want the array to be printed in descending order 
+            if(i % 5 === 0) arrResult.push(i); 
+        }
+    }
+    else {
+        for(let i = numMin; i<= numMax; i++){  // if n2 > n1 ==> then just push/print our array in ascending order 
+            if(i % 5 === 0) arrResult.push(i); 
+        }
+    }
+    return arrResult; 
+}
+console.log(getMultipleOf5(3, 17));     
+console.log(getMultipleOf5(23, 5));     
+console.log(getMultipleOf5(5, 5));     
+console.log(getMultipleOf5(2, 4));     
 
 console.log('\n ---------TASK20----------\n');
 /*
@@ -534,15 +544,21 @@ fizzBuzz(12, 5)	-> "Buzz | Fizz | 7 | 8 | Fizz | Buzz | 11 | Fizz"
 fizzBuzz(5, 5)	-> "Buzz"
 fizzBuzz(9, 6)	-> "Fizz | 7 | 8 | Fizz"
 */ 
-const fizzBuzz = (n1, n2) => {
-    let max = Math.max(n1, n2);
-    let min = Math.min(n1, n2);
-    let result = []; 
+const fizzBuzz = (num1, num2) => { // same thing with Task 19 --> we don't know our range, BUT we do know our paramters 
+    let max = Math.max(num1, num2);
+    let min = Math.min(num1, num2);
+    let result = []; // again, empty array to push our results into; 
 
-    for(let i = min; i < max; i++){
-        if(i % 15 === 0) console.log(result.push('FizzBuzz')); 
-        else if (i % 3 === 0) console.log('Fizz'); 
-        else if(i % 5 === 0) console.log('Buzz')
-}
-}
-console.log(fizzBuzz(13, 18)); 
+    for(let i = min; i <= max; i++){ 
+        if(i % 15 === 0) result.push('FizzBuzz'); // Once we see that there are a few conditions to keep in mind ==> If-Else statments had to be involved 
+        else if (i % 3 === 0) result.push('Fizz'); 
+        else if(i % 5 === 0) result.push('Buzz');  
+        else result.push(i); // if the given number isn't following any of the above conditions --> we're pushing the regular number 
+        }   
+        return result.join(' | '); // after running through out if-else statements ==> we are seperating the numbers w/ join [turns our array --> string and seperates by a punctuation]
+    }
+
+console.log(fizzBuzz(13, 18));
+console.log(fizzBuzz(12, 5)); 
+console.log(fizzBuzz(5, 5)); 
+console.log(fizzBuzz(9, 6)); 

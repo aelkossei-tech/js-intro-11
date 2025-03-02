@@ -1,0 +1,82 @@
+
+Loops: are used to to run a block of code repeatedly 
+Iteration: each time that loop runs 
+
+There are 5 loops in JS (Typescript as well) ==> 1. for loop   2. for...of loop  3. for...in loop   4. while loop   5. do while loop 
+
+1. for loop: [Traditional loop, or i loop]
+SYNTAX: 
+for(initialization; termination condition; update){
+    // block to execute 
+}
+
+EX: 
+ for(let i = 0; i < 5; i++){
+    //
+ }
+
+LOGICAL MISTAKES: 
+    - a loop that NEVER runs    
+        for(let i = 1; i < 0; i++){  ---> i < 0 condition will be false for the first iteration and will NOT run
+            console.log('SATURDAY'); 
+        }
+    
+    - infinite loops [when you NEVER meet your termination point]
+        for(let i = 10; i > 1; i++){   ---> i > 1 will NEVER be false, SO this loop will never stop 
+            console.log('SATURDAY'); 
+        }
+        - also if you have an empty for loop --> Infinite loop 
+
+
+
+
+{
+    // block of code
+    console.log('Hello'); 
+}
+
+// getting each character in a string 
+{
+    str[i]; 
+}
+
+// getting each element from array
+{
+    arr[i]; 
+}
+
+// getting each key-value pairs from object 
+{
+    //we'll learn this 
+}
+
+
+When to use while loops over for loops: 
+- When the exact iteration is unknown 
+    - for loops KNOW how many iterations
+    - while loops' have UNKNOWN iterations/ranges 
+
+47.5% for loop
+47.5% for...of loop(especially with arrays/objects/other iterables)
+3% while loop
+1% do-while loop 
+1 % for...in loop
+
+
+2. while loop ==> it works with a condition. 
+    - The loop will run while the condition is true. 
+    - The loop will terminate whenever condition is false
+    NOTE: it first checks the condition and then decides whether to run the block or not 
+    - SYNTAX: 
+        while(condition){
+            //run this block 
+        }
+
+3. do-while loop ==> it works with a condition. 
+    - The loop will run while the condition is true. 
+    - The loop will terminate whenever condition is false
+    NOTE: The block of code in do block will execute first and then the condition will be checked 
+    - SYNTAX: 
+        do {
+            // run this block
+        } while(condition); 

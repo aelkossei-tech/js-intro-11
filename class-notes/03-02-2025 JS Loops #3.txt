@@ -1,0 +1,17 @@
+
+
+Loops: 
+
+1. for loop (1995) --> usually useful if you need indexes of something [there's a set range]
+2. while loop (1997) --> if you DON'T know the range
+3. do while loop --> runs at least once [diff. between do while & while]
+4. for...of loop [for each loop] --> (2015) ES6 update [like arrow functions + let + const + spread operator + etc. ]
+    - used to iterate through iterable objects [arrays + objects + maps + sets + etc.]
+5. for...in loop 
+
+Maps, Sets [also an ES6 feature] 
+
+* When to use for loop vs. for...of loop to iterate arrays *
+- for...of loop CAN'T manipulate the index/range --> cannot modify your start/end point 
+
+Useful Array elements [other ways to loop your array elements] ==> forEach(), map(), filter(), reduce(), some(),, every(), first()
