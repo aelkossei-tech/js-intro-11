@@ -406,7 +406,16 @@ firstDuplicate([ 123, 'abc', '123', 3, 'abc' ])	-> 'abc'
 firstDuplicate([ 1, 2, 3])			-> -1
 firstDuplicate([ 'foo', 'abc', '123', 'bar’ ]) 	-> -1
 */
-
+const firstDuplicate = arrayPar => {
+    let seenArr = []; // creating an empty array to put our seen elements in those array
+    for(let i = 0; i < arrayPar.length; i++){ // we're looping through our given array 
+        if(seenArr.includes(arrayPar[i])) return seenArr[0]; // IF our seen array includes our array parameters [THIS MEANS THERE'S A DUPLICATE] --> we're returning the first element in the array which is our first instance of our duplicate
+        else seenArr.push(arrayPar[i]); // if NOT --> we're pushing our seen elements (not duplicates) into our seenArr 
+}
+    return - 1; // if there AREN'T any duplicates at all in our array parameters --> we're returning -1 
+}
+console.log(firstDuplicate([ 3, 7, 10, 0, 3, 10 ])); 
+console.log(firstDuplicate([ 5, 7, 7, 0, 5, 10 ])); 
 
 console.log('\n ---------TASK16----------\n');
 /*
@@ -424,7 +433,21 @@ getDuplicates([ 1, 2, 5, 0, 7 ])			-> [ ]
 getDuplicates(['A', 'foo', '12’ , 12, 'bar', 'a', 'a', 'foo' ])	-> [ 'foo', 'a’ ]
 getDuplicates([ 'foo', '12' , 12, 'bar', 'a' ])		-> [ ]
 */
-
+let seenElementArr = []; // we're creating 2 different empty arrays, one for seen elements that we loop through  
+let dupeArr = []; // the other one is for our duplicates 
+const getDuplicates = arrayParam => { 
+    for(let i = 0; i < arrayParam.length; i++) { // so we're looping through our array elements --> we're looking through our seen --> if our seen elements are the SAME as our array parameters ===> we're pushing into our dupe array
+        if(seenElementArr.includes(arrayParam[i])) { // SO --> if our seen elements array includes our element in our original array --> it will check the second condition
+            if(!dupeArr.includes(arrayParam[i])) // --> ONLY add our element if it's NOT in our dupe array 
+             dupeArr.push(arrayParam[i]); // ONLY if eveything is true --> we push our duplicates into our final array 
+        }
+        else {
+             seenElementArr.push(arrayParam[i]); // if it's NOT a dupe ==> push to our seenElement array 
+        }
+    }
+    return dupeArr; // we're returning our duplicates in an array 
+}
+console.log(getDuplicates([ 0, -4, -7, 0, 5, 10, 45, -7, 0 ])); 
 
 console.log('\n ---------TASK17----------\n');
 /*
@@ -441,6 +464,13 @@ reverseStringWords("Hello") 		-> "olleH"
 reverseStringWords("") 			-> ""
 reverseStringWords("    ") 		-> ""
 */
+const reverseStringWords = string => {
+    let reverseStr = ''; 
+    for(let i = string.length - 1; i >= 0; i--){
+        reverseStr += string[i] 
+    }
+    return reverseStr; 
+}
 
 console.log(reverseStringWords('Hello World')); 
 console.log(reverseStringWords('I like Javascript')); 
