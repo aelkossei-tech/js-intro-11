@@ -133,7 +133,7 @@ update: ++
 let sum = 0; // doing this because we're ADDING TO the sum 
 
 for(let i = 1; i <= 10; i++){ // range 1 - 10  and we're increasing it by 1 every iteration [++]
-    sum += i; // so 0(sum) + whatever i is going to be [if i = 1 and ++ --> 2 (0 + 2 = 2)]
+    sum += i; // so 0 (sum) + whatever i is going to be [if i = 1 and ++ --> 2 (0 + 2 = 2)]
 }
 console.log(sum); 
 
@@ -158,7 +158,7 @@ For example:
 let ran = Math.floor(Math.random() * 10) + 1; 
 let factorialRandom = 1; // we're doing this [making this 1] since we're multiplying this by whatever number we'll generate
 
-for(i = ran; i > 0; i--){ // for loop structure: the random number is going to be the subject(i) +  non-negative --> SO "i" should be higher than 0 + we're counting down 
+for(let i = ran; i > 0; i--){ // for loop structure: the random number is going to be the subject(i) +  non-negative --> SO "i" should be higher than 0 + we're counting down 
     factorialRandom *= i; // whatever our iteration [i] --> we're going to multiply factorialRandom by it [which is the factorial equation]
 }
 console.log(`My random number is: ${ran} and its factorial is: ${factorialRandom}.`); 
@@ -416,6 +416,8 @@ const firstDuplicate = arrayPar => {
 }
 console.log(firstDuplicate([ 3, 7, 10, 0, 3, 10 ])); 
 console.log(firstDuplicate([ 5, 7, 7, 0, 5, 10 ])); 
+console.log(firstDuplicate([ 5, '5', 3, 7, 4 ])); 
+console.log(firstDuplicate([ 123, 'abc', '123', 3, 'abc' ])); 
 
 console.log('\n ---------TASK16----------\n');
 /*
