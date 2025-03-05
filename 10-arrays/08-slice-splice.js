@@ -36,6 +36,7 @@ const names = ['John', 'Jane', 'Alex', 'Max', 'Mariia'];
 // names.splice(2, 0, 'Adam'); // if you want to add 'Adam' between 'Jane' and 'Alex'
 
 names.splice(1, 2, 'Adam'); // [ 'Jane', 'Adam', 'Max', 'Mariia' ]
+console.log(names); 
 
 /*
 splice()

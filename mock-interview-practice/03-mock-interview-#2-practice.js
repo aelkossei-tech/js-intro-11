@@ -13,7 +13,7 @@ doubleOrTripleWord("1") -> "11"
 doubleOrTripleWord("22") -> "222222"
 */
 const doubleOrTripleWord = word => {
-    if(word.length % 2 === 0) {
+    if(word.length % 2 === 0){
         return word + word + word
     }
     else if(word.length % 2 !== 0){
@@ -37,6 +37,7 @@ firstLastWord("Hello") -> "HelloHello"
 firstLastWord("") -> ""
 firstLastWord(" ") ->
 */
+
 
 
 
@@ -72,4 +73,69 @@ startVowel("orange") -> true
 startVowel("") -> false
 startVowel(" ") -> false
 startVowel("123") -> false
+*/
+const startVowel = word => {
+    let vowels = 'AEIOUaeiou'; 
+    return vowels.includes(word[0]); 
+}
+console.log(startVowel('Hello')); 
+console.log(startVowel('Apple')); 
+
+/*
+Average of Edges
+Write a function named averageOfEdges() which takes three number arguments and will return
+average of min and max numbers.
+
+Examples:
+averageOfEdges(0, 0, 0) -> 0
+averageOfEdges(0, 0, 6) -> 3
+averageOfEdges(-2, -2, 10) -> 4
+averageOfEdges(-3, 15, -3) -> 6
+averageOfEdges(10, 13, 20) -> 15
+*/
+
+
+
+/*
+Swap First and Last Characters
+Write a function named replaceFirstLast() which takes a string argument and returns a new string with
+the first and last characters replaced.
+
+NOTE: If the length is less than 2, return an empty string.
+
+NOTE: Ignore extra spaces before and after the string.
+
+Examples:
+replaceFirstLast("") -> ""
+replaceFirstLast("Hello") -> "oellH"
+replaceFirstLast("Tech Global") -> "lech GlobaT"
+replaceFirstLast("A") -> ""
+replaceFirstLast(" A ") -> ""
+*/
+const replaceFirstLast = string => {
+    let firstChar = string[0]; 
+    let lastChar = string.slice(-1); 
+    let middle = string.slice(1, -1); 
+    
+    return lastChar + middle + firstChar; 
+}
+console.log(replaceFirstLast('Hello')); 
+console.log(replaceFirstLast('Tech Global')); 
+
+
+/*
+Swap First and Last Four Characters
+
+Write a function named as swap4() which takes a string word as an argument and returns the string
+back with its first and last 4 characters swapped when invoked.
+
+NOTE: Return empty string if the given string does not have 8 or more characters.
+
+Examples:
+swap4("abc") -> ""
+swap4("JavaScript") -> "riptScJava"
+swap4("TechGlobal") -> "obalGlTech"
+swap4("") -> ""
+swap4(" ") -> ""
+swap4("Apple") -> ""
 */

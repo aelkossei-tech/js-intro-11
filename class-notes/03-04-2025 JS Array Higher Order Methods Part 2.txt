@@ -1,0 +1,82 @@
+Array Methods: 
+
+1. map() ==> you use this when you need a NEW ARRAY w/ transformed values [same-sized array]
+    - - Problems I could use this for --> finding/returning the square of array elements in an array 
+2. filter() ==> you use this when you need a NEW ARRAY w/ only certain values 
+    - creates a shallow copy of a portion of a given array, filtered down to just the elements from the given 
+        array that passes the test implemented by the provided function --> BASICALLY it creates a whole new array 
+        with array elements that pass a test 
+    - Problems I could use this for --> find a duplicate!
+3. forEach() ==> you use this when you need to LOOP through an array and do something (no return value)
+    - it DOES NOT return anyhing (void method)
+4. find() [also findLast()] ==> returns the FIRST ELEMENT in the provided array that satisfies the provided
+    testing function 
+5. findIndex() [also findLastIndex()] ==> returns the INDEX of the first element in an array that satisfies the provided 
+    testing function
+
+6. some() ==> this tests whether at least ONE element in the array passes the test implemented by the provided function
+    - sounds just like do...while loops OR includes()
+    - "Is there at least one?" --> checks if at least one item in the array meets the condition 
+    - if ONE or MORE pass ==> TRUE 
+    - if NONE ==> FALSE
+    - returns a Boolean 
+    - doesn't modify the array 
+    - checks if SOME array elements pass a test 
+    - finds the FIRST MATCH  
+    - - Problems I could use this for --> find at least on negative number in an array
+7. every() ==> tests whether ALL elements in the array pass the test implemented by the provided function 
+    - "Do they all match?" --> checks if EVERY SINGLE ITEM in the array meets the condition 
+    - if ALL pass the test ==> TRUE
+    - if even ONE FAILS ==> FALSE
+    - also returns a Boolean 
+    - checks if ALL array elements pass a test
+    - finds the FIRST FAILURE
+    - Problems I could use this for --> check if all numbers are positive 
+8. ** reduce() ** ==> it takes all the values in an array + combines them into a single result (a number/string/object/etc.)
+    - it takes 2 main things --> 1. Accumulator ==> keeps track of the result as we go through the array 
+                                 2. Current Value ==> the item  we're currently processing in the array 
+    - think of finding the sum/total average of array elements 
+    - works from left to right in an array
+    - Problems I could use this for --> add all these numbers in an array up!
+9. reduceRight() ==> same as reduce(), but works in the opposite direction 
+
+
+RECAP: 
+
+Array Higher Order Functions/Methods: 
+1. arr.forEach(callback) 
+    - it runs the callback for each array element 
+    - it is a VOID method --> it doesn't give anything in return which is why --> you CAN'T store it in a vairable 
+
+2. map(callback) 
+    - it runs the callback for each array element + collects the new elements in a new array 
+    - it returns a new array with the SAME SIZE as original array 
+
+   const newMappedArr =  ['apple', 'ORANGE', 'Kiwi'].map((x) => {
+        return x[0].toUpperCase() + x.slice(1).toLowerCase; 
+    }); 
+
+    console.log(newMappedArr); 
+
+   const newMappedArr =  [1, 2, 3].map((x) => {
+        if(x % 2 === 0 ) return 'even'   // OR return x % 2 === 0 ? 'even' : 'odd; 
+        else return 'odd'; 
+    }); 
+
+    console.log(newMappedArr)// ['odd', 'even', 'odd']; 
+
+3. filter(callback)
+    - it runs the callback for each array element + collects filtered elements in a new array 
+    - it returns a new array usuallty with a smaller size array 
+    - you should return a Boolean --> the inner callback should return Boolean  
+
+const newFilteredArray = [5, 2, 'Hello', null, 12.5].filter((x) => return typeof x === 'number';) // typeof null --> object 
+ 
+    console.log(newFilteredArray); // [5, 2, 12.5]; 
+    - if NOTHING matches the condition --> [ ] empty array 
+    - if ALL matches the condition --> full sizes array 
+
+4. reduce(callback)
+    - it runs the callback for each array element + returns single value + collects an accumulated value 
+    - returns a SINGLE value {can be anything: number/string/Boolean}
+    - if initialValue is not provided --> then the first array element is considered as initialValue by default 

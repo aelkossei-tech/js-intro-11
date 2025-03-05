@@ -50,7 +50,7 @@ if-else statements did the same thing?)
 
         5. do/while --> also loops through a block of code while a specified condition is TRUE
             - use this to ensure a block of code executes at least once
-            - simialr to while --> BUT it executes the code block at least once before checking the condition 
+            - simialr to while --> BUT it executes the code block at least ONCE before checking the condition 
             - SYNTAX: 
 
             do {
