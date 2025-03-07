@@ -139,3 +139,66 @@ swap4("") -> ""
 swap4(" ") -> ""
 swap4("Apple") -> ""
 */
+const swap4 = word => {
+    let first4 = word.slice(0, 4); 
+    let last4 = word.slice(-4); 
+    let middle = word.slice(4, -4)
+    
+    if(word.length >= 8) {
+        return last4 + middle + first4; 
+    
+    }
+    else {
+        return ''; 
+    }
+}
+console.log(swap4('abc')); 
+console.log(swap4('JavaScript')); 
+console.log(swap4('TechGlobal')); 
+
+
+/*
+Swap First and Last Words
+Write a function named as swapFirstLastWord() which takes a string word as an argument and returns
+the string back with its first and last words swapped when invoked.
+
+NOTE: Return empty string if the given string does not have 2 or more words.
+
+Examples:
+swapFirstLastWord("Hello World") -> "World Hello"
+swapFirstLastWord("I like JavaScript") -> "JavaScript like I"
+swapFirstLastWord("foo bar foo bar") -> "bar bar foo foo"
+swapFirstLastWord("") -> ""
+swapFirstLastWord(" ") -> ""
+swapFirstLastWord("Hello") -> ""
+swapFirstLastWord("Hello ") -> ""
+*/
+const swapFirstLastWord = string => {
+    let word = string.split(' '); 
+    if (word.length >= 2) {
+        return word.slice(-1) + ' ' + word.slice(1, -1) + ' ' + word[0]; 
+    }
+    else {
+        return ''; 
+    }
+}
+console.log(swapFirstLastWord('Hello World')); 
+console.log(swapFirstLastWord('I like JavaScript')); 
+console.log(swapFirstLastWord('foo bar foo bar')); 
+console.log(swapFirstLastWord('')); 
+
+
+/*
+Count Positive Numbers
+Write a function named countPos() which takes an array of numbers as an argument and returns how
+many elements are positive when invoked.
+
+Examples:
+countPos([-45, 0, 0, 34, 5, 67]) -> 3
+countPos([-23, -4, 0, 2, 5, 90, 123]) -> 4
+countPos([0, -1, -2, -3]) -> 0
+*/
+const countPos = arr => arr.reduce((accum, curr) => curr > 0 ? accum + 1 : curr, 0);
+console.log(countPos([-45, 0, 0, 34, 5, 67])); 
+console.log(countPos([-23, -4, 0, 2, 5, 90, 123])); 
+console.log(countPos([0, -1, -2, -3])); // why is it getting -3

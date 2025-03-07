@@ -409,12 +409,12 @@ firstDuplicate([ 'foo', 'abc', '123', 'bar’ ]) 	-> -1
 const firstDuplicate = arrayPar => {
     let seenArr = []; // creating an empty array to put our seen elements in those array
     for(let i = 0; i < arrayPar.length; i++){ // we're looping through our given array 
-        if(seenArr.includes(arrayPar[i])) return seenArr[0]; // IF our seen array includes our array parameters [THIS MEANS THERE'S A DUPLICATE] --> we're returning the first element in the array which is our first instance of our duplicate
+        if(seenArr.includes(arrayPar[i])) return arrayPar[i]; // IF our seen array includes our array parameters [THIS MEANS THERE'S A DUPLICATE] --> we're returning the first element in the array which is our first instance of our duplicate
         else seenArr.push(arrayPar[i]); // if NOT --> we're pushing our seen elements (not duplicates) into our seenArr 
 }
-    return - 1; // if there AREN'T any duplicates at all in our array parameters --> we're returning -1 
+    return -1; // if there AREN'T any duplicates at all in our array parameters --> we're returning -1 
 }
-console.log(firstDuplicate([ 3, 7, 10, 0, 3, 10 ])); 
+console.log(firstDuplicate([ 3, 7, 10, 0,0, 3, 10 ])); 
 console.log(firstDuplicate([ 5, 7, 7, 0, 5, 10 ])); 
 console.log(firstDuplicate([ 5, '5', 3, 7, 4 ])); 
 console.log(firstDuplicate([ 123, 'abc', '123', 3, 'abc' ])); 
