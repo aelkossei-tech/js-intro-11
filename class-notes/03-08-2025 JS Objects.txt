@@ -1,0 +1,74 @@
+Remember our primitive data types --> String + Number + Boolean+ Null + Undefined + BigInt + Symbol 
+Remember our reference data types ==> can contain Arrays + Objects + Collections + Functions + Etc. 
+
+JS Objects: 
+    - collections of properties + also variables at the same time 
+    - keys converted to strings (except symbols)
+    - to access --> using CUSTOM KEYS [unlike strings/arrays with indexes]
+    - To create an object ==> 1. Objects literals {} 2. Objects constructor (new Object) [obviously use const - like for arrays]
+
+Accessing a Property: 
+    - object.key (syntax) --> accesses a value of the specified key
+    - ALSO object['key'] --> can also access it like IF the key is not a valid identifier 
+
+Updating Properties: 
+    - object.key = newValue; (just like a variable)
+    - OR object['key'] = newValue; 
+
+Adding Properties: 
+    - object.newKey = newValue; 
+    - OR object['newKey'] = newValue; 
+
+Removing Properties: 
+    - delete object.newKey; --> reminds me somewhat of CLI commands
+    - delete object['newKey']; 
+
+for...in loop:
+    - we can loop through object properties using a for...in loop
+    - SYNTAX: 
+        for (let x in object){
+            // code to be executed [MUST use bracket notation --> ex: person[x]]
+        }
+
+Property Functions: 
+    - JS Objects can also have functions within them (can be performed on objects/its properties)
+    - this: 
+        - keyword that refers to an object
+
+Pre-Built Methods: 
+    - objects can be converted ---> arrays 
+    - Object.keys(obj) ===> returns an array of a given object's property keys
+        - ex: [name, age, address]
+    - Object.values(obj) ===> returns an array of a given object's property values 
+        - ex: [John, 25, Chicago]
+    - Object.entries(obj) ===> return an array of a given object's property key-value pairs
+        - ex: [ [name John], [age 25], [address Chicago] ]
+
+Destructuring ==> allows us to extracr values from arrays/objects/other iterable data structures
+                  + assign them to variables in a more concise and readable way. 
+    - to destructure an object --> use {curly braces} on the LEFT side of an assignment + 
+                                   within those braces, we specify the variables where we want 
+                                   to store the values from the object 
+                                   - ex: cosnt {fName, lName} = person; 
+
+Enhanced Object Literals: 
+    - introduced in ES6 (2015) update to make working w/ objects more conscise/convenient
+
+
+
+fetch ('http://imbd.api.com/tt3465227)
+
+const movie = {
+    title: 'The Batman', 
+    year: 2022 
+    director: 'Matt Reeves', 
+    imbdRating: 7.8, 
+    img: 'url.com'
+}
+
+Object is a collection of key-value pairs (properties/ entries)
+
+keys: title, year, director
+Values: The Batman, 2022, Matt Reeves
+
+Properties: title: 'The Batman' , year: 2022 

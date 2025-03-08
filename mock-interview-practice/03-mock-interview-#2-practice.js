@@ -198,7 +198,8 @@ countPos([-45, 0, 0, 34, 5, 67]) -> 3
 countPos([-23, -4, 0, 2, 5, 90, 123]) -> 4
 countPos([0, -1, -2, -3]) -> 0
 */
-const countPos = arr => arr.reduce((accum, curr) => curr > 0 ? accum + 1 : curr, 0);
+const countPos = arr => arr.reduce((accum, curr) => curr > 0 ? accum + 1 : accum, 0);
 console.log(countPos([-45, 0, 0, 34, 5, 67])); 
 console.log(countPos([-23, -4, 0, 2, 5, 90, 123])); 
-console.log(countPos([0, -1, -2, -3])); // why is it getting -3
+console.log(countPos([0, -1, -2, -3])); 
+
