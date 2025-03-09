@@ -1,0 +1,126 @@
+Hoisting ==> a concept in JS that allows you to use functions & variables before they're
+             declared 
+     - refers to the behavior where JS moves the declarations of variables/functions/classes to the top of their scope
+       during the compilation phase 
+     - means a variable and function declarations are moved to the top of their scope before the code runs 
+        - Think of it as "lifting" your function/variable declaration to the top of file or function before executing the code 
+     - JS interpreter moves delcarations --> to the top of their containing scope before execution 
+     - OBVIOUSLY --> always declare all variables at the beginning of every scope to avoid confusion/bugs
+     
+     - When you use VAR to declare a variable --> the declaration is hoisted to the top, but value is not assigned until the code
+      execution reaches the variable's initialization ==> undefined
+        - hoisted, but initialized as UNDEFINED --> causes bugs 
+    
+     - With LET or CONST --> also hoisted but they remain in the Temporal Dead Zone (TDZ) from the start of their block until their
+      declaration is encountered 
+        - hoisted, but NOT initialized --> leading to errors if accessed too early 
+     
+     - FUNCTIONS declared with "function" are FULLY hoisted 
+        - you can call a function BEFORE it's defined --> you can call them before they appear
+    
+    *** BEST PRACTICE: ALWAYS declare variables at the top of their scope to avoid confusion/bugs ***
+
+Scope ==> determines the accessibility (visibility) of variables/objects/functions
+    - refers to the environment in which a variable/function is declared and accessible 
+    - JS has 4 types of scope:
+        1. Global scope ==> when variables are declared outside any function or block
+            - a variable/function created in this scope can be accessed anywhere in the code 
+            - can be accessed from anywhere in the program [so like normal variable declaration, not within functions]
+            - variables declared w/ var/let/const --> quite similar when declared outside a block 
+        
+        2. Function scope ==> variables declared within a JS function --> become LOCAL to the function
+            - mainly contained by the variables that are declared inside a function 
+            - can't be used outside of function 
+
+        3. Block scope (ES6) ==> if a variable is created inside a block of code OR curly braces --> will not be accessible 
+        outside that block
+            - intorduced in ES6, w/ intro of let and const variables [before then only Global and Function scope]
+            - variables declared w/ VAR keyword CANNOT have block scope 
+
+        4. Lexical scope (ES6 - Closure) ==> used in case of nested functions + defines the accessibility of variables for inner/outer functions
+            - means that a variable/function can only be accessed withint the scope in which it is defined 
+            - scope of variable/function --> determined by its position in the source code 
+
+Closure ==> a function that has access to variables from its containing (enclosing) function 
+    - makes it possible for a function to have "private" variables 
+    - "private" variables can only be changed using inner functions
+
+
+
+Hoisting ==> is the ability to call a variable or function before their declaration
+
+var is hoisted.
+let-const are NOT hoisted. 
+
+So, JS will move all the variable declaration to the top when they are created w/ var keyword
+
+LET-CONST: 
+console.log(name); // ReferenceError: Cannot acces 'name' before initialization
+let name = 'John'; // same goes for const 
+
+VAR: 
+console.log(name); // undefined
+var name = 'John';
+
+
+Functions created w/ a traditional way (function declaration) are HOISTED --> so you can use them before their declaration
+
+sum(3, 5) // 8 
+
+function sum(num1, num2){
+    console.log(num1 + num2); 
+}
+
+Functions created w/ arrow OR expressions CANNOT be hoisted --> so you CAN'T use them before their declaration
+
+goToSite(); //  ReferenceError: Cannot acces 'goToSite' before initialization
+
+const goToSite = function() {
+    console.log('Here is website'); 
+}
+
+validateTitle(); //  ReferenceError: Cannot acces 'validateTitle' before initialization
+const validateTitle => {
+    console.log('Here is website'); 
+}
+
+*** Understand hoisting --> can definitely show up in interviews *** 
+
+
+var - let - const 
+
+1. Re-assignment: 
+    - var-let can be reassigned
+    - const CAN'T be reassigned
+
+2. Hoisting: 
+    - var is hoisted (var declarations move to the top - no errors if you try to acces them before their declaration --> you get undefined)
+    - let-const are NOT hoisted (You get error - ReferenceError if you try to access them before their declaration)
+
+3. Scope: 
+    - var-let-const supports global and function scope 
+    - var does not support block scope (variables declared w/ var within a block can be used OUTSIDE the block)
+    - let-const also support block scope (variables declared w/ let-const within a block CANNOT be used outside the block)
+
+
+Closure: it's about preventing a variable to be updated outside the function it is by declaring it 
+However, same function will provide another function to manipulate the variable value 
+
+function outer() {
+    // private/protected variable
+
+    // provide a function whcih updates the variable value
+
+    // return that inner function to be used outside
+}
+
+const innerFunction = outer(); 
+innerFunction(); // update the private variable value
+
+
+*** INTERVIEW QUESTIONS:***
+1. var-let-const? (re-assignmet + hoisting + scope)
+2. What is scope in JS? [what types of scopes/differences]
+3. What is hoisting? [concept-wise ---> simple, brief explanation]
+4. What is closure? (3 - 5%)
+5. what is currying?

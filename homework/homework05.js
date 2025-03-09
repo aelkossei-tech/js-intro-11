@@ -84,7 +84,7 @@ countConsonants("Hello World") 		   -> 8
 countConsonants("JavaScript is fun")   -> 12
 countConsonants("") 			       -> 0
 */
-const countConsonants = string => {
+const countConsonants = string => { 
     let counter = 0; 
     let vowels = 'AEIOUaeiou'; 
     for(let i = 0; i < string.length; i++){
@@ -93,7 +93,7 @@ const countConsonants = string => {
     return counter; 
 }
 console.log(countConsonants('Hello')); // 3
-console.log(countConsonants('Hello World')); // 8
+console.log(countConsonants('Hello World')); // 8 --> includes the spaces 
 console.log(countConsonants('JavaScript is fun')); // 12 
 console.log(countConsonants('')); // 0 
 
@@ -199,18 +199,21 @@ and returns the count of the elements that has multiple words when invoked.
 NOTE: Be careful about the extra whitespaces before and after the array element.
 
 Examples:
-countMultipleWords([ "foo", "", "    ", "foo bar", "     foo" ]) 		-> 1
+countMultipleWords([ "foo", "", "    ", "foo bar", "     foo" ]) 		-> 1      --> every time split('') method is used ==> returns an empty space as empty string ==> SO, using trim() + split(/\s+/) will account for the spaces 
 countMultipleWords([ "foo", "bar", "foobar", "     foobar   " ]) 		-> 0
 countMultipleWords([ "f o o", "b a r", "foo bar", "     foo bar   " ]) 	-> 4
 countMultipleWords([ ]) 					                            -> 0
 */
-const countMultipleWords = array => {
-    for(const ele of array){
-        array.reduce((accum, curr) => curr[ele] ? accum +1 : accum, 0); 
-    }
-}
 
+// What we need to do: 1.) we're looping through the array elements 2.) we're trying to find a way to have code recognize if an array contains an element that has more than 1 ( eleWord > 1) 3.) we need to ignore the spaces 4.) we need to count the instances [reduce() method?]
+const countMultipleWords = array => { // SO --> we can see which examples have words + we need to bear in mind the spaces ==> SO, should we trim the spaces first? 
+   return array.reduce((accum, ele) => ele.trim().split(/\s+/).length > 1 ? accum + 1 : accum, 0);  // reduce would loop through array and see if the array element iteration's length [after ignoring spaces] > 1 --> add to the counter (accum)
+}
 console.log(countMultipleWords([ "foo", "", "    ", "foo bar", "     foo" ])); 
+console.log(countMultipleWords([ "foo", "bar", "foobar", "     foobar   " ])); 
+console.log(countMultipleWords([ "f o o", "b a r", "foo bar", "     foo bar   " ])); 
+console.log(countMultipleWords([])); 
+
 
 console.log('\n ---------TASK09----------\n');
 /*
@@ -225,11 +228,13 @@ count3OrLess("JavaScript is fun") 		-> 2
 count3OrLess("My name is John Doe") 	-> 3
 count3OrLess("") 		             	-> 0
 */
+
+// What we need to do: 1.) loops through the string  2.) count how many words are 3 or less characters --> we COULD either use a for loop OR convert the string to an array and then use reduce()
+// IF we're going with string conversion to array method [using split(' ') --> we know our words will be indexed in the array, which means if the array.length <= 3  --> count++
 const count3OrLess = string => {
-    let stringArr = string.split(' '); 
-    for(const word of stringArr){
-        if(stringArr[word] <= 3) return stringArr.reduce((accum, curr) => curr.length <= 3 ? accum + 1 : accum, 0); 
-    }
+    let stringArr = string.trim().split(/\s+/); // converting our string --> array, so that we can index our elements 
+    return stringArr.reduce((accum, ele) => ele.length <= 3 ? accum + 1 : accum, 0); 
+
 }
 console.log(count3OrLess("Hello")); 
 console.log(count3OrLess("Hi John")); 
@@ -260,6 +265,11 @@ isPrime(0)		-> false
 isPrime(1)		-> false
 */
 
+// What we need to do: 1.) Understand prime numbers and how to not hard-code them 2.) figure out how to return true/false when given a number 
+// If a prime number is a number that can only be divided by itself --> that means dividing by any other number won't produce a whole divible number
+//  ==> we need to try to find a way where if the number that's given is able to divide by itself, BUT can't be divided by another number --> return true 
+
+
 
 console.log('\n ---------TASK11----------\n');
 /*
@@ -274,6 +284,51 @@ add([3, 0, 0, 7, 5, 10], [6, 3, 2]​) 		             -> [9, 3, 2, 7, 5, 10]
 add([10, 3, 6, 3, 2], [6, 8, 3, 0, 0, 7, 5, 10, 34]) 	-> [16, 11, 9,  3, 2, 7, 5, 10, 34]​
 add([-5, 6, -3, 11], [5, -6, 3, -11]) 	             	-> [0, 0, 0, 0]
 */
+
+// What we need to do: 1.) Figure out a way how to add each arrays' elements to one another 2.) Figure out what to do when one array is larger/longer than the other 3.) We need to return an array as our result (filter?)
 const add = (arr1, arr2) => {
-    arr1
+    return 
 }
+
+
+console.log('\n ---------TASK12----------\n');
+/*
+Requirement: 
+Write a function named as removeExtraSpaces() which takes a string word as an argument 
+and returns the string back with all extra spaces removed when invoked.
+
+Examples:
+removeExtraSpaces("Hello") 		-> "Hello" 
+removeExtraSpaces("      Hello    World     ") 	-> "Hello World" 
+removeExtraSpaces("     JavaScript is          fun") 	-> "JavaScript is fun”
+removeExtraSpaces("") 			-> "" 
+*/
+const removeExtraSpaces = string => {
+    return string.trim().split(/\s+/).join(' '); 
+}
+console.log(removeExtraSpaces('Hello')); 
+console.log(removeExtraSpaces(removeExtraSpaces("      Hello    World     "))); 
+console.log(removeExtraSpaces("     JavaScript is          fun") ); 
+console.log(removeExtraSpaces("")); 
+
+
+console.log('\n ---------TASK13----------\n');
+/*
+Requirement: 
+Write a function named findClosestTo10() which takes an array of numbers as argument 
+and returns the closest element to 10 from the given array.
+
+NOTE: Assume that length of array is always more than zero.
+
+NOTE: Ignore the 10 itself.
+
+NOTE: If there are more than one numbers are close equally, return the smaller number.
+
+Examples:
+findClosestTo10([10, -13, 5, 70, 15, 57]​) 	-> 5
+findClosestTo10([10, -13, 8, 12, 15, -20]) 	-> 8
+findClosestTo10([0, -1, -2]) 		-> 0
+*/
+
+// What we need to do: 1.) Loop through out array of numbers 2.) Find a way to compare each element and see which ONE is the closest to 10 (ignoring 10 itself) 3.) Have a possible if statement --> one ele > 2nd ele => return 2nd ele (smaller #)
+// filter() method? 
