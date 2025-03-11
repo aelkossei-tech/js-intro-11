@@ -1,0 +1,38 @@
+- Universal to all other programming languages 
+
+Error Handling ==> the process of dealign with these errors in a controlled/graceful manner to prevent them from causing 
+                   the entire 
+
+
+
+Errors ==> unexpected results, most probably caused by programmers' codes 
+     1. Errors we can handle/fix with our code
+        a. Checked (syntax errors) (complite-type errors) --> You SEE the error before you run the code 
+        b. Unchecked (runtime errors) --> You see these errors when you run the code [until you run, everything looks good]
+
+     2. Errors: caused by server, network, loads 
+
+EX:
+if(websiteLoads){
+    // show users website
+}
+else {
+    // show a nice picture with 404 Not Found message 
+}
+
+Custom Errors ==> allows us to throw an error (create your own errors) using throw keyword
+
+*** INTERVIEW QUESTIONS:****
+
+What is error handling? 
+How do you handle errors? 
+What are some JavaScript errors you've experienced when coding? [say how you fix them as well]
+What are checked and unchecked exceptions/errors? 
+What are complie-time and runtime exceptions/errors? 
+
+
+falsy values: NaN, undefined, null, 0, false, ''
+
+ESLINT: define rules 
+
+throw Error // not proper way and converted to "throw new Error" = throw new Error 
