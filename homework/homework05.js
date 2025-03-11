@@ -477,15 +477,23 @@ isPasswordValid("Chicago123$") 	    	-> true
 isPasswordValid("Test1234#") 		    -> true
 */
 const isPasswordValid = password => {
-    if(password.includes(' ')) return false; 
-    if(password.length <= 16 || password.length >= 8) return false; 
+    if(password.includes(' ')) return false; // if our given password includes a space --> return false
+    if(password.length > 16 || password.length < 8) return false; // if our given password is MORE than 16 characters OR LESS than 8 characters --> return false
 
+    // I know there's a more efficient/concise way to solve this task w/ regex, but this is how I used them
     let regexDigit = /[0-9]/; 
+    if(!regexDigit.test(password)) return false; // if the password DOES NOT have at least 1 digit --> returns false
+
     let regexUpperCase = /[A-Z]/; 
-    let regexLowerCase = /[a-z]/; 
-    let regexSpecialChar = /[$!#%-+*/]/; 
+    if(!regexUpperCase.test(password)); // if the passowrd DOES NOT have at least 1 uppercase letter --> return false
 
+    let regexLowerCase = /[a-z]/; // if the passowrd DOES NOT have at least 1 lowercase letter --> return false
+    if(!regexLowerCase.test(password)); 
 
+    let regexSpecialChar = /[$!#%-+*/]/; // if the passowrd DOES NOT have at least 1 symbol given in the regex --> return false
+    if(!regexSpecialChar.test(password)); 
+
+    return true; //  if all conditions are passed --> TRUE 
 }
 
 console.log(isPasswordValid('')); 
