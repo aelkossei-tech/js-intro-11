@@ -44,7 +44,8 @@ console.log(countA("Cypress"));
 console.log('\n ---------TASK03----------\n');
 /*
 Requirement: 
-Write a function named as countVowels() which takes a string word as an argument and returns the count of the vowel letters when invoked.
+Write a function named as countVowels() which takes a string word as an argument 
+and returns the count of the vowel letters when invoked.
 
 NOTE: Vowel letters are A,E, O, U, I, a, e, o, u, i
 
@@ -111,8 +112,8 @@ countWords("Cypress is an UI automation tool.    ") 	-> 6
 countWords("1 2 3 4") 				                    -> 4
 */
 const countWords = string => {
-    let words = string.trim().split(/\s+/); // to addres the extra whitespaces before/after the string --> we're using a regex to addres this 
-    // AND we're using it within the our split('') to address it in the array
+    let words = string.trim().split(/\s+/); // to addres the extra whitespaces before/after the string --> we're using a regex to address this 
+    // AND we're using it within split('') to address it in the array
     return words.reduce((accum, curr) => curr[0] ? accum + 1 : accum, 0); // since we have an array --> we can use the reduce method 
 }
 console.log(countWords("     Javascript is fun       ")); 
@@ -199,7 +200,7 @@ and returns the count of the elements that has multiple words when invoked.
 NOTE: Be careful about the extra whitespaces before and after the array element.
 
 Examples:
-countMultipleWords([ "foo", "", "    ", "foo bar", "     foo" ]) 		-> 1      --> every time split('') method is used ==> returns an empty space as empty string ==> SO, using trim() + split(/\s+/) will account for the spaces 
+countMultipleWords([ "foo", "", "    ", "foo bar", "     foo" ]) 		-> 1   --> every time split('') method is used ==> returns an empty space as empty string ==> SO, using trim() + split(/\s+/) will account for the spaces 
 countMultipleWords([ "foo", "bar", "foobar", "     foobar   " ]) 		-> 0
 countMultipleWords([ "f o o", "b a r", "foo bar", "     foo bar   " ]) 	-> 4
 countMultipleWords([ ]) 					                            -> 0
@@ -273,7 +274,7 @@ isPrime(1)		-> false
 // If a prime number is a number that can only be divided by itself --> that means dividing by any other number won't produce a whole divible number
 //  ==> we need to try to find a way where if the number that's given is able to divide by itself, BUT can't be divided by another number --> return true 
 const isPrime = number => {
-    if(number <= 1) return false; // with this condition --> trying to exclude negative numbers and 0 and 1 
+    if(number <= 1) return false; // with this condition --> trying to exclude: negative numbers + 0 + 1 
     
     for(let i = 2; i < number ; i++){ // according to the info above --> the smallest prime number is 2, so we're starting out for loop from 2
         if(number % i === 0) return false; // with this condition --> if our number we're inputting into our function is divisible by another number --> it's NOT a prime number, so FALSE
@@ -307,7 +308,7 @@ add([-5, 6, -3, 11], [5, -6, 3, -11]) 	             	-> [0, 0, 0, 0]
 // 3.) We need to return an array as our result (filter()? & reduce()? OR map()? & reduce()?)
 // If the length of arr1 is bigger than arr2 --> we need to find a way to add the known elements and just keep the unadded elements as is 
 const add = (arr1, arr2) => {
-   let finalArr = []; // we're pushing our sum and whatever is left w/ array in empty array 
+   let finalArr = []; // we're pushing our sum and whatever is left w/ array into the empty array 
    let maxArr = Math.max(arr1.length, arr2.length); // this is a way for us to figure out in a dynamic sense --> which array length is larger 
    
    for(let i = 0; i < maxArr; i++){ // Since i'm still trying to figure out to use map() + reduce() w/ this problem --> used for loop instead 
