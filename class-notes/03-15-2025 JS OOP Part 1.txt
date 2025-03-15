@@ -1,0 +1,143 @@
+OOP (object-oriented programming) ==> tries to implement real-world characteristics in terms of objects that contain data/code
+    - Main advantages include: 
+        1. easy code maintenance (obviously)
+        2. code reusability w/ inheritnce (duh)
+        3. simplicity (are we surprised?)
+    - Some OOP programming languages are --> Java + C++ + C# + Kotlin
+    - OOP in OTHER languages --> have objects (also known as instances) that are INSTANTIATED fom a class [class-based programming]
+        - instantiated ==> creating an actual object from a class 
+    - OOP in JavaScript ==> objects are LINKED to a prototype object [prototype-based programming]
+        - it means that objects inherit properties/methods from other objects, not classes (like in traditional OOP languages)
+        - SO --> instead of using a class blueprint, JS objects are linked to a prototype object that contains shared properties/methods
+        - every object --> has a prototype (like a parent object that holds shared properties/methods)
+        - prototype chain ==> is how JS looks up properties/methods --> if an object doesn't have something, it checks its prototype
+        - class/prototype ==> is a blueprint/template from which many objects are created
+    - Object ==> a unique entity that contains properties/methods   
+        - EX: "a car" = Object --> it has characteristics [properties in OOP] = color, type, model  + performs certain actions like driving [methods]
+        - Method ==> is a property of an object whose value is a function 
+
+JS classes ==> a way to create objects using a blueprint similar to other OOP languages
+    - introduced in ES6 (2015)
+    - even though JS is prototype-based --> ES6 introduced classes to make object creation look/feel more like traditional OOP
+    - classes are a cleaner way to use prototypes + classes make it easer to understand/write [while also having prototypes in the background]
+    - class declaration is NOT hoisted --> so you can declare a class before you can use it create objects(?)
+
+BEFORE ES6: JavaScript Constructor 
+    - create an object --> object literals {}
+        - could be preferred IF you would only create ONE object --> BUT not useful when you need more objects w/ same properties 
+        - Constructor ==> can be used to create multiple objects from the same template/blueprint/prototype
+        - adding a prototype function to be used by all objects created w/ Constructor
+        - this was considered as defining class in a traditional way
+
+AFTER ES6: JavaScript classes
+    - creating objects from the class(template, blueprint, or prototype)
+    - class ==> a blueprint or template from which objects are created 
+        - class = sketch (prototype) of a car 
+        - it contains all detauls about the engine/doors/windows etc. --> BASED on these descriptions, we can build a car [car = object]
+        - since many cars [objects] can be made from the same descriptions [classes] --> we can create MANY objects from the car class 
+
+SYNTAX: 
+    1. Class Syntax: 
+
+    class className {
+        // data (properties) + methods (functions)
+    }
+
+    2. Object Syntax: 
+
+    class Car {
+        // data (properties) + methods (functions)
+    }
+
+ - Every CLASS --> has its own PROPERTIES and methods
+    - properties ==> states/fields
+    - methods ==> functions of that class
+    - EX: 
+        - car = object 
+        - brand/color = properties (descriptions)
+        - drive/brake = methods (actions)
+    - Object ==> an instance of a class 
+    - Class ==> a template/blueprint from which objects are created 
+    - SO --> an object is the instance (result) of a class 
+    - EX: 
+        - car = class ---> BMW = object of that class [it's known as an instance of car class]
+
+How to Create an Object: 
+    - Objects --> an instance of a class in programming languages
+    - can be created by using the "new" keyword --> can create A LOT of objects from the same class 
+
+
+
+
+OOP: Object Oriented Programming 
+    - this helps us to put real life object into programming
+
+const phone1 = {
+    brand: '', 
+    color: '' 
+    price: 10, 
+    img: ''
+}
+
+const phone2 = {
+    brand: '', 
+    color: '' 
+    price: 10, 
+    img: ''
+}
+
+const phone3 = {
+    brand: '', 
+    color: '' 
+    price: 10, 
+    img: ''
+}
+
+const phone4 = {
+    brand: '', 
+    color: '' 
+    price: 10, 
+    img: ''
+}
+
+SO, the way of creating individual objects like above is too much/time-consuming 
+
+OOP: Java + C# + C++ 
+PROTOTYPE Based languages: JS, TS
+
+JavaScript started to implement classes (OOP) after ES6. 
+
+BEFORE ES6: 
+// constructor function 
+
+function Phone(brand, color, price) {
+    this.brand = brand; // assignment 
+    this.color = color; 
+    this.price = price;  // "this" refers to the new Object --> to keep it more dynamic, instead of changing its properties everytime you need to 
+}
+new Phone('iPhone', 'Purple', 1000);  // "new" keyword is used to make an instance of a prototype/new Object 
+
+const phone1 = new Phone('iPhone', 'Purple', 1000);  // can assign this to a new variable 
+const phone2 = new Phone('Samsung', 'Blue', 1200); 
+
+phone1.brand; // iPhone
+phone2.color; // Blue 
+
+phone1.color = 'Yellow'; 
+
+AFTER ES6: 
+class Phone {
+    constructor() {  // doesn't need the function keyword to create a function --> () is enough 
+    this.brand = brand; 
+    this.color = color; 
+    this.price = price; 
+    }
+} // all the same syntax --> only difference is that it's a constructor inside of a class 
+
+
+Each prototype/class will have PROPERTIES [what it has] + METHODS [what it does]
+    - Phone properties --> brand, color, price
+    - Phone methods --> calls
+
+Prototype/ class = templates, blueprints  --> Phone class or prototype
+Object: instance of a class/prototype  --> phone1, phone2 
