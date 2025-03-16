@@ -1,0 +1,102 @@
+Inheritance ==> is inheriting properties/methods from one object to another --> creates 'inheritance concept'
+    - fundamental concept that allows one class/object to derive properties/behaviors from another 
+    - like a parent-child relationship --> objects/functions/classes can INHERIT properties/methods from others 
+    - improves code resuability --> since it allows properties/functions of one object/class be used OTHER objects/classes [we don't have to write code over and over again]
+    - JS can do this using prototypes which connect objects in a CHAIN 
+    - prototype ==> container for methods/properties
+        - template for objects 
+    - Multiple methods to achieve inheritance in JS: 
+        1. Prototypal Inheritance ==> every object in JS has a prototype --> objects can INHERIT properties/methods from their prototype
+            - a feature in JS used to add methods/properties in objects
+            - we use a JS prototype --> to add new properties/methods to an existing object constructor
+            - BEFORE ES6: 
+                - every objects w/ its methods/properties had a hidden property = [[Prototype]] --> allows object to inherit properties/methods 
+                - using either Object.getPrototypeOf  && Object.setPrototype 
+                - MAIN way from modern times --> _prototype_ ==> every object this hidden property and points to its prototype (another object)
+
+        2. Constructor Function Inheritance/Class Inheritance(ES6) ==> using the "extends" keyword + super() constructor in ES6 classes 
+            - Constructor --> an older way to create objects BEFORE ES6 classes
+                - uses a function w/ "new" keyword to create multiple instances
+
+            - Class Inheritance --> AFTER ES6
+                - uses the "extends" keyword to inherit properties/methods (like in other OOP languages)
+                - subclass (child) ==> class that inherits fro super (parent) class
+                - superclass (parent) ==> the class being inherited from sub (class)
+                    - super() --> used to call the constructor on the PARENT object that is being inherited by the child 
+                        - this is used to avoid duplication of the parts of the constructor that are present in both parent/child classes 
+            - ES6 Classes ---> getters and setters 
+                - you'd use the "get"/"set" keywords 
+
+        3. Object.create() ==> creating objects w/ Object.create() to establish inheritance
+            - is used to create an object that directly inherits 
+            - easy to use/inherit ONE object property/function to another object 
+
+    - Prototype Chain ==> a mechanism that allows objects to inherit properties/methods from OTHER objects
+        - every object ---> can have exactly ONE prototype object [that object can have a prototype object as well, and so on] --> creates a chain of 
+                            inherited properties/methods 
+
+
+OOP: 
+    - resuability (inheritance makes it better)
+    - maintainability 
+    - easy to read 
+
+// Before ES6 
+    
+    function Person (fname, age) {
+        this.fname = fname; 
+        this.age = age; 
+    }
+
+    Person.prototype.study = function() {
+        return true; 
+    } 
+
+    Person.prototype.eat = function() {
+        return true; 
+    } 
+
+
+// After ES6 - classes
+ 
+ class Person {
+    constructor(fname, age) {
+        this.fname = fname; 
+        this.age = age; 
+    }
+    study() {
+        return true; 
+    }
+    eat() {
+        return true; 
+    }
+ }
+
+const person1 = new Person('John', 25); 
+const person2 = new Person('Jane', 22); 
+const person3 = new Person('Alex', 30); 
+const person4 = new Person('Mariia', 26); 
+
+
+Inheritance concept ==> child-parent relationship
+
+Parent classes: Base classes/Super classes --> are inherited BY child class
+Child classes: Sub classes --> inheriting FROM parent classes 
+
+Classes have constructors, methods, properties
+
+*** MUST KNOW: ***
+    - ES6 Classes 
+    - Inheritance w/ ES6 classes using "extends" keyword 
+    - function constructor
+    - "super" keyword - constructor
+    - static methods 
+
+GOOD TO KNOW: 
+    - Prototypal inheritance 
+
+
+OKAY IF YOU FORGET
+    - prototype chain
+    - Object.create()
+

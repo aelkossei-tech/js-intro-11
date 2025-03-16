@@ -190,7 +190,7 @@ no3and5([7, 4, 11, 23, 17])      	-> [7, 4, 11, 23, 17]
 no3and5([3, 4, 5, 6]) 		        -> [100, 4, 99, 100]
 no3and5([10, 11, 12, 13, 14, 15]) 	-> [99, 11, 100, 13, 14, 101]
 */
-const no3and5 = array => {
+const no3and5 = array => { // COME BACK HERE 
     let newArr = []; 
     for(let i = 0; i < array.length; i++){
         if(array[i] % 3 == 0 && array[i] % 5 === 0) newArr.push(101); 
@@ -237,7 +237,7 @@ countPrimes([41, 53, 19, 47, 67]) 	-> 5
 // What we need to do: 1.) find a way to loop through our array 
 // 2.) Check if our current element is --> divisible by itself AND not any other number 
 // 3.) Count those instances --> could either use for loop OR reduce() in this case 
-const countPrimes = array => {
+const countPrimes = array => { // COME BACK HERE 
     let count = 0; 
     for(let i = 0; i < array.length; i++) {
         if(i < 1 && i % 2 === 0) count; 
@@ -265,6 +265,39 @@ removeDuplicates(["abc", "xyz", "123", "ab", "abc", "ABC"]) 	-> ["abc", "xyz", "
 removeDuplicates(["1", "2", "3", "2", "3"]) 	              	-> ["1", "2", "3"]
 */
 
+// Either could use for loop OR filter method 
+const removeDuplicates = array => {
+    let seenArr = []; // this is where our non-duplicates will be pushed into 
+    
+    for(let i = 0; i < array.length; i++) {  // we're looping through each element in the array 
+        if(!seenArr.includes(array[i])) seenArr.push(array[i]); // if our seenArray DOES NOT have a duplicate element --> we get to push our element into our seenArray    
+    }
+    return seenArr; // returns the array that has NO duplicated elements 
+}
+console.log(removeDuplicates([10, 20, 35, 20, 35, 60, 70, 60])); 
+console.log(removeDuplicates([1, 2, 5, 2, 3])); 
+console.log(removeDuplicates([0, -1, -2, -2, -1])); 
+console.log(removeDuplicates(["abc", "xyz", "123", "ab", "abc", "ABC"])); 
+console.log(removeDuplicates(["1", "2", "3", "2", "3"])); 
+
+/*
+using filter() method: [more concise]
+
+array.filter((callbackFunction(element, index?, array?))) --> SO filter method obviously takes a callback function that we usuaully use an element in 
+BUT --> there are other optional parameters we can use ==> INDEX [index of the current element] + ARR [can return the filtered array]
+
+const removeDuplicates = array => array.filter((item, index) => array.indexOf(item) === index); 
+*/
+
+/*
+using Set() method: [more concise and just easier]
+    - stores unique collection of items  --> NO DUPLICATES ALLOWED 
+    - converting an array --> Set 
+    - could be used to remove duplicates from an array 
+
+const removeDuplicates = array => [... new Set(array)]
+
+*/
 
 console.log('\n ---------TASK10----------\n');
 /*
@@ -306,3 +339,29 @@ console.log(isDateFormatValid("05/30/2020")); // true
 console.log(isDateFormatValid("10/2/2020")); // false 
 console.log(isDateFormatValid("10/02/2020")); //true 
 
+
+console.log('\n ---------TASK11----------\n');
+/*
+Requirement: 
+Write a method named secondMax() takes an array argument 
+and returns the second max number from the array.
+
+NOTE: Assume that you will not be given empty array and if the array has only 1 element, it will be returned as second max number.
+
+NOTE: Be careful when there is multiple max numbers.
+
+Examples:
+secondMax([7, 4, 4, 4, 23, 23, 23])    -> 7
+secondMax([3, 4, 5, 6]) 		       -> 5
+secondMax([10]) 		               -> 10
+*/
+
+// What we're trying to do: 1.) Loop through our array [either using filter(), reduce(), or for loop] 2.) Find the max 3.) Find the second max 
+// SO, we know how to find the Max [Math.max()] --> but HOW do we 
+const secondMax = array => {
+    let max = Math.max(...array); 
+}
+
+console.log(secondMax([7, 4, 4, 4, 23, 23, 23])); 
+console.log(secondMax([3, 4, 5, 6])); 
+console.log(secondMax([10])); 
