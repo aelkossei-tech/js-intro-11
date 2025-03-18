@@ -174,6 +174,12 @@ const isPrime = num => {
     }
     return true; 
 }
+console.log(isPrime(5)); 
+console.log(isPrime(2)); 
+console.log(isPrime(29)); 
+console.log(isPrime(-5)); 
+console.log(isPrime(0)); 
+console.log(isPrime(1)); 
 
 console.log('\n ---------TASK06----------\n');
 /*
