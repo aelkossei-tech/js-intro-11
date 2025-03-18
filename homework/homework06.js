@@ -446,18 +446,34 @@ mostRepeated(["pen", "pencil", "pen", "123", "abc", "pen", "pencil"]) 	-> "pen"
 mostRepeated([10]) 				                                       	-> 10
 mostRepeated(["TechGlobal"]) 			                             	-> "TechGlobal"
 */
+/*
+What we're going to do: 
+1.) loop through our array --> either through reduce(), filter(), or for...of loop/for loop
+2.) If we encounter a duplicated element --> add it to a counter  [maybe there should be a seperate counter to compare the counts betwween 2 elements?]
+        // MAYBE --> add all the counters ==> empty objectt [key:value pairs --> elementFromArray: elementCount] 
+        // SO like this: {
+            4(element in first example's array): 4 (count/how many 4's are in the array), 
+            7(element in the first example's array): 1 (count/how many 7's are in the array), 
+            23(element in the first example's array): 3  (count/how many 23's are in the array)
+        }
+         - Obviously in this example --> we should get 4 (our element) b/c it shows up 4 times 
 
-// What we're going to do: 1.) loop through our array --> either through reduce(), filter(), or for...of loop/for loop
-// 2.) If we encounter a duplicated element --> add it to a counter  [maybe there should be a seperate counter to compare the counts betwween 2 elements?]
-        // MAYBE --> using 
-// 3.) Compare the counts between elements --> whichever element has the higher count ==> return it 
+3.) Then loop through our object(?) --> return our most common/repeated instance based on the biggest count  
+*/
 
 const mostRepeated = array => {
-    let obj = {}; 
+    let obj = {}; // here is our empty object, where we will put our counts for each element here [key:value -->  arrayElement:amountItRepeats]
 
-    const counter = array.reduce((accum, item) => item[0] === item[1] ? accum + 1 : accum, 0); 
-    
+    for(const item of array){ // looping through our array, looking at each item
+        obj[item] = (obj[item] || 0) + 1; // we're counting with this statement --> obj is the object where we are storing our values in + our array item ([item]) is what we're checking and counting if there's more instances of it 
+        // if our item within our object (obj[item]) has been seen more than once then we're adding to the count [EX: 1 + 1 = 2 instances]
+        // if our item is seen for the first time --> we start the count at 0 and keep counting from there (+1)
+    }
 
+    return Object.keys(obj).reduce((a, b) => obj[a] > obj[b] ? a : b); 
+    // Object.keys takes it's keys --> turns them into an array, which is why the reduce() method can be used here to loop through our key-value pairs 
+    // the condition: if the obj[firstKey] is greater than obj[secondKey] --> return firstKey ELSE secondKey 
+    // Object.keys in reduce statement is comparing BOTH the keys and its values, but returns the KEY (not value) with the highest count
 }
 
 console.log(mostRepeated([4, 7, 4, 4, 4, 23, 23, 23])); 
