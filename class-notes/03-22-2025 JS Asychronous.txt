@@ -1,0 +1,78 @@
+- Call Stack ==> mechanism for the JS interpreter to keep track of its place in a scrip that calls 
+    multiple functions 
+        - keeps track of what functions are currently being run + what functionsare called within that function
+        - works based on the LIFO (last-in-first-out) principle 
+        - JS is single-threaded --> means that it can only run one program at a time 
+
+- Asynchronous JS ==> refers to the ability of JS to execute code that doesn't block the main thread of execution 
+    - allows you to run code in the background w/o stopping the rest of the program 
+    - Common ways of using Asynchronous JS: 
+        1. Call backs [old way] ==> a functions runs AFTER another function finishes
+            - are functions that you pass as arguments to another function 
+            - Nested Callbacks/Callback Hell: 
+                - term used to describe a situation where multiple nested callback functions make the code structure diffiult to read/understand/maintain
+                - typically occurs when you have nested callback functions 
+                - "Pyramid of Doom" 
+                - proper error handling for call backs --> ensures that program runs gracefully and recover from errors when it crashes
+        2. Promises [preferred] ==> better way to handle async tasks (avoids messy nested code)
+            - makes handling asynchronous operations like API calls + file loading +  time delays easier
+            - it's like a placeholder for a value that will be available in the future 
+            - provides methods like .then() to attach success/error handlers 
+            - can be chained together to represent async operations 
+            - Has 3 States: 
+                1. Pending [initial state]--> waiting for the task to finish; neither fulfilled/rejected
+                2. Resolved (fulfilled) --> task was successful + a result is available
+                3. Rejected --> task failed + error reason is available
+
+            - .then() method ==> used to handle SUCCESSFUL resoultion of a Promise 
+                - takes a success callback function as its arguments
+            - .catch() method ==> used to handle ERRORS or REJECTIONS in a Promise. 
+                - takes an error callback function as its argument 
+            - SYNTAX: 
+
+            let promise = new Promise((resolve, reject) => {
+                     // Perform async operation
+                      if (operationSuccessful) {
+                       resolve(“Task successful”);
+                      } else {
+                          reject(“Task failed”);
+                     }
+                });
+
+                - resolve(value) ==> marks the promise as fulfilled/provides a result
+                - reject(error) ==> marks the promise as rejected w/ an error
+
+        3. Async/Await [preferred] ==> more modern way to write async code that looks more like normal code 
+            - cleaner way to write Promises + built on top of Promises 
+            - use the "async" keyword before a function declaration + "await" inside that function to stop execution until a 
+                promise is resolved 
+            - can use try...catch blocks to handle errors 
+
+
+
+JS is single-threaded (multi-tasking/multi-threading is not possible)
+JS is asynchronous
+
+Parallel execution --> shorter ==> JS CAN'T DO THIS 
+
+Handling asynchronous code --> we need to do this frequently when writing automated scripts b/c there will be test failures 
+as some steps will not wait for the previous step to complete 
+
+
+How can we handle asynchronous code? 
+    1. callbacks (old but not preferred)
+    2. promises (ES6)
+    3. asyn-await (ES6)
+
+
+TEST CASE: 
+Go to https://www.carvana.com/
+Click on Financing 
+Validate "FINANCING MADE EASY" heading is visible 
+
+
+               Promises Sates: 
+                  pending 
+        
+        Is there an error or not? 
+    YES --> Rejected      NO --> Resolved 
