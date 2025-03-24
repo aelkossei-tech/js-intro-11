@@ -1,0 +1,60 @@
+Wihtout asynchronous JS--> modern websites would be slow, unresponsive, and frustrating to use. Huge deal in web development. 
+- fundamental for building modern web applications. You need it for: 
+    - making fast/interactive websites 
+        - Async JS lets a webpage load parts of content while waiting for other parts 
+    - fetching and displaying data from APIs
+        - Async JS helps fetch data w/o stopping other code from running 
+    - running background tasks w/o blocking the user experience 
+        - Async JS ensures that the user can still interact w/ the page while waiting 
+    - writing better, more readable code using "async/await" 
+
+- BEFORE Promises --> Callback Hell (too many nested callbacks = unreadable code)
+
+- Promise --> makes async tasks easier to manage and cleaner to read 
+    - parameters are always: "resolve", "reject" 
+    - makes async code readable by replacing nested callbacks w/ .then() and .catch()
+    - .then() --> deals w/ the "resolve" part, allows code to run if there's no errors 
+    - .catch() --> catches errors 
+
+- async/await --> cleaner way to use Promises
+    - instead of .then() --> uses "await" to make async code look more like normal step-by-step code
+    - "await" pauses the function until the Promise is resolved 
+    - makes async code LOOK/BEHAVE like synchronous code (but w/o blocking the page)
+    - can use try...catch for error handling withing async/await 
+
+
+Asynchronous JS: 
+
+AJAX (Asynchronous JavaScript and XML) ==> a web development technique that enables web pages to update content
+    dynamically without requiring a full page reload. 
+
+TEST CASE: 
+Go to Amazon https://www.amazon.com/ (0.5 seconds)
+Click on location header item (0.2 seconds)
+Validate the "Choose your location" dialog is visible (0.3 seconds)
+
+3 ways to handle asynchronous codes/operations: 
+    1. callbacks 
+    2. Promises
+    3. async/await
+
+
+JS Modules 
+CommonJS Modules (what we've been using this whole time) [module.exports, require]
+ES6 Modules (export, import)
+
+NodeJS 
+NPM: Note Package Manager 
+
+We can install, update, or uninstall some external packages/libraries using npm 
+
+Manual Test Case: 
+Go to 'https://www.facebook.com/'
+Fill username as 'johndoe@gmail.com'
+Fill password 'john1234'
+Click on "Log In" 
+Validate "The password you've entered is incorrect." error message is visible
+
+*** INTERVIEW QUESTION: Automated Test Script  VS. Automated Test Case ***
+
+Automated Test Script 

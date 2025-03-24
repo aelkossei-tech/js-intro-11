@@ -192,13 +192,19 @@ arrFactorial([]) 		          -> []
 */
 /*
 What we need to do: 
-1.) Obviously loop through our array 
+1.) Obviously loop through our array --> either using a for loop/for...of loop/reduce()/map()
 2.) Look at each element --> figure out how to implement the factorial equation  
-    - maybe even using .map() within the return statement (since we're returning the same-sized array)
 */
-const arrFactorial = array => {
-
+const factorial = num => { 
+    let product = 1; 
+    for(let i = num; i >= 1; i--){ 
+        product *= i; 
+    }
+    return product; 
 }
+
+const arrFactorial = array => array.map(ele => factorial(ele)); 
+
 console.log(arrFactorial([1, 2, 3 ,4])); 
 console.log(arrFactorial([0, 5])); 
 console.log(arrFactorial([5, 0, 6])); 
