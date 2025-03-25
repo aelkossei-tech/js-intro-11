@@ -1,0 +1,59 @@
+- We've used Code Runner thus far in the program --> simple/convenient way to run code within VSCode
+- "node" command to run any file that has .js 
+- Modules(import/export)
+- You can open up an external JS file in HTML --> 
+    1. Using <script> tag  
+    2. Save the file 
+    3. Open the file in your browser (Chrome recommended)
+    4. Open the Developer tools + Console to see the results 
+
+- Live Server ==> a popular VSCode extension that provides a local development server for web development projects 
+    - allows you to easily launch a live server to serve your HTML/CSS/JS files --> provides features like live 
+      reloading + auto-refreshing your web pages (as you make changes to your code)
+    - to set it up: 
+        1. Go to Extensions 
+        2. Install "Live Server" 
+        3. Go to your HTML file
+        4. Right-click and click on "Open with Live Server" 
+        5. Open Developer Tools & Console 
+
+- What are JS Modules? 
+    - module ==> just a bit of code encapsulated in a file & exported to another file 
+    - helps organize code by --> breaking it into smaller, reusable files (instead of writing everything in one script 
+      --> can split your code into seperate files/modules + use only when needed) 
+    - b/c of this --> code is easier to maintain/organize  + reusable code + prevents variables/functions from interfering w/ each other 
+    - use "export" and "import" to share/use code across files 
+    - 2 different mechanisms for working w/ modules in JS: 
+        1. CommonJS [module.exports/require] ==> module system used in Node.js by default 
+            - suitable for server-side applications & environments
+            - SYNCHRONOUS by nature 
+            - more compatible w/ older Node.js codebases and environments
+            - EXPORT --> module.exports 
+            - IMPORT --> require()
+
+        2. ES6 Modules (ESM) [export/import]
+            - supported in modern web browsers AND Node.js 
+            - w/ the experimental-modules flag OR when using .mjs file extensions 
+            - ASYNCHRONOUS by nature 
+            - modern standard for JS Modules in both browsers & Node.js
+            - EXPORT --> "export" keyword 
+                - 2 types of exports: NAMED + DEFAULT
+                - we can export ES6 classes from a file 
+                - we can export only ONE function/variable/class by DEFAULT [can be exported w/o curly braces]
+            - IMPORT --> "import" + "from" keyword
+                - we can import ES6 classes from a different file 
+
+
+JS Modules 
+
+Creating small, reusable, easy to maintain components (functions/objects/classes) to
+be exported and resused anywhere in your project by importing 
+
+Or, sometime we install some ready packages (NPM) and these are stored in node modules 
+and we can import them to use anywhere within our project. 
+
+There are 2 ways to create/use JS Modules: 
+    1. CommonJS --> mostly used w/ NodeJs
+    2. ES6 Modules --> mostly used w/ browsers
+
+
