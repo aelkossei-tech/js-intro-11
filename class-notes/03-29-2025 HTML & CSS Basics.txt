@@ -1,0 +1,125 @@
+HTML (HyperText Markup Language) ==> standard markup language for creating web pages/any application 
+    - describes the STRUCTURE of a web page + tells browser how to display content 
+    - consists of series of elements (represented by tags)
+    - all HTML documents start with --> <!DOCTYPE html>
+        - <!DOCTYPE> --> represents the document type
+        - should only appear one, at the top of the page BEFORE any HTML tags
+        - not case-sensitive (unlike JS)
+    - <html> </html> --> HTML documents start/end with these tags 
+        - they're the parent of all web elements in HTML doc 
+        - ALL other tags are within this tag 
+    - SYNTAX: 
+
+    <!DOCTYPE html>
+    <html> 
+
+    <! --- everything goes here --- >
+
+    </html> 
+
+Tag VS. Web Element: 
+    - everything we see on a web page --> WEB ELEMENT
+    - elements are created w/ specific tags --> <tagName> & </tagName> 
+    - Tag ==> basically considered as container in HTML 
+    - Every TAG is creating a WEB ELEMENT of its own 
+
+Head and Body in HTML Doc: 
+    - Head/body are 2 most important tags after <html> </html> tag
+    - the INVISIBLE part of the HTML doc + not displayed in web browser when page is loaded--> inside <head></head> 
+    - contains info such as page title/links to CSS/etc. 
+
+    - the VISIBLE part of the HTML doc --> <body> </body>
+    - container for all visible content such as headings/paragraphs/images/hyperlinks/tables/lists/etc. 
+
+HTML Titles: 
+    - <title> </title> ==> defines the title of the HTML doc (must be text-only)
+    - Title of the page goes into <head> </head> tag
+    - displayed in browser's title bar/page's tab
+    - obviously make your title meaningful --> can ONLY be ONE title element in doc 
+
+HTML Headings: 
+    - can be <h1> </h1> through <h6> </h6>
+    - h1 --> main headings; h6 --> least important heading 
+    - recommended to only use ONE h1 tag/page 
+
+HTML Paragraphs - Bold & Italics: 
+    - <p> </p> ==> used to define HTML paragraphs
+    - <br> ==> used to break the line + continue paragraph in the next line after the tag
+    - <strong> </strong> OR <b> </b> ==> used to define important text by making them BOLD 
+    - <em> </em> ==> used to define emphasized text by making italic
+    - <hr> ==> useed to define a horizontal ruler + used to seperate contents in an HTML page
+
+HTML Images: 
+    - <img> ==> used to link an image in HTML page  
+        - SELF-CLOSING tag --> doesn't require a closing tag 
+    - requires 2 attributes: 
+        - src ==> specifies the path to the image   
+        - alt ==> specifies an alternate text for the image (if image cannot be displayed)
+    - height + width --> also are attributes to define the size of image 
+    - Attributes ==> used to provide additional info about HTML elements 
+
+HTML Links: 
+    - <a> </a> ==> tag(anchor) used to define a link in an HTML page 
+    - creates a hyperlink 
+    - most important attribute --> href (indicates the link's destination)
+    - SYNTAX: 
+        <a href="link">visibleLinkName</a> 
+
+HTML Attributes: 
+    - Attributes ==> used to define info about the HTML elements 
+    - every HTML element can have MANY attributes
+    - they must ALWAYS be defined in the OPENING-START TAG 
+    - usually defined in name-value pairs --> name="value"
+
+HTML Styles: 
+    - style ==> attribute that is used w/ HTML elements to define their color/font/size/background color/alignment/etc. 
+    - background-color + color + font-family + font-size + text-alignment
+    - SYNTAX: 
+
+    <tagName attribute = "property:value;"></tagName>
+    <p style="color:red;"></p>
+
+HTML Lists: 
+    - allows for 2 types of lists to group a set of related items
+        1. Unordered HTML List: 
+            - <ul> </ul> ==> used to create unordered list + each item statys w/ <li> </li> 
+        2. Ordered HTML List: 
+            - <ol> </ol> ==> used to create ordered list and each items still starts w/ <li> </li> 
+
+
+
+
+HTML - CSS: 
+    - What is HTML ==> is the skeleton/backbone of any web page/application
+    - DOCTYPE ==> tells browser which version of html to render/show (Most recent is v5)
+    - <html> </html> ==> the parent of all web pages in HTML doc 
+        - tag ==> html
+        - element ==> <html> </html> (Element consists of tag)
+
+    - <head> </head> ==> everything that is NOT VISIBLE to user 
+        - title --> title of your web page 
+        - meta elements --> useful information about your webpage 
+    - <body> </body> ==> everything that is VISIBLE to user
+        - headings ==> text-based element 
+    - <p> </p> ==> paragraph
+    - <strong> </strong> ==> bold text (also <b> </b>)
+    - <hr/> ==> horizontal line 
+    - <br/> ==> break the row 
+    - <div> ==> block elements
+    
+    - Semantic Elements Examples: 
+    
+    - Styling: 
+        1. Inline styling ==> apply styles right inside of the element itself. BUT it's harder to
+        maintain and manage. 
+        2. Internal styling ==> Styles are stored inside of <head> section 
+            - CSS specificity: inline > internal 
+
+    - Element attributes: 
+        - img --> src/alt/width/height
+        - <a> --> href/target 
+        - id + class ==> attributes by all elements 
+            - id --> unique identifier 
+            - class --> common class selector  
+    
+    - Nesting ==> render elements inside another element 

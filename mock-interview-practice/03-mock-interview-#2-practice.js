@@ -375,3 +375,27 @@ console.log(factorial(5));
 console.log(factorial(4)); 
 console.log(factorial(0)); 
 console.log(factorial(1)); 
+
+
+/*
+Count 3 or Less
+Write a function named as count3OrLess() which takes a string word as an argument 
+and returns the count of the words that has 3 characters or less when invoked.
+
+Examples:
+
+count3OrLess("Hello") -> 0
+count3OrLess("Hi John") -> 1
+count3OrLess("JavaScript is fun") -> 2
+count3OrLess("My name is John Doe") -> 3
+count3OrLess("") -> 0
+*/
+const count3OrLess = string => {
+    let strArr = string.split(' '); 
+    return strArr.reduce((accum, curr) => curr.length <= 3 ? accum + 1 : accum, 0); 
+}
+console.log(count3OrLess('Hello'));
+console.log(count3OrLess('Hi John'));
+console.log(count3OrLess('JavaScript is fun'));
+console.log(count3OrLess('My name is John Doe'));
+console.log(count3OrLess(''));
