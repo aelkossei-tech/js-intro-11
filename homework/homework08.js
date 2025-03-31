@@ -34,11 +34,11 @@ Write a function named noZero() which takes an array of numbers as argument
 and returns the array back with all zeros removed.
 
 Examples:
-noZero([1])  -> [1]
-noZero( [1, 1, 10] )  -> [1, 1, 10] 
-noZero([0, 1, 10])  -> [1, 10]
-noZero([0, 0, 0])  -> []
-noZero([10, 100, 0]) -> [10, 100]
+noZero([1])                -> [1]
+noZero( [1, 1, 10] )       -> [1, 1, 10] 
+noZero([0, 1, 10])         -> [1, 10]
+noZero([0, 0, 0])          -> []
+noZero([10, 100, 0])       -> [10, 100]
 */
 
 /*
@@ -251,11 +251,20 @@ noXInVariables(["xyXyxy", "Xx", "ABC"]) 	-> ["yyy", "ABC"]
 /*
 What we need to do: 
 1.) Loop through our array
-2.) Extract 'x' and 'X' --> .filter()? + includes()
+2.) Extract 'x' and 'X' --> .filter()? ==> ONLY concern is that not all of the elements are strings
+    - figure out how to deal with BOTH numbers & string 
     - we have a same-sized array as well --> maybe .map()?
+3.) Return the filtered array w/o any x's/X's ==> find a way to ignore the cases 
+    - either RegEx or? 
 */ 
 const noXInVariables = array => {
-    return array.filter((ele) => ele.split('')); 
+    return array.map(ele => typeof ele === 'string' ? ele.replace(/x/gi, '') : ele).filter((ele) => ele !== ''); 
+    // SO --> we're using both .map() + .filter() to loop through array and then filter out certain elements 
+    // w/ .map() ==> we're checking first what's the TYPE of ele we encounter in the array [string or number?]
+        // with doing this --> we get to kind of ignore special characters/digits 
+        // the conditional statement is: IF our ele's type is equal to 'string' --> THEN replace any part of the string that has an x  w/ an empty string('') OR return ele (numbers or special chars.)
+            // - (using RegEx that looks at 'x' globally AND ignores case-sensitivity)
+    // THEN w/ .filter() ==> IF ele is NOT equal to an empty string('') [b/c of map condition --> x = ' ' ] --> then filter it(the empty strings that replaced x's) out 
 }
 console.log(noXInVariables(['abc', 123, '#$%'])); 
 console.log(noXInVariables(['xyz', 123, '#$%'])); 

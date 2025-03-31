@@ -47,7 +47,6 @@ console.log(firstLastWord("Hello"));
 console.log(firstLastWord(""));
 
 
-
 /*
 Has Vowel
 Write a function named hasVowel() which takes a string argument and returns true if the string has a
@@ -117,6 +116,17 @@ averageOfEdges(-2, -2, 10) -> 4
 averageOfEdges(-3, 15, -3) -> 6
 averageOfEdges(10, 13, 20) -> 15
 */
+const averageOfEdges = (num1, num2, num3) => {
+    let min = Math.min(num1, num2, num3);
+    let max = Math.max(num1, num2, num3);
+
+    return (min + max)/2;
+}
+console.log(averageOfEdges(0, 0, 0)); 
+console.log(averageOfEdges(0, 0, 6)); 
+console.log(averageOfEdges(-2, -2, 10)); 
+console.log(averageOfEdges(-3, 15, -3)); 
+console.log(averageOfEdges(10, 13, 20)); 
 
 
 /*
@@ -230,7 +240,6 @@ console.log(countPos([-23, -4, 0, 2, 5, 90, 123]));
 console.log(countPos([0, -1, -2, -3]));
 
 
-
 /*
 Find Even Numbers
 Write a function named as getEvens() which takes 2 number arguments
@@ -301,9 +310,9 @@ Write a function named countNeg() which takes an array of numbers as an argument
 and returns how many elements are negative when invoked.
 
 Examples:
-countNeg([-45, 0, 0, 34, 5, 67]) --> 1
-countNeg([-23, -4, 0, 2, 5, 90, 123]) --> 2
-countNeg([0, -1, -2, -3]) --> 3
+countNeg([-45, 0, 0, 34, 5, 67])         --> 1
+countNeg([-23, -4, 0, 2, 5, 90, 123])    --> 2
+countNeg([0, -1, -2, -3])                --> 3
 */ 
 const countNeg = array => array.reduce((accum, curr) => curr < 0 ? accum + 1 : accum, 0); 
 console.log(countNeg([-45, 0, 0, 34, 5, 67]));
@@ -318,9 +327,9 @@ and returns how many A or a there are in the given string when invoked.
 NOTE: Ignore case sensitivity.
 
 Examples:
-countA("TechGlobal is a QA bootcamp") --> 4 
-countA("QA stands for Quality Assurance") --> 5
-countA("Cypress") --> 0
+countA("TechGlobal is a QA bootcamp")        --> 4 
+countA("QA stands for Quality Assurance")    --> 5
+countA("Cypress")                            --> 0
 */
 const countA = string => string.split('').reduce((accum, ele) => ele === 'A' || ele === 'a' ? accum + 1 : accum, 0);
 console.log(countA('TechGlobal is a QA bootcamp')); 
@@ -335,9 +344,9 @@ and returns the total count of words in the given string when invoked.
 NOTE: Be careful about the extra whitespaces before and after the string.
 
 Examples:
-countWords(" Javascript is fun ") -> 3
-countWords("Cypress is an UI automation tool. ") -> 6
-countWords("1 2 3 4") -> 4
+countWords(" Javascript is fun ")                    --> 3
+countWords("Cypress is an UI automation tool. ")     --> 6
+countWords("1 2 3 4")                                --> 4
 */
 const countWords = string => {
     let strArr = string.trim().split(' '); 
@@ -399,3 +408,144 @@ console.log(count3OrLess('Hi John'));
 console.log(count3OrLess('JavaScript is fun'));
 console.log(count3OrLess('My name is John Doe'));
 console.log(count3OrLess(''));
+
+
+/*
+Remove Extra Spaces
+Write a function named as removeExtraSpaces() which takes a string word as an argument and
+returns the string back with all extra spaces removed when invoked.
+
+Examples:
+removeExtraSpaces("Hello")               -> "Hello"
+removeExtraSpaces(" Hello World ")       -> "Hello World"
+removeExtraSpaces(" JavaScript is fun")  -> "JavaScript is fun”
+removeExtraSpaces("")                    -> ""
+*/
+const removeExtraSpaces = string => string.trim(); 
+console.log(removeExtraSpaces('Hello')); 
+console.log(removeExtraSpaces(' Hello World ')); 
+console.log(removeExtraSpaces(' JavaScript is fun')); 
+console.log(removeExtraSpaces('')); 
+
+
+/*
+Middle Number
+Write a function named middleInt() which takes three number arguments 
+and return the middle number.
+
+Examples:
+middleInt(1, 2, 2) -> 2
+middleInt(5, 5, 8) -> 5
+middleInt(5, 3, 5) -> 5
+middleInt(1, 1, 1) -> 1
+middleInt(-1, 25, 10) -> 10
+*/
+
+
+/*
+First Duplicate Element
+Write a function named as firstDuplicate() which takes an array argument and returns the first
+duplicated number in the array when invoked.
+NOTE: Make your code dynamic that works for any array and return -1 if there are no duplicates in the
+array. For two elements to be considered as duplicated, value and data types of the elements must be
+same.
+
+firstDuplicate([ 3, 7, 10, 0, 3, 10 ])          --> 3
+firstDuplicate([ 5, 7, 7, 0, 5, 10 ])           --> 5
+firstDuplicate([ 5, 5, 3, 7, 4 ])               --> -1
+firstDuplicate([ 123, 'abc', '123', 3, 'abc' ]) --> 'abc'
+firstDuplicate([1, 2, 3])                       --> -1
+firstDuplicate([ 'foo', 'abc', '123', 'bar’ ])  --> -1 
+*/
+
+/*
+What do we need to do: 
+1.) Look at each element in array --> for loop/for...of loop/array methods?
+ - In normal life --> we'd look at each number one by one and see if there is an instance of a duplicate ==> this is what we'd do normally 
+2.) Once we find our FIRST duplicate --> we STOP
+*/
+const firstDuplicate = array => {
+    let seenArr = []; 
+
+    for(let i = 0; i < array.length; i++) {
+        if(seenArr.includes(array[i])) return array[i]; 
+        else seenArr.push(array[i]);
+    }
+    return -1; 
+}
+console.log(firstDuplicate([ 3, 7, 10, 0, 3, 10 ])); 
+console.log(firstDuplicate([ 5, 7, 7, 0, 5, 10 ])); 
+console.log(firstDuplicate([ 5, 5, 3, 7, 4 ])); 
+console.log(firstDuplicate([ 123, 'abc', '123', 3, 'abc' ])); 
+console.log(firstDuplicate([1, 2, 3])); 
+console.log(firstDuplicate([ 'foo', 'abc', '123', 'bar'])); 
+
+
+/*
+Write a function named as getDuplicates() which takes an array argument and returns all the duplicated
+elements in the array when invoked.
+
+NOTE: Make your code dynamic that works for any array and return empty array if there are no
+duplicates in the array. For two elements to be considered as duplicated, value and data types of the
+elements must be same.
+
+Examples:
+getDuplicates([ 0, -4, -7, 0, 5, 10, 45, -7, 0 ])                  --> [0, -7]
+getDuplicates([ 1, 2, 5, 0, 7 ])                                   --> []
+getDuplicates(['A', 'foo', '12’ , 12, 'bar', 'a', 'a', 'foo' ])    --> ['foo', 'a']
+getDuplicates([ 'foo', '12' , 12, 'bar', 'a' ])                    --> []
+*/
+
+/*
+What we need to do: 
+1.) We're going to loop through our array --> either through for loop/for...of loop/array methods
+2.) Create a final array to push our duplicated elements in
+3.) Return our duplicate array 
+*/
+const getDuplicates = array => {
+  
+}
+console.log(getDuplicates([ 0, -4, -7, 0, 5, 10, 45, -7, 0 ]));
+console.log(getDuplicates([ 1, 2, 5, 0, 7 ]));
+console.log(getDuplicates(['A', 'foo', '12', 12, 'bar', 'a', 'a', 'foo']));
+console.log(getDuplicates([ 'foo', '12' , 12, 'bar', 'a' ]));
+
+
+/*
+Count Vowels
+Write a function named as countVowels() which takes a string word as an argument 
+and returns the count of the vowel letters when invoked.
+
+NOTE: Vowel letters are A,E, O, U, I, a, e, o, u, i
+
+Examples:
+countVowels("Hello") -> 2
+countVowels("JavaScript is fun") -> 5
+countVowels("")
+*/
+
+
+const countVowels = string => {
+    let vowels = 'AEIOUaeiou'; 
+    let counter = 0; 
+    for(let i = 0; i < string.length; i++) {
+        if(vowels.includes(string[i])) counter++
+        else counter; 
+    }
+    return counter; 
+}
+console.log(countVowels('Hello')); 
+console.log(countVowels('Javascript is fun')); 
+console.log(countVowels('')); 
+/*
+Array Method - .reduce(): 
+
+const countVowels = string => {
+    let vowels = 'AEIOUaeiou';
+    let strArr = string.split(''); 
+    return strArr.reduce((accum, ele) => vowels.includes(ele) ? accum + 1 : accum, 0); 
+}
+console.log(countVowels('Hello')); 
+console.log(countVowels('Javascript is fun')); 
+console.log(countVowels('')); 
+*/
