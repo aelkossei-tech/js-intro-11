@@ -26,7 +26,48 @@ monkeyTrouble(false, false) → true
 monkeyTrouble(true, false) → false
 */
 function monkeyTrouble (aSmile, bSmile) {
-
-
-// if we're in trouble     
+    return aSmile === bSmile; 
 }
+console.log(monkeyTrouble(true, true)); 
+console.log(monkeyTrouble(false, false)); 
+console.log(monkeyTrouble(true, false)); 
+
+
+/*
+Warmup-1 -- sumDouble
+
+Given two int values, return their sum. Unless the two values are the same, 
+then return double their sum.
+
+Examples: 
+sumDouble(1, 2) → 3
+sumDouble(3, 2) → 5
+sumDouble(2, 2) → 8
+*/
+const sumDouble = (num1, num2) => {
+    if(num1 === num2) return (num1 + num2) * 2
+    return num1 + num2; 
+}
+console.log(sumDouble(1, 2));
+console.log(sumDouble(3, 2));
+console.log(sumDouble(2, 2));
+
+
+/*
+Warmup-1 -- diff21
+Given an int n, return the absolute difference between n and 21, 
+except return double the absolute difference if n is over 21.
+
+Examples:
+diff21(19) → 2
+diff21(10) → 11
+diff21(21) → 0
+*/
+const diff21 = num => {
+    if(num > 21) return Math.abs(num - 21) * 2
+    return Math.abs(21 - num); 
+}
+console.log(diff21(19)); 
+console.log(diff21(10)); 
+console.log(diff21(21)); 
+

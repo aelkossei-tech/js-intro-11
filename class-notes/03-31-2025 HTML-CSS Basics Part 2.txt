@@ -1,0 +1,49 @@
+HTML Tables: 
+    - <table> </table> ==> tag used to create a table in an HTML doc 
+    - <th> </th> ==> used to define the headers of each column in a table
+    - <tr> </tr> ==> used to define the rows of the table 
+    - <td> </td> ==> used to define data/cell 
+
+HTML Forms: 
+    - <form> </form> ==> tag used to create a form in HTML doc + USED TO COLLECT DATA FROM USER 
+    - <input> </input> ==> most common tag used w/ forms 
+        - there are different input types: 
+            1. <input type=”username">  ==> used to display a single-line username text field 
+            2. <input type=”password">  ==> used to display a single-line password text field 
+            3. <input type="text">      ==> used to display a single-line text field 
+            4. <input type="submit">    ==> used to display a submit button 
+            5. <input type="button">    ==> used to display a clickable button 
+            6. <input type="radio">     ==> used to display a radio button (selecting 1 item from a list)  
+            7. <input type="checkbox">  ==> used to display a checkbox (selecting multiple items)
+    
+    - <label> </label> ==> defines a label for many form elements 
+    - <textarea> </textarea> ==> tag often used in forms --> collects user reviews/comments 
+
+HTML dropdowns: 
+    - <select> </select> ==> tag used to create a dropdown in an HTML doc + used to list items in a dropdown
+        - mostly used in a FORM --> to collect user data 
+    - <option> </option> ==> used within <select> </select> tag --> to define the available options in the dropdown list 
+
+
+DAY #2: 
+    HTML Tables:
+        - Table is HTML element 
+        - Can be used to display tabular data 
+        - table ==> parent element 
+        - tr ==> table row element 
+        - th ==> table heading 
+        - td ==> table data 
+        
+        - OPTIONAL: 
+            - thead ==> group head elements
+            - tbody ==> group content of table data
+            - tfoot ==> group footer table data 
+    
+    HTML Forms:
+        - form ==> most parent element
+        - label ==> Label/text for input element
+        - input ==> used to take user info. 
+            - text --> most basic input type
+            - email --> 
+        
+        - button ==> button element

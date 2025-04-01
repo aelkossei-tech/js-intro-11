@@ -1,0 +1,12 @@
+1. What is SDLC?
+
+
+What are the differences between array slice and splice methods?
+
+
+What is IIFE (Immediately Invoked Function Expression)?
+
+
+What is Monkey (Ad Hoc) Testing and what are the benefits it provides?
+
+

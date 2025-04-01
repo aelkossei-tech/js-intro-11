@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recreate Form</title>
+</head>
+<style>
+    table {
+            width: 600px;
+            border-collapse: collapse; 
+        }
+    th, td {
+            border: 1px solid; 
+        }
+     th {
+            text-align: left;
+        }
+    td {
+        font-weight: bold;
+       }
+    tr {
+        border: 1px solid;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+       }
+</style>
+<body>
+    <table style="background-color: rgb(201, 159, 105);">
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" value="John AppleScript"></td>
+        </tr>
+
+        <tr>
+            <td>Email:</td>
+            <td><input type="email" value="johnny@AppleScript.com"></td>
+        </tr>
+
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" value="password"></td>
+        </tr>
+
+        <tr>
+            <td>Approval Required:</td>
+            <td><input type="checkbox">Do you approve?</td>
+        </tr>
+
+        <tr>
+            <td>Pick Your Favorite:</td>
+            <td>
+                <input type="radio" name="choiceA">Choice A <br>
+                <input type="radio" name="choiceB">Choice B<br>
+                <input type="radio" name="choiceC">Choice C
+            </td>    
+        </tr>
+
+        <tr>
+            <td>Popup Menu</td>
+            <td>
+                <select>
+                   <option>Texas -- TX</option> 
+                   <option>California -- CA</option> 
+                   <option>Colorado -- CO</option> 
+                   <option>Conneticut -- CN</option> 
+                   <option>Dalifornia -- DA</option> 
+                   <option>Dolorado -- DO</option> 
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>List:</td>
+            <td>
+                <select multiple>
+                    <option>Texas -- TX</option> 
+                    <option>California -- CA</option> 
+                    <option>Colorado -- CO</option> 
+                    <option>Conneticut -- CN</option> 
+                    <option>Dalifornia -- DA</option> 
+                    <option>Dolorado -- DO</option> 
+                 </select>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>Field Ignored by KM</td>
+            <td><input type="text" value="10,384"></td>
+        </tr>
+       
+        <tr>
+            <td>Text Area</td>
+            <td><textarea rows="4">Now is the time for all good men to come to the aid of their country</textarea></td>
+        </tr>
+    </table>
+
+    <div>
+        <input type="button" value="Save">
+        <input type="button" value="Cancel">
+        <input type="button" value="Resize">
+    </div>    
+</body>
+</html>
