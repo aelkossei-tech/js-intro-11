@@ -895,7 +895,12 @@ const noA = array => {
 console.log(noA(["javascript", "hello", "123", "xyz"])); 
 console.log(noA(["apple", "123", "ABC", "javascript"])); 
 console.log(noA(["apple", "abc", "ABC", "Alex", "A"]) ); 
+/*
+Simpler solution using .map(): 
 
+const noA = array => array.map(word => (word.startsWith('A') || word.startsWith('a')) ? '###' : word);
+
+*/
 
 /*
 No Elements Divisible By 3 and 5
@@ -927,6 +932,16 @@ const no3and5 = array => {
 console.log(no3and5([7, 4, 11, 23, 17]));
 console.log(no3and5([3, 4, 5, 6]));
 console.log(no3and5([10, 11, 12, 13, 14, 15]));
+/*
+Simpler solution using .map(): 
+
+const no3and5 = array => array.map(num => 
+    num % 15 === 0 ? 101 : 
+    num % 5 === 0 ? 99 : 
+    num % 3 === 0 ? 100 : 
+    num
+);
+*/
 
 
 /*
@@ -953,7 +968,11 @@ console.log(no13([1, 2, 3 ,4]));
 console.log(no13([13, 2, 3]));
 console.log(no13([13, 13, 13 , 13, 13]));
 console.log(no13([]));
+/*
+Simpler solution using .map(): 
 
+const no13 = array => array.map(num => num === 13 ? 0 : num);
+*/
 
 /*
 Remove Duplicates

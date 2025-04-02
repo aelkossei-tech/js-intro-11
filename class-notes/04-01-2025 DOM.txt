@@ -1,0 +1,42 @@
+DOM (Document Object Model) ==> a cross-platform and language-independent application programming interface
+    - a standard for how to get/change/add/delete HTML elements 
+    - represents a document AS A TREE of nodes --> every element (like headings/paragraphs/buttons/images)
+        - tree of objects 
+    - it's a structured representation of a web page 
+    - important b/c --> allows JS to interact with/change a webpage [w/o it, JS won't be able to update content/change styles/respond to user interactions]
+        - w/ the object model --> JS gets all the power it needs to create dynamic HTML 
+    - Tree Representation: 
+        - document object is the MAIN ENTRY POINT to the page --> can change/create anything on the page using it 
+    - HTML --> provides the structure (or skeleton) of a webpage
+    - CSS --> styles the webpage (like clothing and colors)
+    - JS --> uses DOM to DYNAMICALLY change the content/style/structure of webpage
+
+Node Relationships: 
+    - DOM Node --> can go to its immediate neighbors using navigation 
+        - node ==> one piece of the webpage (HTML documentt)
+    - like a family tree --> parent, sibling, child
+    - Types of DOM Nodes: 
+        1. Element Nodes ==> represents HTML elements like <div> + <p> + <button> + etc. 
+            - EX: <p>Hello!</p> --> <p> is an element node 
+        2. Text Nodes ==> holds text inside an element 
+            - EX: <p>Hello!</p> --> "Hello!" is a text node 
+        3. Attribute Nodes ==> stores attributes inside elements (like id, class, src)
+            - EX: <img src="image.jpg"> --> src="image.jpg is an attribute node
+        4. Comment Nodes ==> stores comments in HTML 
+            - EX: <!-- This is a comment -->  --> the whole thing is a comment node 
+
+    - JS can select/manipulate nodes to change the webpage
+
+ID vs. Classes: 
+    - ID ==> only applies to ONE element on a webpage 
+        - to access ID/nodes in the document by ID --> document.getElementById("your id name");
+    - Class ==> applies to MULTIPLE elements on a webpage; everything in DOM (elements/text/attributes/comments) is a node
+        - to access HTML elements by their class name --> document.getElementsByClassName('someClass')
+    
+    - Tag Name ==> document.getElementsByTagName('someElementTag')
+    - querySelector (selectors = element/id/class)
+        - document.querySelector(selectors)  ==> returns the FIRST element that matches the specified selectors
+        - document.querySelectorAll(selectors)  ==> returns ALL elements that match the specified selector 
+ 
+Events ==> an object    
+    - sent when certain actions take place on a webpage
