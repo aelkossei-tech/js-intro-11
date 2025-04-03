@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Practice #12: Create a Resume </title>
+</head>
+<style>
+    img {
+        width: 250px;
+        height: 256px;
+        padding-left: 10px;
+    }
+    body {
+        background-color: rgb(231, 235, 245);
+        padding: 10px; 
+        padding-top: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        border: 1px solid black;
+
+    }
+    .resume-sections-heaings {
+        color: rgb(63, 112, 149);
+        font-weight: lighter;
+        margin-left: 5px;
+    }
+    .mini-sections {
+        color: rgb(61, 134, 186);
+        font-weight: bold;
+        font-size: small;
+        margin-left: 10px;
+        margin-top: auto;
+
+    }
+    .job-title {
+        color: rgb(69, 146, 201);
+        font-weight: bold;
+    }
+    .company-name-and-dates {
+        color:rgb(184, 195, 203);
+        font-weight: lighter;
+    }
+    .resume-subheadings {
+        margin-left: 20px;
+    }
+    .job-description {
+        color: rgb(102, 101, 101);
+        font-weight: lighter;
+        font-size: smaller;
+        margin-left: 20px;
+    }
+</style>
+<body>
+  <img src="./resume-profile-pic.png">  
+  <h1 style="color: rgb(61, 134, 186); font-weight:580;">JOHN <span style="color:rgb(177, 207, 227);">DOE</span></h1>
+  
+  <div style="display: flex";>
+    <p class="mini-sections">Email: <span style="color: black; font-weight: 100";>johndoe@gmail.com</span></p> 
+    <p class="mini-sections" style="margin-left: 10px;">Phone: <span style="color: black; font-weight: 100";>(111) 222-3333</span></p>
+ </div>
+  
+ <p class="mini-sections">Software Engineer in Test: <span style="color: black; font-weight: 100";>I am a Software Engineer in Test with more than 4 years of experience working with Java,<br> Selenium WebDriver, JUnit, TestNG, Maven, and more automation tools. I am self-taught and team-oriented person and looking to grow in this field.</span></p>
+    
+ <br>
+
+  <h3 class="resume-sections-heaings">EXPERIENCE</h3>
+  <div>
+    <p class="company-name-and-dates" style="margin-left: 15px;">Company 1 |<span style="color: rgb(61, 134, 186);"> Software Engineer </span>| January 2020 - Present</p>
+    <p class="job-description">Serve as a key member of software development team as the Software Engineer in Test on development projects. Supervise testing team in <br>
+    developing and implementing quality-assurance and quality-control methodologies to ensure compliance with QA standards, and customer <br>
+    specifications. 
+    </p>
+    </div>
+    
+    <div>
+        <p class="company-name-and-dates" style="margin-left: 15px;">Company 2 |<span style="color: rgb(61, 134, 186);"> Automation Test Engineer </span>| January 2019 - January 2020</p>
+        <p class="job-description"> Overseeing quality-assurance testing and teams for client software and systems development projects. Performed system, unit, <br> 
+            performance, load, regression, stress and data interface testing. Provided client developer teams with detailed reports on quality metrics, <br>
+            identified bugs/flaws and recommended fixes.
+            </p>
+    </div>
+
+    <div>
+        <p class="company-name-and-dates" style="margin-left: 15px;">Company 3 |<span style="color: rgb(61, 134, 186);"> Quality Assurance </span>| January 2017 - January 2019</p>
+        <p class="job-description">Assisted with user-acceptance testing and defect tracking for three new software releases. Offered full-time UAT position after graduating <br>
+            from college (respectfully declined to accept software developer job).
+            </p>
+    </div>
+<br>
+
+<div>
+    <h3 class="resume-sections-heaings">EDUCATION</h3>
+    <p style="font-size: small;">ABC University | Computer Science | Septemeber 2012 - June 2016</p>
+</div>
+
+</body>
+</html>
