@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        .card {
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px;
+            width: 200px;
+        }
+
+        .highlight {
+            background: #f0f8ff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>User Profiles</h1>
+    <div id="card-container"></div>
+
+    <script>
+        const users = [
+            { name: 'Alice', age: 25, hobby: 'Drawing' },
+            { name: 'Bob', age: 30, hobby: 'Soccer' },
+            { name: 'Charlie', age: 22, hobby: 'Gaming' },
+            { name: 'Dana', age: 28, hobby: 'Photography' }
+        ];
+       // Your code goes here ...
+
+       // 1.) Create 3 elements (name, age, hobby)
+       const containerEl = document.getElementById('card-container');  
+       
+       users.forEach( (user, index) => {
+            // Create card element 
+           
+            const cardEl = document.createElement('div'); 
+            cardEl.classList.add('card');
+
+            // Highlight 
+            const randNum = Math.random(); 
+            if(randNum < 0.5) {
+                cardEl.classList.add('highlight'); 
+            }
+            
+            
+            // Create content of card
+            const name = document.createElement('p');
+            name.textContent = `Name: ${user.name}`; 
+
+            const age = document.createElement('p');
+            age.textContent = `Age: ${user.age}`;
+
+            const hobby = document.createElement('p');
+            hobby.textContent = `Hobby: ${user.hobby}`;
+
+            // Add content to card 
+            cardEl.append(name, age, hobby); 
+            cardEl.appendChild(name, age, hobby); 
+            cardEl.appendChild(name, age, hobby); 
+            cardEl.appendChild(name, age, hobby); 
+            
+            // Add card to container 
+            containerEl.appendChild(cardEl); 
+        })
+  
+       // 2.) Append to card element 
+    
+
+
+
+
+       // 3.) Append card element to body 
+
+
+
+
+       // 4.) Create a random number and based on it highlight the card. Check style above 
+
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+

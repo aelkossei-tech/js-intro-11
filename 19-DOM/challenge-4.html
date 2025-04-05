@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shopping List</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 500px;
+      margin: auto;
+    }
+    li {
+      margin: 8px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    button {
+      margin-left: 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Shopping List</h1>
+  <form id="item-form">
+    <input type="text" id="item-input" placeholder="Add item..." />
+    <button type="submit">Add</button>
+  </form>
+  <ul id="item-list"></ul>
+  <!-- Items -->
+
+  <script>
+  // 1. Add click event listener to button 
+  const buttonEl = document.querySelector('button'); // got our variable here --> we're trying to find the id of button ('submit')
+  // use --> document.getElementById()
+  buttonEl.addEventListener('click', (event) => { // now we need to add "click" to our .addEventListenner('action', callBackFunc)
+    event.preventDefault(); // function where it prevents an event to do its defaulted action 
+
+  // 2. Grab input value 
+  const inputEl = document.getElementById('item-input'); 
+    const item = inputEl.value; // this will give you input value 
+
+ // 3. Create item element (li)
+   const li = document.createElement('li');  // creating element ==> document.createElement('HTMLelement')
+   li.textContent = item.trim(); // .textContent ==> returns the text content of the item 
+
+ // 4. Append it to item list
+    const itemWrapper = document.getElementById("item-list"); 
+    itemWrapper.appendChild(li); // you're adding (appending) under the "item-list" (which is an unordered list)
+    // itemWrapper.innetHTML += `<li>${item}</li>`
+  })
+  
+  </script>
+</body>
+</html>
+
+
+
+
+
+
