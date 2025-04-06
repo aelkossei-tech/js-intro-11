@@ -198,5 +198,85 @@ fibonacciSeries1(2) 	-> [0, 1]
 */
 /*
 What we need to do: 
-1.) Obviously loop through 
+1.) Obviously use a loop to iterate every number in the fibonacci series until as many times as our parameter wants [so if it's 3 --> iterating 3 times]
+    - for loop --> similar to factorial()?  OR a while loop? (ee=ven though we have )
+2.) Return our result as an array 
+*/
+const fibonacciSeries1 = number => { 
+    let finalArr = [0, 1]; // we're going to not only create a finalArr variable to return an array 
+    // --> BUT also we're going to include 0, 1, since w/ every example we always start w/ 0, 1
+    if(number === 1) return [0]; // addresses the edge case if number is 1 --> just return [0]
+    for(let i = 2; i < number; i++) { 
+        // we're starting here at 2 since we already included 0, 1 in our finalArr
+        // since we're trying to reach our number paramter --> it should be our max/limit in our for loop [so then it can stop at that number]
+        finalArr.push(finalArr[i - 1] + finalArr[i - 2]); 
+        // obviously we're pushing our iterations within the terms of the fibonacci formula into the finalArr
+    }
+    return finalArr; 
+}
+console.log(fibonacciSeries1(3)); 
+console.log(fibonacciSeries1(5)); 
+console.log(fibonacciSeries1(7)); 
+console.log(fibonacciSeries1(8)); 
+console.log(fibonacciSeries1(1)); 
+console.log(fibonacciSeries1(2)); 
+
+
+console.log('\n ---------TASK07----------\n');
+/*
+Requirement:
+Write a function named fibonacciSeries2() which takes a number n argument 
+and returns the nth series of Fibonacci number as a number.
+
+REMEMBER: Fibonacci series = 0, 1, 1, 2, 3, 5, 8, 13, 21
+
+Examples:
+fibonacciSeries2(2) 	-> 1
+fibonacciSeries2(4) 	-> 2
+fibonacciSeries2(8) 	-> 13
+fibonacciSeries2(9) 	-> 21
+fibonacciSeries2(1) 	-> 0
+*/
+/*
+What we need to do: 
+1.) Similar to Task06 --> using a for loop to do the same thing EXCEPT --> return the place of where it is (our number parameter) in the series 
+    - fibonacciSeries2(4) --> 2 ==> the value of the 4th spot in the series is 2 
+        - 4 = spot in the series
+        - 2 = value at the spot 
+2.) Maybe we look at our array's indexes? 
+*/
+const fibonacciSeries2 = number => {
+    let finalArr = [0, 1]; 
+    for(let i = 2; i < number; i++) {
+        finalArr.push(finalArr[i - 1] + finalArr[i - 2]); 
+    }
+    return finalArr[number - 1]; 
+}
+console.log(fibonacciSeries2(2));
+console.log(fibonacciSeries2(4));
+console.log(fibonacciSeries2(8));
+console.log(fibonacciSeries2(9));
+console.log(fibonacciSeries2(1));
+
+
+console.log('\n ---------TASK08----------\n');
+/*
+Requirement:
+Write a function named findUniques() which takes two array of number arguments 
+and returns the array which has only the unique values from both given arrays.
+
+NOTE: If both arrays are empty, then return an empty array.​
+
+NOTE: If one of the array is empty, then return unique values from the other array.
+
+Examples:
+findUniques([], []) 		                -> []
+findUniques([], [1, 2, 3, 2]) 	            -> [1, 2, 3]
+findUniques([1, 2, 3, 4], [3, 4, 5, 5]) 	-> [1, 2, 5]
+findUniques([8, 9], [9, 8, 9]) 	            -> []
+findUniques([-1, -2], [1, 2]) 	            -> [-1, -2, 1, 2]
+*/
+/*
+What we need to do: 
+1.) 
 */

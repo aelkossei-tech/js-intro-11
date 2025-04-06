@@ -1,0 +1,95 @@
+1. What is SDLC? Briefly explain all the phases.**  
+    - SDLC (Software Development Life Cycle) ==> the process for building software step by step.
+        - a comprehensive process that guides the development of software from conception --> deployment/maintenance 
+        - well-structured process that guides software development projects from start to finish 
+        - used by software engineers to plan/design/develop/test/maintain software applications 
+        - obviously it's designed for efficiency + to deliver a high-quality product 
+        - it helps w/ risk reduction + use resources wisely + collaboration + project management
+
+        - there are 7 Phases of SDLC
+    - SDLC Phases:
+        1. Planning –-> Understand what the software needs to do.
+            - foundation of the project ---> establishes the project's direction 
+            - this is where the project goals/objectives/requirements [all based on user feedback OR market research] are set here 
+            - stakeholders are here to explain what they want to IT business analyst 
+
+        2. Requirements/Feasibility Analysis (some might put this step w/ planning)–-> Gather and document what the users want.
+            - analyzing the requirements of the project 
+            - the project team evaluates whether the project is technically/financially viable 
+            - looking at costs and logistics --> see if they could afford to do it and what tools would they need to work on project  + risk analysis (to identify potential 
+                challenges that might come with project)
+
+        3. Design –-> Create a plan or blueprint for how the software will look and work.
+            - includes creating the software's architecture/design by software architects
+            - based on the previous phases --> team develops a blueprint of the project and how it might look like/function 
+            - also includes aspects like UI/UX to make sure all kinds of users are able to use application 
+
+        4. Development/Implementation –-> Actually build or code the software.
+            - finally transforming the design into an actual working project 
+            - this phase is where coding actually takes place --> developers write their code based on the specifications drawn in previous phases 
+
+        5. Testing –-> Check for bugs and make sure it works correctly.
+            - critical part of the process --> b/c finding bugs + generates essential performance/usability feedback
+            - various ways of testing: 
+                a. automation testing ==> 
+                b. unit testing (mainly only developers)==> test the individual software modules to validate that each one is working correctly
+                c. integration testing == test how different modules interact w/ each other to verify that they work together correctly
+                d. system testing ==> test the software to verify it meets the requirements and works correctly in the production environment 
+           
+            - ** GOAL OF PHASE ** ==> to find/fix bugs, ensuring that the software operates as intended before being deployed to users 
+
+        6. Deployment –-> Release the software to users.
+            - once you test and all is good --> deploy software to end users 
+            - typically includes a beta-testing phase OR pilot launch [limited to a select group of real-world users]
+            - pretty important step to see how users easily access/use software
+            - ensures that application is relevant and functional over time 
+
+        7. Maintenance –-> Fix issues and update the software over time.
+            - even after software is deployed --> ongoing support is necessary to address issues/apply updates/add new features 
+
+2. Explain Agile vs Waterfall methodologies.
+    - Different softwares = different needs --> b/c of this there are different ways/workflows/models to accomodate    
+        1. Waterfall ==> A step-by-step process. Each phase is done one after the other. You finish one before moving to the next. It’s more structured but less flexible.
+            - Linear approach --> each phase is completed before it moves onto the next phase 
+            - based on the assumption that the last phase had little to no errors --> move onto the next one 
+            - straight-forward/easy-to-manage --> ideal for SMALLER projects w/ well-defined roles 
+            - BUT inflexible --> challenging to adapt to complex tasks 
+    
+        2. Agile ==> A flexible and fast approach. Work is done in small parts (called sprints), and you can make changes along the way based on feedback.
+            - more flexible/iterative apporach --> emphasizes collaboration/adaptibility/customer feedback ==> "sprints" (occurs in small-incremented cycles)
+            - fosters continous evalutation, so changes are well-adapted 
+            - ideal for larger,complex projects 
+            - ONLY thing is that you'd need constant/consistent communication in order for this to work 
+
+3. Explain Scrum vs Kanban frameworks.
+    Both are Agile frameworks, but they work differently:
+        - Scrum ==> Work is done in sprints (usually 1–4 weeks). You plan tasks, work on them, then review and repeat. Roles like Scrum Master and Product Owner help manage it.
+            - framework that outlines workflows through "sprints" --> helps teams in managing work from sprint to sprint 
+            - key components: backlog management + "sprint" planning + tracking tools + visualization boards 
+
+        - Kanban ==> Uses a visual board (like sticky notes) to show tasks in columns: 1. To Do,  2. In Progress,  3. Done. It focuses on continuous work and limiting how many tasks are in progress.
+            - emphasizes continous workflows + efficient task management --> focusing more on work progress than deadlines 
+            - highlights work visualization + task prioritization 
+
+
+SDLC(Software Develpoment Life Cycle)
+    - SRS (Software Requirement Specifications) --> document that comes out of the meeting between idea person and tech company 
+    - MVP (Minimum Viable Product) 
+
+Scrum Master (only in Agile methodology)=> faciliates Scrum ceremonies(meetings)/removes impide=
+
+** Scrum has sprints and scrum ceremonies/meetings 
+- sprint ==> period of time (most of the time = 2 weeks) that the development team needs to deliver small 
+features for software
+
+- kanban ==> does NOT have sprint and ceremonies
+    - Less meetings comapred to Scrum 
+    - Development team members would adding themselves new tasks whenever they finish their task 
+
+- Stand up (meeting):
+- Sprint Planning: 
+- Sprint Refinement/Grooming: 
+- Sprint Review/Demo: 
+- Sprint Retrospective:  
+
+- Parking lot meeting: if meeting takes longer than stand up meeting, 
