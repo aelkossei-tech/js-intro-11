@@ -1,0 +1,181 @@
+What is Scrum and what are Scrum roles?
+
+Scrum is a way to manage projects by breaking work into small, manageable pieces called sprints (usually 1–4 weeks). 
+It helps teams deliver work quickly and make changes based on feedback.
+
+    - an agile, management process/framework that allows us to focus on delivering the highest business value in the shortest amount of time 
+        - OR an agile framework that breaks down larger projects into smaller, more manageable parts (sprints)
+    - sprints ==> a defined period (typically 1 - 4 weeks - 2 being the most common) where the development team focuses on 
+        completing a set of tasks to deliver a usuable product 
+
+Scrum roles: 
+  a. Product Owner – Decides what to build next and manages the product backlog.
+    - *** defines the product vision + builds/manages/prioritizes the backlog + represents the stakeholders ** 
+    - ensures the development team delivers the most value to the business [link between the Scrum team and the businnes ]
+    - understand/prioritize the changing needs of end users/customers 
+    - champions of their products
+
+  b. Scrum Master/Scrum Leader – Makes sure the team follows Scrum and helps remove any obstacles.  
+    - coaches the team + faciliates the Scrum process + removes impediments/obstacles + ensures the team follows the agreed-upon practices 
+    - accountable for the team's effectiveness 
+
+  c. Development Team (Developers & QA) – The people who actually build the product.
+    - responsible for delivering potentially shippable incremenets at the end of each sprint 
+
+    - w/ a Scrum team --> there's no hiearchies; everyone's working towards one goal [the Product Goal] together 
+
+2. Tell me about Scrum artifacts.
+    - it's important information used by the Scrum team that helps define the product & what work needs to be done to create the product 
+
+    - Scrum has three main artifacts (tools used in Scrum to solve problems & manage projects):
+         a. Product Backlog – A dynamic list of everything (features/requirements/enhancements/fixes) that needs to be done for the project, managed/maintained/uodated by the Product Owner.
+
+          b. Sprint Backlog – The list of tasks the (development) team plans to finish during the current sprint.
+
+         c. Increment – The working product (or piece of software) that the team finishes by the end of the sprint.
+            - a step towards a goal/vision
+
+3. Tell me about Scrum Ceremonies.
+
+Scrum ceremonies are essential meetings that help the team stay organized and stick to the Scrum framework. There are several 
+types of Scrum ceremonies, which include: 
+    
+    a. Sprint Planning – The team plans what they will work on in the sprint.
+
+    b. Daily Scrum (or Stand-up) – A quick daily meeting to check in on progress and discuss any problems.
+
+    c. Sprint Review – At the end of the sprint, the team shows what they’ve completed to get feedback.
+
+    d. Sprint Retrospective – The team talks about what went well and what can be improved for the next sprint.
+
+
+*** INTERVIEW QUESTIONS/TOPICS: ***
+    - SDLC Roles and Repsonsibilites 
+        1. Client 
+        2. PO / PM / BA
+        3. System Architect
+        4. UI/UX designers
+        5. Development Team: DEV + QA 
+        6. DevOps: DevOps Engineers, Cloud Engineers
+        7. End Users 
+
+        Security Engineers, Data Engineers, Cybersecurity Team, Performance Team, Analytic Teams 
+
+        SCRUM TEAM: 
+            - PO
+            - SM 
+            - Development Team: Developers, Testers 
+
+        Some additional team members: 
+        UI/UX Designer 
+        BA 
+        PM 
+
+        Frontend Developers: JS, CSS, HTML, React/Angular 
+        Backend Developers: Database Tables etc., services/APIs. C#/Java/Ruby/Go/TypeScript
+
+    ROLES: 
+         1. PO - Product Owner ==> They are the communicator/bridge between the development team and the stakeholders/client
+            - documentation of all the needs/future features 
+                - Divide it into smaller tasks: PBI's to be added to Product Backlog 
+                - Each PBIs MUST have clear accepetance criterias 
+                - [INTERVIEW QUESTION] ==> If accpetance criteria is NOT clear, development will ask about it in refinement OR 
+                    they can schedule a meeting w/ PO 
+
+            - Epic ==> one big feature to add to product [Cart/Payment/Login/Delivery Types]
+            - Epic = from which PO creates smaller PBIs
+
+                - Cart feature will be broken into smaller PBIs (Product Backlog Item)/User Story/Ticket 
+                     - 'As a user I should see a cart when I visit the app' - 8 points 
+                       
+                        - AC1 (Acceptance Criteria): An icon should be in header
+                        - AC2: This icon should show a digit when products when added 
+                        - AC3: This icon number/digit should be updated if products are deleted/added 
+
+                      - 'As a user I should be able to add products to car' 
+                      - 'As a user I should be able to delete product from the cart' 
+                      - 'As a user I should be able to update the quantity of the product in the cart' 
+                      
+         2. SM - Scrun Master ==> main job is to increase communication/collaboration in the team 
+            - they also remove impediments/obstacles/blockers 
+            - they also faciliate most of the Scrum ceremonies such as Sprint Planning/Dail (Stand Up)/ Sprint Retro 
+            - they schedule all the meetings + updates everyone + etc. 
+            - they support 2-3-4 teams 
+
+    - AC (Acceptance Criteria) ==> detailed steps to consider PBI is completed. 
+         - EVERY PBI will have AC's to accompany it 
+
+
+    CEREMONIES: 
+        1. Refinements/Grooming Meetings: 
+            - PO organizes/drives this meeting --> they bring the stakeholders' ideas to discuss w/ SCRUM team 
+            - 1 to 3 times in a sprint
+            - 30 - 60 minutes 
+            - to refine/clarify the requirements of the future sprint PBIs (Product Backlog Item)/User Story/Ticket 
+            - development team estimates PBIs (Product Backlog Item)/User Story/Ticket --> They assign a point to ready PBIs after 
+                clarifying all the accpetance criteria w/ PO 
+
+                - Capacity -->  how many resources you have in the development team 
+                - Velocity -->  how much work you finish in average in a sprint 
+                - EX: 
+                    Team: 5 Devs, 2 QAs 
+                    Sprint: 2 weeks - 10 working days - each day considers as 1 point 
+                    Capacity: 7 
+                    Velocity: 70 
+
+        2. Daily Stand Up: 
+            - SM organizes/drives this meeting 
+            - Every day usually in the morning 
+            - 15 - 30 minutes
+            - UPDATES: What team members did yesterday + what is the plan for today + is there any blockers/help needed/questions
+
+        3. Sprint Retrospective: 
+            - SM organizes/drives this meeting 
+            - 1 time in a sprint (at the beginning of the next sprint)
+            - 60 minutes 
+            - What was good, NOT good, and what can be improved? 
+                - CTA (Call to action) to do in the future sprints 
+
+        4. Sprint Planning: 
+            - PO drives this meeting 
+            - 1 time in a sprint (at the very beginning)
+            - 60 minutes
+            - Assign tasks to development team members
+
+            PBI1 -> 8
+            PBI2 -> 5
+            PBI3 -> 5
+            PBI4 -> 3
+            PBI5 -> 8
+            PBI6 -> 2
+            PBI7 -> 2
+            BUG1 -> 2
+            BUG2 -> 1
+            BUG3 -> 3
+
+            40 POINTS: 
+            20 QA1  --> PBI1, PBI2, PBI3, BUG1
+            20 QA2  --> PBI4, PBI5, PBI6, PBI7, BUG2, BUG3
+
+        5. Sprint Review/DEMO: 
+            - driven by PO/Development Team
+            - 1 time in a sprint (at the end of the sprint)
+            - 30 - 60 minutes
+            - Demonstrating completed PBIs to stakeholders for the last sprint 
+
+
+
+    ARTIFACTS: 
+        1. Product Backlog ==> All the tasks/PBIs/User Story/Ticket we're planning to complete as a team 
+            - PO is responsible for the backlog
+            - PO moves high-priority PBIs to the top 
+
+        2. Sprint Backlog ==> Active Sprint which includes only the PBIs that needs to be completed in the current sprint
+
+        3. Increment ==> what you finished in each sprint/ what is completed in the sprints 
+
+        - Burndown Chart => graphic that shows how much of the work you completed 
+
+*** INTERVIEW QUESTION: *** 
+- DOR: Definition of Ready --> this is a PBI refined and ready to be completed/pulled into sprint
+- DOD: Definition of Done --> this is a PBI developed/tested/marked as done by PO 

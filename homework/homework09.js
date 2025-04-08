@@ -278,5 +278,12 @@ findUniques([-1, -2], [1, 2]) 	            -> [-1, -2, 1, 2]
 */
 /*
 What we need to do: 
-1.) 
+1.) Need to find a way to loop through each arrays' element --> compare the elements to each other [for loop/for...of loop]
+2.) Then return the numbers that:  [.filter()? w/ all of these conditions in mind] --> nested loops? 
+    - either show up in one array and not the other 
+    - OR empty array if BOTH are empty 
+    - OR just focus on the array that has numbers and return the unique values of that one 
 */
+const findUniques = (array1, array2) => {
+    
+}
