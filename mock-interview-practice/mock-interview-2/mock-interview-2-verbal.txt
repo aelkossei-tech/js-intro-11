@@ -1,5 +1,7 @@
 1. What is SDLC?
 
+SDLC stands for the Software Development Life Cycle. It's a well-structured process for building software step-by-step 
+
 
 What are the differences between array slice and splice methods?
 

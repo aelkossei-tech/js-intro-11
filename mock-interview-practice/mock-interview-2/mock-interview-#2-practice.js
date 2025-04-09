@@ -1017,7 +1017,7 @@ noDigit("123Tech456Global149") -> "TechGlobal"
 */
 const noDigit = string => {
     let strArr = string.split(''); 
-    return strArr.filter(ele => /[A-Za-z]/.test(ele)).join(''); 
+    return strArr.filter(ele => /[A-Za-z/\s+]/.test(ele)).join(''); 
 }
 console.log(noDigit(""));
 console.log(noDigit("Javascript"));

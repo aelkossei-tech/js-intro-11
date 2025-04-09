@@ -1,0 +1,146 @@
+1. What is STLC? Briefly explain all the phases.
+    - STLC stands for Software Testing Life Cycle. 
+    - it's a step-by-step process (framework) that testers follow to ensure a software product is tested properly before it's released 
+    - defined the steps that should be followed when attempting to throughly test a piece of software in a planned manner 
+    - ensures software quality by following a structured testing process that detects defects early 
+    - The STLC Phases include: 
+        1. Requirement Analysis - Testers understand what needs to be tested 
+            - directs testers to identify the aspects of the application that need to be tested + define the requirements of the test + what types to perform 
+        2. Test Planning - Decide how testing will be done and what resources are needed 
+            - test managers develop a strategy that documents the steps to be taken + tools required + responsibilities of various people involved in development/testing 
+        3. Test Case Design - Write detailed test cases (steps to check the software)
+            - test are created by defining test inputs/procedures/conditions of testing + expected results 
+        4. Test Environment Setup - Prepare the environment where testing will happen 
+            - include hardware/software/frameworks/configs./networks/test data/testing tools 
+        5. Test Execution - Run the tests and note the results 
+            - testers run tests + compare the results to the expected result --> findings are documented 
+        6. Defect Reporting - If bugs are found, report them. 
+        7. Test Cycle Closure - Review how testing went and document lessons learned. 
+            - reports document the steps taken in testing process + results/findings of the test 
+
+2. What is a Defect/Bug in Software Development?
+    - A defect/bug is a mistake/issue in the software that causes it to behave in a way it's not suppossed to 
+
+3. What is Defect Life Cycle?
+    - Also called Bug Life Cycle
+    - the journey a bug goes through when it's found until it's fixed/closed
+    - a process that describes the different stages a bug/defect goes through from its identification to its solution
+    - integral part of software testing 
+    - The steps include: 
+        1. New --> Bug is found and reported
+        2. Assigned --> Sent to developer to fix
+        3. In Progress/Fixed --> Developer is working on it or has fixed it 
+        4. Retest --> Tester checks if it's really fixed 
+        5. Closed --> Bug is resolved and no longer an issue 
+            - if the fix didn't work, it may go back to "Reopened" 
+
+4. What is Severity vs Priority of a software defect?
+    - Severity --> how bad the bug is 
+    - Priority --> how soon it needs to be fixed 
+
+
+
+STLC (Software Testing Life Cycle)
+
+- Example Scenario: 
+
+    Let's say, we're in sprint-26 this week. 
+        - Refinement meetings --> discuss PBIs for future sprints (27-28-29-30)
+        - We discuss the requirements/acceptance criterias. 
+
+    1. Read and understand requirements
+    2. Planning: what kin d of tests this PBIs requires 
+    3. Write test cases 
+    4. Environment set up or make sure developers merge their changes in test environment
+    5. Execution --> 
+        - Run your test cases manually 
+        - Report unexpected issues (defects/bug tickets)
+        - Write scripts - automation (playwright-js OR cypress-js, playwright-ts)
+    6. Closure: Reports/Documentation 
+    
+    TRADITIONAL WAY: 
+        Test Case 1: Validate Mock Interviews page is accessible 
+        Go to url.com 
+        Click on "Mock Interviews" in the header 
+        Validate a login form is visible 
+
+        Test Case 2: Validate Mock Interviews form allows logging in  
+        Go to url.com 
+        Click on "Mock Interviews" in the header 
+        Enter username as "TechGlobal" 
+        Enter password as "Test1234!" 
+        Select language as "JavaScript" 
+        Click on "LOGIN" button 
+        Validate user is on "this-page" 
+        Validate the main heading of the page is "JavaScript Mock Interviews" 
+
+        Test Case 3: Validate user cannot login if they do not select language
+        Go to url.com 
+        Click on "Mock Interviews" in the header 
+        Enter username as "TechGlobal" 
+        Enter password as "Test1234!" 
+        Click on "LOGIN" button 
+        Validate the error message "Please select a language!" 
+
+    BDD (Behavior Driven Development) - Gherkin Language: 
+        - This is used if your company user Cucumber 
+
+        Feature: Mock Interviews
+
+        Scenario: Validate Mock Interviews page is accessible 
+        Given (main keyword) user is on/I am on url.com 
+        When I click on "Mock Interviews" in the header 
+        Then I should seee a login form is visible 
+
+        Scenario 2: Validate Mock Interviews form allows logging in  
+        Given I am on to url.com 
+        When I click on "Mock Interviews" in the header 
+        And I enter username as "TechGlobal" 
+        And I Enter password as "Test1234!" 
+        And I Select language as "JavaScript" 
+        And I click on "LOGIN" button 
+        Then I should see user is on "this-page" 
+        And I should see the main heading of the page is "JavaScript Mock Interviews" 
+
+        Given --> pre-condition 
+        When --> actions 
+        Then --> assertions/validations 
+        And  --> used for repeated keywords
+
+        200 test cases 
+        160-170 automated scripts 
+        30-40 manual 
+
+    CREATE A BUG TICKET (if you find a defect): 
+        ** BOTH ARE INTERVIEW QUESTIONS ** 
+        - What do you include in a bug ticket? 
+            - Description --> high-level summary of the issue you found 
+            - Details: 
+                - Environment (what type of environment did you find it in?) --> most of the time Test/QA/IT/ or Dev/STG/UAT or PROD 
+                - Steps to reproduce
+                - Expected and Actual result
+                - Attachments (screenshots/screen-recording)
+                - Logs from Databse or Developer tools 
+
+        - Bug Life Cycle? 
+            1. New - Opened 
+            2. Assigned - to a developer 
+            3. In Progress 
+            4. Dev ready/done
+            5. Retest 
+            6. If passed --> fixed --> closed 
+               if not --> 7. reassign - to a develop
+               8. Follow the same steps until it is fixed and passed 
+
+
+- Severity ==> how impactful the issue/defect is considering the applciation 
+- Priority ==> how soon the plan is to fix the defect/bug
+
+Discuss Bugs for different states: 
+High-Medium-Low
+Critical-Major-Minor-Cosmetic 
+
+** INTERVIEW QUESTION ** 
+RTM: Requirement Traceability Matrix 
+    - something some companies that require testers to do
+    - used to make sure each acceptance criteria is covered by at least one test case 
