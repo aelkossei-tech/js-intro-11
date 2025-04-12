@@ -1,0 +1,90 @@
+** These are sample INTERVIEW QUESTIONS **
+1. Tell the difference between Unit vs Component vs Integration vs  E2E testing?
+
+Unit Testing ==>  this type of testing tests individual functions/methods in isolation. It's the smallest 
+    level of testing and usually written by developers. 
+
+Component Testing ==> this tests a SINGLE component (like a form or a class) as a WHOLE, including how its 
+    internal units interact, without relying on external systems. 
+
+Integration Testing ==> this tests how MULTIPLE components/systems work together; it focuses on the interactions between            
+    different types of modules (like a database and API)
+
+End to End (E2E) Testing ==> this simulates a real user scenario from start to finish - from the UI to the backend and everything 
+    in between - to ensure the entire app works correctly 
+
+2. What is Testing Pyramid and benefits it provide?
+
+    The testing pyramid is an idea/concept that visualizes different layers of testing. So, at the bottom would be Unit Tests (since
+    it can be many + fast + cheaper). The middle would be Integration Tests (so fewer that unit tests and slower). At the top would be
+    E2E Testing (fewest, slowest, most expensive). 
+
+    This kind of concept helps build a balanced, more cost-effective testing strategy. It also encourages testing small pieces early 
+    to catch bugs sooner; it reduces reliance on slow, flaky E2E tests.
+
+
+3. What User Acceptance Testing? When is it performed?
+
+    User Acceptance Testing (UAT) is where end users/clients tests the software to make sure it meets the needs their 
+    needs and requirements. It's usually performed AFTER system testing, right before a release, to verify the product is 
+    ready for prodution.
+
+
+4. What are Non-Functional Testing Types? When are they performed?
+
+So, Non-Functional Testing focuses more on HOW a system performs, not what it does. A few Non-Functional 
+Testing Types are: 
+    1. Performance Testing ==> Tests the speed/responsiveness of an app under various conditions 
+    2. Security Testing ==> Tests the protection against all types of vulnerabilites 
+    3. Usability Testing ==> Tests how user-friendly the system is 
+    4. Reliability/Availability Testing ==> Tests stability over time 
+    5. Scalibility Testing ==> Tests how well it handles growth(an app's ability to scale up or down)
+    6. Accessibilty Testing ==> Tests an app's ability for usability for people w/ disabilities. 
+
+    Non-functional Tests are typically performed AFTER Functional Testing - during or after system testing 
+
+
+
+Unit vs. Component vs. Integration vs.  E2E testing
+Unit Testing Tools (mostly by developer): Jest (JS/TS), XUnit/NUnit (C#), JUnit/TestNG (Java), PyTest (Python)
+Integration/E2E Testing tools (SDETs): Cypress, Playwright (maybe Selenium) 
+
+Smoke vs. Regression vs. Sanity Testing  
+
+Testing Pyramid --> have lots of Unit tests + have good coverage with Component tests  (multiple Units tested together) 
+                    + have less Integration Test  + have very few E2E test 
+
+
+Non-Functional Testing: 
+    - Performance Testing: Stress - Spike* - Load* - Endurance 
+    - Security Testing: 
+    - Accessibilty Testing:           
+
+UAT: Functional and happens in STG before PROD 
+
+Smoke and Regression for your integration and e2e tests --> run in Dev. and QA (optional STG)
+
+MVP ==> Minimum Viable Product 
+
+
+NOTE: What is verification and validation in Software Testing? [Could be an INTERVIEW QUESTION]
+    - Verification ==> Are we building product correctly?
+   
+    Requirements + Designs         ===       Developed Components by developers
+   
+    - Validation ==> Are we building the right product? 
+
+    UAT Testing 
+
+Performance Tests are done w/ services - APIs (Backend)
+
+* Load Testing: You test your end-points within your load 
+* Stress Testing: You test your end-points above your load capacity
+* Spike Testing: You test one specific end-point w/ a huge amount of users hitting the 
+    same end-point at the same time
+Endurance Testing 
+
+* Ad-Hoc Monkey Testing (Monkey Testing/Gorilla Testing/Exploratory Testing/ Random Testing)
+    ==> testing application without any set agenda 
+
+A/B Testing: testing where you have two different possible outputs/looks of an app (different versions)
