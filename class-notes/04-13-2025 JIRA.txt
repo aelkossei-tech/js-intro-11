@@ -1,0 +1,12 @@
+JIRA ==> one of the most commonly used for Software Development teams for management 
+Benefits: 
+    1. Issue Tracking --> Epic, User Story, Task/SubTask, Defect/Bug, Test Cases 
+    2. Bug Tracking 
+    3. Agile Boards --> Scrum and Kanban 
+    4. Backlogs --> Product Backlog, Sprint Backlog
+    5. Graphics 
+
+PO/SM and Upper Management is responsible for creating JIRA projects + creating Boards + adding Epics/User Stories + 
+providing access to development team members. 
+
+Azure DevOps
