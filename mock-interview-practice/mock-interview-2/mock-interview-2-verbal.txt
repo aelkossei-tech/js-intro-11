@@ -1,14 +1,229 @@
-1. What is SDLC?
+** 1. What is SDLC? **
 
-SDLC stands for the Software Development Life Cycle. It's a well-structured process for building software step-by-step 
-
-
-What are the differences between array slice and splice methods?
+SDLC stands for the Software Development Life Cycle. It's a well-structured process for building software step-by-step, 
+including multiple phases that .  
 
 
-What is IIFE (Immediately Invoked Function Expression)?
+2. How do you differentiate between a project manager and a product owner in Agile methodology?
 
 
-What is Monkey (Ad Hoc) Testing and what are the benefits it provides?
+3. What are Scrum Ceremonies?
+
+Scrum ceremonies are essential meetings that help the team stay organized and stick to the Scrum framework. There are several 
+types of Scrum ceremonies, which include: 
+    
+    a. Sprint Planning – The team plans what they will work on in the sprint.
+
+    b. Daily Scrum (or Stand-up) – A quick daily meeting to check in on progress and discuss any problems.
+
+    c. Sprint Review – At the end of the sprint, the team shows what they’ve completed to get feedback.
+
+    d. Sprint Retrospective – The team talks about what went well and what can be improved for the next sprint.
+
+
+4. What are the benefits of writing Test Cases?
+
+
+5. What is Smoke Testing and Regression Testing and what are their differences?
+
+
+6. What is the difference between 'null' and 'undefined' in JavaScript?
+
+
+7. What are the differences between array slice and splice methods?
+
+8. What are function expressions?
+
+9. What are the spread operator and rest parameters and differences between them?
+
+10. What is a super keyword and why do we use it in JavaScript?
+
+
+11. What is JSON, why do we need it and what are its common operations?
+
+
+12. What is IIFE* (Immediately Invoked Function Expression)?
+
+13. What are modules and why do we need them?
+
+14. What are static properties and methods in JavaScript?
+
+15. What is an SSH Key?
+
+16. What is Epic and who is responsible for creating and managing Epics?
+
+17. What is Happy Path Testing?
+
+18. What is Unit Testing and Integration Testing and what are their differences?
+
+19. What are the differences between 'var', 'let', and 'const'? *now include hoisting*
+
+20. What are lambda or arrow functions in JavaScript?
+
+21. What is immutable in JavaScript? Explain in detail.
+
+22. What is hoisting in JavaScript?
+
+23. What are closures in JavaScript?
+
+24. What are classes in ES6, how do you extend and why do we need it?
+
+25. What is a Burndown Chart?
+
+26. What are the three primary Scrum artifacts, and what is the purpose of each?
+
+    - it's important information used by the Scrum team that helps define the product & what work needs to be done to create the product 
+
+    - Scrum has three main artifacts (tools used in Scrum to solve problems & manage projects):
+         a. Product Backlog – A dynamic list of everything (features/requirements/enhancements/fixes) that needs to be done for the project, managed/maintained/uodated by the Product Owner.
+
+          b. Sprint Backlog – The list of tasks the (development) team plans to finish during the current sprint.
+
+         c. Increment – The working product (or piece of software) that the team finishes by the end of the sprint.
+            - a step towards a goal/vision
+
+27. What are positive and negative Test Cases?
+
+
+28. What are the differences between '=' and '==' and '==='?
+
+
+29. What are the differences between array map, filter and reduce methods?
+
+
+30. What is the difference between Shallow and Deep copy?
+
+
+31. What is serialization and deserialization?
+
+
+32. What is an event loop in JavaScript?
+
+
+33. What are some GIT commands you use?
+
+
+34. How do Product Backlog, Sprint Backlog, and Increment contribute to the Scrum framework?
+
+
+35. What is the Bug Life Cycle?
+
+
+36. What is a callback function and why do we need it?
+
+
+37. How does prototypal inheritance work in JavaScript?
+
+
+38. What is GIT vs VCS?
+
+
+39. How do you prioritize items in the Product Backlog, and what factors should be considered?
+
+
+40. What is a Parking Lot Meeting?
+
+
+41. What are the 'template literals' in JavaScript?
+
+
+42. What are the differences between array some and every method?
+
+43. What is Monkey (Ad Hoc) Testing and what are the benefits it provides?
+
+44. What are the different ways to deal with Asynchronous Code?
+
+45. What is a prototype chain in JavaScript?
+
+46. What are linux commands and can you give some examples that you use?
+
+47. Can you explain the Scrum framework and its key components, such as the Scrum Master, Product Owner, and Development Team?
+
+48. What are differences between Test Scenario, Test Case and Test Script?
+
+49. What are white-box and black-box testing? Give some examples.
+
+50. What is promise, why do we need it and what are the states of promise?
+
+51. What is the acceptance criteria?
+
+52. What is the definition of 'Done' in Scrum, and how does it impact the Increment?
+
+53. Can you explain what NodeJS is and why it's important for JavaScript?
+
+54. What is callback hell?
+
+55. What are the stages of STLC?
+
+56. What are Boundary or Edge Test Cases?
+
+57. What is User Acceptance Testing (UAT) and when to perform it?
+
+58. How does JavaScript differ from compiled languages, and what unique features characterize JavaScript as an interpreted language?
+
+59. What is a call stack in JavaScript?
+
+60. What is a Pull Request?
+
+61. What is STLC?
+
+62. What is the Requirement Traceability Matrix (RTM)?
+
+63. What are loops in JavaScript?
+
+64. What is a Sprint?
+
+65. What are the stages of STLC?
+
+66. How do you sort elements in an array in JavaScript?
+
+67. What is nullish coalescing operator (??)?
+
+68. Can you explain the difference between a product backlog and a sprint backlog?
+
+69. What is the purpose of each stage in STLC?
+
+70. What needs to be included in a Bug ticket?
+
+71. What is End-to-End Testing and what are the benefits it provides?
+
+72. What is an array in JavaScript and why do we need it?
+
+73. What is scope in JavaScript? Explain in detail.
+
+74. What is an async function in JavaScript?
+
+75. What is a constructor, why do we need it and how do we use it?
+
+76. What are the differences between GIT and hosting platforms like GitHub?
+
+77. nWhat is a Burndown Chart?
+
+78. What is a merge conflict and how to resolve it?
+
+79. Why do we need Bug Tracking Tools?
+
+80. What is Performance Testing and why is it needed? What are different types of Performance Testing?
+
+81. How do you prioritize items in the Product Backlog, and what factors should be considered?
+
+82. What is Sanity Testing and when to perform it?
+
+83. What are enhanced object literals in JavaScript?
+
+84. What is the difference between priority vs severity of a bug?
+
+85. What is a Test Case and what are Test Case components?
+
+86. What is GIT branching?
+
+87. Can you explain the process of refining the Product Backlog, and how does the Scrum Team ensure that items are 'Ready' for an upcoming Sprint?
+
+88. What is the Three-Amigos Meeting?
+
+89. List and briefly describe the basic data types in JavaScript.
+
+90. What is Alpha Testing and Beta Testing and who performs them?
+
 
 
