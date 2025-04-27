@@ -1,0 +1,13 @@
+Video #1: Cypress Introduction: 
+    - What is Cypress? 
+        ==> an automation tool that helps us automate any browser application; End-to-End (E2E) Testing Tool 
+        - helps us to automate the browser + gives an opportunity to automate APIs [before there were diff. multiple libraries to do this]
+        - next-generation front=end testing tool constructed for modern web 
+        - tool addresses the critical pain points developers/QAs used to face when testing modern apps. [like synchronization issues + test inconsistencies]
+        - built on Node.js  + comes packaged as an npm module 
+        - since it's based on Node.js --> uses only JS for writing tests
+        - bundles w/ jQuery (JS library) + inherit manys jQuery methods 
+        - We're learning Cypress because: 
+            1. Speed & Reliability --> delivers fast/reliable test execution b/c of architectural design 
+                - Cypress runs tests in the browser + provides instant feedback 
+            2. Flake Resitant --> 

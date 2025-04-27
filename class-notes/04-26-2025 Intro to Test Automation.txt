@@ -1,0 +1,110 @@
+** Questions to be ready for: ** 
+1. What is automated testing?
+
+Automated testing is the use of specialized software tools to execute pre-scripted tests on a software
+application automatically. The goal is to verify that the software works as expected without the need for manual 
+intervention. It's commonly used to run repetitive tests quickly/consistently, such as regression tests, performance, 
+tests, and functional tests. 
+
+2. Can you discuss the differences between automated testing and manual testing such as benefits, demands, costs etc.?
+
+Manual testing is when a person physically executes test cases without using automation tools. It's good for exploratory,
+usability, and ad-hoc testing where human judgement is important. 
+
+Automated testing, on the other hand, uses scripts and tools to automatically perform tests. 
+
+Benefits of automated testing: 
+    1. Much faster execution, especially for repetitive tasks
+    2. Greater accuracy --> helps eliminate human errors; runs the same tests precisely every time, which 
+        leads to more reliable results 
+            - EX: a test script for login feature will perform the exact sequence of actions/validations every single time 
+                [unlike manual testing, where steps can be missed/executed differently]
+    3. More reliable for regression testing since scripts don't forget steps
+    4. Can run tests 24/7 without human involvement 
+    5. Cost savings --> reduces the need for manual testing and focus on more critical tasks 
+
+Demands/costs of automated testing: 
+    1. Higher upfront costs --> You have to spend time and resources creating the automated scripts
+        and maintaining them as the application changes. 
+    2. Requires programming/scripting skills
+
+Benefits of manual testing: 
+    1. Cheaper/quicker to start (no need to build scripts right away)
+    2. Better at identifying issues related to user experience
+
+Demands/costs of manual testing: 
+    1. Slower for large projects or repetitive tasks
+    2. Prone to human error 
+    3. Harder to scale when you have frequent updates
+
+
+
+Test Automation Tools: 
+    1. Appium: 
+        - ideal for mobile app testing on both iOS and Android 
+        - allows you to write tests using the same APIs aross diff. mobile operating systems
+        - open-source, free to use
+
+    2. Cypress*: 
+        - easy to install and start using w/ minimal configuration
+        - runs tests quickly --> makes it great for modern web apps. 
+        - simplifies the development process 
+
+    3. Playwright: 
+        - 
+
+
+
+Manual: 
+    - have no coding skills usually 
+    - detail-oriented 
+    - documentation 
+    - they have knowledge for every details of the app 
+    - Tools ==> Human efforts 
+
+Automation: 
+    - does have coding skills; programming langauges --> JavaScript, TypeScript, C#, Java, Python
+    - Automation Tools ==> 
+        - UI: Selenium WebDriver + Cypress + Playwright + Katalon + TOSCA 
+
+        - UI Cloud Tools: BrowserStack, SeeTest, SauceLabs + Perfecto 
+            * Get a free trial and play around with it *
+
+        - API: Cypress* + Playwright* + Karate + Rest-Assured (w/ Java) + RestSharp (w/ C#)
+
+        - Mobile Testing: UI Cloud Tools + Appium 
+
+        - Performance Testing Tools: JMeter + LoadRunner + NeoRunner + BlazeMeter 
+            * Read and know what these do * 
+
+        - Pipelines: GitHub Actions + Jenkins + Azure Pipelines + GitLab + CircleCI
+
+        - Accessibility Testing Tools: Playwright
+
+        - Unit Testing tools: Mocha*/Chai*/Jest*/Jasmine (JS) + NUnit/XUnit() + JUnit/TestNG + PyTest (Python)
+
+        - BDD tools: Cucumber*(almost all programming languages)/JBehave 
+
+        - Build tools: Node.js*/NPM*/NPX* + MAven/Gradle/Ant (Java) + DotNet or .NET (C#)
+
+        - Some other tools: JIRA + Postman + Azure DevOps + SQL IDE + many others 
+
+
+SaaS 
+
+ServiceNow --> supports the ticketing system/software with almost all the companies you know  
+
+Node.js: 
+    - JS used to be running only in browsers
+    - Node.js made JS to be executed in the machines w/o need of browsers --> node file.js 
+    - has its own syntax 
+    - when you install Node.js in local --> you also get npm/npx
+        - npm: node package manager [package = libraries = modules --> these are lots of useful methods/prototypes/classes 
+            written by someone (programmer, etc.) and shared w/ the others]
+            - npm can be considered as the Apple Store for packages
+            - npm is used one time to install a dependency --> npm cypress -D 
+        - npx: node package executor 
+            - EX: npx playwright test OR npx cypress open 
+            - npx can be used frequently to run npm packages --> npx cypress run
+
+    - Cypress is a npm package 

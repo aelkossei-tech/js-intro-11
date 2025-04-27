@@ -1,16 +1,25 @@
 ** 1. What is SDLC? **
 
 SDLC stands for the Software Development Life Cycle. It's a well-structured process for building software step-by-step, 
-including multiple phases that .  
+including multiple phases that planning, designing, developing, testing, deploying, and maintaining software applications. 
+
+SDLC is there to ensure that the end product meets the desired quality/functionality requirements. 
 
 
 2. How do you differentiate between a project manager and a product owner in Agile methodology?
 
+So, for the Agile  methodology --> 
+    - Project Manager ==>  a project manager focuses more on managing the project timeline/resources/budget + ensures that the team delivers the 
+        project as planned 
+    - Project Owner ==> is responsible for defining the product's vision + prioritizing the backlog + ensures that the team delivers value to 
+        end-users/stakeholders 
 
 3. What are Scrum Ceremonies?
 
-Scrum ceremonies are essential meetings that help the team stay organized and stick to the Scrum framework. There are several 
-types of Scrum ceremonies, which include: 
+Scrum ceremonies are essential meetings that help the team stay organized and stick to the Scrum framework. These "ceremonies" are there to help move the 
+project along together as a team efficiently, while also checking in consistentlty with one another to ensure transparency + adapt to any changes to the project
+
+There are several types of Scrum ceremonies, which include: 
     
     a. Sprint Planning – The team plans what they will work on in the sprint.
 
@@ -23,52 +32,178 @@ types of Scrum ceremonies, which include:
 
 4. What are the benefits of writing Test Cases?
 
+There are multiple benefits of writing test cases. Test cases ensure that all types of scenarios have been though out/considered. They also allow 
+testers to work more efficiently by providing clear instructions. Test cases help to uncover defects/bugs early in the development process. 
 
 5. What is Smoke Testing and Regression Testing and what are their differences?
+
+    - Smoke Testing ==> is more of a quick check to ensure that the most critical functions of a software operates 
+        after adding new changes/features. 
+   
+    - Regression Testing  ==> RETESTS the entire application to ensure that the new changes did not affect any exisiting 
+        functionalities. 
 
 
 6. What is the difference between 'null' and 'undefined' in JavaScript?
 
+- Null ==> represents an intentional absence of any object value [typeof = object]
+
+- Undefined ==> indicates a variable that has been declared BUT hasn't been intialized/assigned value [typeof = undefined]
+
 
 7. What are the differences between array slice and splice methods?
 
+- .slice(startIndex, endIndex) ==> similar to the string method in that it will extract the values from the startIndex [inclusive] 
+    till the endIndex [exclusive of the endIndex]. This method does create a NEW array, but it does not modifiy the original array. 
+
+- splice(startIndex, deleteCount, replacementItem1, replacementItem2, etc.) ==> this method requires more parameters than .slice(). Unlike 
+    .slice(), this method DOES modify the original array and is a method that slices, deletes, and replaces certain items from an array. It returns
+    a new NEW array with the new/modified elements.
+
+
 8. What are function expressions?
+
+It's a way to define functions in JavaScript by assigning them to variables OR using them within expressions. You can use it like any other function, 
+but it's n
+
 
 9. What are the spread operator and rest parameters and differences between them?
 
+    - The spread operator (...) ==> used to split an array/object into individual items
+    - Rest parameters(...) ==> used to gather multiple values INTO an array inside a function 
+
 10. What is a super keyword and why do we use it in JavaScript?
+
+The "super" keyword is used in JS within classes to call methods AND access properties of a parent class. You typically use this keyword
+whenever you want to create a child (subclass), a class that inherits from another class. It's helpful when dealing with inheritance. 
 
 
 11. What is JSON, why do we need it and what are its common operations?
 
+JSON (JavaScript Object Notation) is an inter-exchange data format that is useful in transferring different types of data between a server and
+web application. It's great because it's human/machine readable and it's a way to standardize 
+
+We need JSON because it's a helpful way to 
+
+Some common JSON operations are: Serialization [a way to convert an array/object to JSON --> JSON.stringify()] 
++ Deserialization [a way to convert JSON to a data structure (like an object) --> JSON/parse()].
+
 
 12. What is IIFE* (Immediately Invoked Function Expression)?
 
+IIFE stands for Immediately Invoked Function Expression. It's a common JS design pattern used to create a function expression and execute 
+it immediately after its declaration. 
+
+IIFE is a function that you define and then run it immediately right after defining it. They're used to create a local scope for variables 
+and keep those variables safe/hidden from the rest of the program. 
+
+
 13. What are modules and why do we need them?
+
+Modules are a way to encapsulate code into separate/resuable/maintable files. It helps organize code by breaking it down into smaller, more 
+usable units. It rwally helps code to maintable/reusable + reduces the risk of conflicts 
 
 14. What are static properties and methods in JavaScript?
 
+    - Static Properties ==> properties that belong to a class itself rather than to instances of a class 
+    - Static Methods ==> methods  
+
 15. What is an SSH Key?
+
+It's a secure/convenient way to authenticate and establish a secure connection between a local development environment (such as a laptop/computer)
+and a remote repository [like Github, BitBucket etc.]. It's an alternative to using just a username/password. Using a SSH is a more secure than that + 
+more simplified (since you don't need to enter an SSH key multiple times like a password) + more efficient since SSH keys are essential for automated 
+processes. 
 
 16. What is Epic and who is responsible for creating and managing Epics?
 
+    - Epic ==> within Jira, it'a large/high-level body of work that can be broken down into smaller/more manageable pieces [either called User Stories/PBIs]. 
+        - they're usually created/managed by Product Owners (POs) and Development Team, but can also be created/managed by people on the Development team (like higher-ups)
+
 17. What is Happy Path Testing?
+
+It's a testing approach that focuses on testing a software application under normal/expected conditions, almost simulating 
+a user's experience. It involves executing positive test cases to ensure the software follows the intended flow + functions correcltly when
+everything goes well. 
+
+Happy Path Testing is a testing approach where we test the software under normal, expected conditions — basically, when the user does
+everything right. It focuses on positive test cases to make sure the application works correctly when everything goes as planned.
+
 
 18. What is Unit Testing and Integration Testing and what are their differences?
 
-19. What are the differences between 'var', 'let', and 'const'? *now include hoisting*
+    - Unit Testing ==> checks individual components/functions of a software in ISOLATION; this type of testing is usually preformed by developers. 
+        - focuses more on smaller units 
+
+    - Integration Testing ==> type of testing where it verifies how these components work together; usually done by testers 
+        - compared to Unit Testing --> looks at the integrated functions work correclty as a WHOLE
+
+
+19. What are the differences between 'var', 'let', and 'const'? *now includes hoisting*
+
+All of them are used for variable declaration. 
+    - var --> is an older keyword, that was used mostly up until the ES6 update in 2015
+        - variables can be reassigned
+        - this type of keyword is function-scoped, which means it doesn't respect block scope 
+        - CAN be hoisted 
+
+    - let --> replaced var in the ES6 update to JS (added in 2015)
+        - block-scoped + CANNOT be hoisted
+        - variables can be reassigned 
+
+    - const --> brought in with ES6 update along with let keyword (2015)
+        - block-scoped as well  + CANNOT be hoisted
+        - variables CANNOT be reassigned
+
 
 20. What are lambda or arrow functions in JavaScript?
 
+Arrow functions is another way to create a function in JS; it is a more concise way, since it proves a shorter syntax - doesn't include the 
+"function"/ "return" keywords and curly braces. 
+
+
 21. What is immutable in JavaScript? Explain in detail.
+
+Immutability in JS is the idea of making data/objects unchangeable/constant after they have been created. Immutable data CANNOT be modified/changed, 
+which can lead to more predictable/reliable code. A few immutable data structures are arrays/objects. 
+
 
 22. What is hoisting in JavaScript?
 
+Hositing in JS is a behavior where variable/function declarations are moved to the TOP of their containing scope, before the code is executed. 
+
+
 23. What are closures in JavaScript?
+
+A closure is when a function remembers and can use variables from the scope it was created in—even after that outer function has finished running.
+
+This happens because functions in JavaScript "remember" the environment they were created in. Closures let you create private variables, 
+help with callbacks, and are often used in functional programming.
+
+Closures are when a function remembers and has access to variables from the place where it was created 
+— even after that outer function has finished running. So basically, it's like the inner function “closes over” 
+its surrounding variables and keeps them alive.
+
 
 24. What are classes in ES6, how do you extend and why do we need it?
 
+So, during the ES6 update to JS (2015), the update introduced classes - a more structured way to define constructor functions using the 
+"class" keyword. JS is not originally a class-based language (unlike other programming languages). 
+
+Classes are syntatical sugar over constructor functions; it makes object-oriented programming in JS more readable/familiar to people who have 
+dealt with other programming languages (that includes classes). 
+
+You extend a class (from a parent class) by using the "extend" keyword when trying to inherit properties/methods from a parent class. 
+
+We need classes because it provides more of a structured/organized way to define/work with objects --> makes it easier to work with objects, 
+especially within larger applications. 
+
+
 25. What is a Burndown Chart?
+
+A burndown chart is a graph/chart (usually used in Agile workflows, like Scrum) to visualize/track the progress of work during a sprint. It's a 
+way to monitor whether the Scrum team is on track to complete their planned work within their sprint. 
+
 
 26. What are the three primary Scrum artifacts, and what is the purpose of each?
 
@@ -84,32 +219,79 @@ types of Scrum ceremonies, which include:
 
 27. What are positive and negative Test Cases?
 
+    - Positive Test Cases ==> test cases that validate that software behaves correctly under normal/expected conditions. They make sure a software
+        is meeting the functional requirements. 
+
+    - Negative Test Cases ==> test cases that are designed to check how the software handles unexpected/incorrect scenarios. Its whole goal is to expose
+        any flaws/faults of the software. 
 
 28. What are the differences between '=' and '==' and '==='?
+
+= is an assignment operator; it's used to assign a variable to it's value. 
+== is the equality operator; it compares two entities based on their values, not types
+=== is the strict equality operator; this compares both values/types of an entity 
 
 
 29. What are the differences between array map, filter and reduce methods?
 
+- map() is an array method creates a NEW ARRAY. It transforms each element based on a speificed function/condition and returns those values 
+with the changes [SAME-SIZED ARRAY]
+- filter() is another array method that creates a NEW ARRAY with filtered elements (based on a condition that you create)
+- reduce() is an array method that returns a SINGLE result.  
 
 30. What is the difference between Shallow and Deep copy?
 
+    - Shallow Copy ==> when creating a new instance of the TOP-level object/array, BUT you don't copy nested objects/arrays. 
+        - Changes made to those nested arrays/objects WILL affect both the original and the copy 
+        - using spread operator(...)
+    - Deep Copy ==> creates a completely independent duplicate/copy of the original array/object (including nested arrays/objects)
+        - Changes made to the copy WILL NOT affect the original 
+        - using JSON (JSON.parse(JSON.stringify))
 
 31. What is serialization and deserialization?
 
+- Serialization ==> converting a data structure (mostly objects/arrays) into a JSON string [done by JSON.stringify() method]
+- Deserialization ==> converting JSON string data into an object [done by JSON.parse() method]
 
 32. What is an event loop in JavaScript?
 
+An event loop is how JS handles asynchronous operations like setTimeout/promises/fetching data - without blocking the main thread. Since JS
+is single-threaded 
+
+Event loop in JS is what allows it to handle tasks that take time, like loading data, WITHOUT stopping the rest of the code. It watches for 
+tasks to finish, and then it runs the code when it's ready. 
 
 33. What are some GIT commands you use?
+
+Some GIT commands are: 
+    - git branch --> so I can list the existing branches I'm working with 
+    - git checkout -b <branchName> --> so I can create a new branch and swtich to it in the same command 
+    - git merge <branchName> --> I use this command to merge my changes from the specified branch 
+    - git push --> push my changes that I've made from the exisiting branch 
+    - git pull --> fetch the changes from the remote repository including the main/master brancg 
 
 
 34. How do Product Backlog, Sprint Backlog, and Increment contribute to the Scrum framework?
 
+    - Product Backlogs helps the Scrum tema understand what needs to be done + drives the product's evolution; usually POs are in charge of
+         maintaing the product backlog. 
+
+    - Spring Backlog provides a clear plan for the current Sprint and ensures the team focuses on the highest priority items. 
+
+    - Increment represents the progress made during each Sprint + serves as a foundation for continuous improvement. 
+
 
 35. What is the Bug Life Cycle?
 
+The Bug Life Cycle (Defect Lift Cycle) is a process that describes the various stages that a bug goes through, from its actualization 
+to its resolution. This is a integral part of software testing because it helps testers/QAs 
+
+
 
 36. What is a callback function and why do we need it?
+
+A callback function is a function that is passed as an argument/parameter within another function. They're essential they allow you to write 
+code that doesn't block the execution of other code. 
 
 
 37. How does prototypal inheritance work in JavaScript?
@@ -117,19 +299,30 @@ types of Scrum ceremonies, which include:
 
 38. What is GIT vs VCS?
 
+GIT (Global Information Tracker) is the name of the 
+
 
 39. How do you prioritize items in the Product Backlog, and what factors should be considered?
 
+So, prioritization of Product Backlog items is typically based on certain factors like --> business value + risk + dependencies + techincal 
+complexity. It all depends on how the company does this, since they all use diff. techniques. 
 
 40. What is a Parking Lot Meeting?
 
+A Parking Lot Meeting is a common term used in project management (specifically in Agile/Scrum environments). It's a meeting/discussion where
+team members/stakeholders set aside topics/issues not directly related to the current agenda/sprint, BUT needs to be addressed in the future 
 
 41. What are the 'template literals' in JavaScript?
 
+Template literals are string literals allowing for embedding expressions. It's usually done by backticks (``). Was an ES6 update and it helps 
+with code readibilty and flexibilty.
 
 42. What are the differences between array some and every method?
 
 43. What is Monkey (Ad Hoc) Testing and what are the benefits it provides?
+
+Monkey Testing (Ad Hoc Testing/ Gorilla Testing) is an informal, exploratory testing w/o predefined test cases. So testers will interact w/
+software randomly to discover issues that might be covered by formal testing. 
 
 44. What are the different ways to deal with Asynchronous Code?
 
@@ -137,25 +330,43 @@ types of Scrum ceremonies, which include:
 
 46. What are linux commands and can you give some examples that you use?
 
+y
+
 47. Can you explain the Scrum framework and its key components, such as the Scrum Master, Product Owner, and Development Team?
 
 48. What are differences between Test Scenario, Test Case and Test Script?
 
+    - Test Scenario ==> a high-level test objective/goal 
+    - Test Case ==> a detailed set of instructions specifying 
+
 49. What are white-box and black-box testing? Give some examples.
+
+    - White-Box Testing ==> involves examining the internal structure and code of the software 
+        - Examokes --> Unit Testing and Code Review 
+    - Black-Box Testing ==> focuses on testing the software's functionality w/o knowledge of its internal code 
+        - Functional Testing and User Acceptance Testing (UAT)
 
 50. What is promise, why do we need it and what are the states of promise?
 
 51. What is the acceptance criteria?
 
+    - Acceptance Criteria ==> specific conditions/requirements that must be met for a User Story to be considered complete 
+
 52. What is the definition of 'Done' in Scrum, and how does it impact the Increment?
+
+Definition of Done (DoD) is a shared understanding of the criteria that a Product Backlog item must meet to be considered COMPLETE> 
+DoD ensures consitent quality + provides a clear goal for each Incremenet. 
 
 53. Can you explain what NodeJS is and why it's important for JavaScript?
 
 54. What is callback hell?
 
-55. What are the stages of STLC?
+Callback hell (Pyramid of Doom) refers to the situation when there are so many nested callback functions to the point of confusion - makes code
+hard to read/understand. It occurs when a series of async functions rely on each other  
 
 56. What are Boundary or Edge Test Cases?
+
+Boundary or Edge TesT cases involve testing the limits of software functionality 
 
 57. What is User Acceptance Testing (UAT) and when to perform it?
 
@@ -171,47 +382,104 @@ types of Scrum ceremonies, which include:
 
 63. What are loops in JavaScript?
 
+Loops are control structure that allows you to run a block of code repeatedly. They are used to execute repetitive tasks and can iterate through 
+arrays/object/other data structures, and different loops are used for different scenarios. 
+For example, if there is a set range, a for loop is commonly used. 
+
 64. What is a Sprint?
 
+A sprint is a short, set period of time (usually 1–2 weeks) where a team works to complete specific tasks or features.
+It’s used in Agile, especially in Scrum, to help teams stay focused, organized, and deliver working software quickly.
+
+
 65. What are the stages of STLC?
+
+There are typically 6 main stages of STLC: 
+    1. Requirement Analysis
+    2. Test Planning 
+    3. Test Case Development 
+    4. Test Environment Setup
+    5. Test Execution
+    6. Test Cycle Closure
 
 66. How do you sort elements in an array in JavaScript?
 
 67. What is nullish coalescing operator (??)?
 
+It's a type of operator that will provide a default value is a variable ends up being "null"/"undefined". It only works with those 2 falsy values; 
+others (like 0, false, '' (empty string), etc.) don't work with it. It's helpful only when you know a variable could end up being null/undefined. 
+
 68. Can you explain the difference between a product backlog and a sprint backlog?
 
 69. What is the purpose of each stage in STLC?
 
+Each stage of STLC holds a purpose to ensure testing done for an application is done properly, efficiently. Requirement Analysis
+is where testers 
+
 70. What needs to be included in a Bug ticket?
 
+There should be 
+    1. clear, concise summary of the problem 
+    2.  what type of environment the bug was found
+    3. how to replicate it.
+    4. the severity/priority of the bug should be included, 
+    5. along with proof (like screenshots/screen-recording). 
+
 71. What is End-to-End Testing and what are the benefits it provides?
+
+It's a type of testing that checks the entire flow of a software application - from start to finish. It verifies the software's readiness 
+for real-world usage and makes sure that all parts of a software work together. 
 
 72. What is an array in JavaScript and why do we need it?
 
 73. What is scope in JavaScript? Explain in detail.
 
+Scope determines the accessibilty/visibility of certain variables/functions/objects. There are 4 types of scope in JS: 
+    1. Global Scope --> variables are declared globally (not within function) and can be accessed anywhere throughout the code
+        - only problem is if there are multiple variables --> it'll cause confusion 
+    2. Functional Scope --> variables that are declared a function and can only be accessed within that function (NOT outside of it)
+    3. Block Scope --> 
+        - variables declared w/ var CANNOT be have block scope 
+    4. Lexical Scope --> used in the case of nested functions; variables from both inner/outer functions CAN be accessed 
+
 74. What is an async function in JavaScript?
+
+An async function is a special type of function in JavaScript that lets you write asynchronous code in a cleaner, more readable 
+way using the await keyword. When you use async, the function always returns a promise, and you can use await inside 
+it to pause the code until a promise is resolved.
 
 75. What is a constructor, why do we need it and how do we use it?
 
+A constructor is a regular function used to create/initialize objects in JS. You call a constructor by using the "new" keyword when trying 
+to create instances of objects. We need constructors because it can help create multiple objects w/ the SAME structure/behavior.  
+
 76. What are the differences between GIT and hosting platforms like GitHub?
 
-77. nWhat is a Burndown Chart?
+GIT is a software for tracking any set of changes made in any files and used to help coordinate work with programmers to collaboratively 
+develop source code. Now, GitHub (and other similar platforms like GitLab, BitBucket) are platforms used to store those projects. 
+
 
 78. What is a merge conflict and how to resolve it?
 
 79. Why do we need Bug Tracking Tools?
 
+Bug tracking tools (e.g., Jira, Bugzilla) play a crucial role in managing the bug life cycle. These tools help teams track,
+ prioritize, and communicate about bugs.
+
 80. What is Performance Testing and why is it needed? What are different types of Performance Testing?
 
-81. How do you prioritize items in the Product Backlog, and what factors should be considered?
 
 82. What is Sanity Testing and when to perform it?
 
 83. What are enhanced object literals in JavaScript?
 
+They were an ES6 features that makes it easier/more concise to define objects in JS. 
+
 84. What is the difference between priority vs severity of a bug?
+
+    - Priority --> 
+
+    - Severity --> 
 
 85. What is a Test Case and what are Test Case components?
 
@@ -221,9 +489,81 @@ types of Scrum ceremonies, which include:
 
 88. What is the Three-Amigos Meeting?
 
+The Three-Amigos Meeting is a discussion between three key roles in Agile: the Product Owner, a Developer, and a Tester. 
+The goal is to catch misunderstandings early, improve collaboration, and reduce surprises during development.
+
+They come together to talk about user stories, make sure everyone understands the feature the same way, and confirm that it’s clear, buildable, and testable.
+
 89. List and briefly describe the basic data types in JavaScript.
 
+
+
 90. What is Alpha Testing and Beta Testing and who performs them?
+
+    Both of those types of tests are apart of User Acceptance Testing (UAT). They both try to find any issues/bugs before they publically 
+    release it.  
+
+    - Alpha Testing ==> conducted by the development team 
+    - Beta Testing ==> conducted by external users or customers 
+
+91. What are the Scrum ceremonies, artifacts, and roles?
+
+Scrum ceremonies are essential meetings attended by the Scrum team (PO, Developers/QA, Scrum master)
+
+92. How does Scrum differ from other Agile methodologies?
+
+Scrum differs from other Agile methodologies since it places heavy emphasis on regular communication/collaboration 
+between team members + frequent inspection/adaption of the product and the process 
+
+
+93. What is a Sprint Goal, and how does it relate to the Sprint Backlog?
+
+A Sprint Goal is a short, high-level description of the desired outcome for a Sprint. The Sprint Goal provides 
+a shared understanding of the Sprint's purpose and guides the team in selecting/prioritizing the Product Backlog items for the 
+Sprint Backlog. 
+
+94. What is A/B Testing and why is it needed?
+
+A/B Testing provides two versions of a web page to determine which one performs/looks better. It gives 
+
+95. What is Security Testing and what are the benefits it provides?
+
+It's testing to make sure an app is safe from hackers and security threats. It helps protect data, prevent attacks, and build trust.
+
+96. Can you explain what NodeJS is and why it's important for JavaScript?
+
+NodeJS is a runtime environment for JavaScript that allows it to run on servers and outside of
+web browsers. t's crucial for server-side scripting, building APIs, and creating scalable network apptlications.
+
+
+97. What is the acceptance criteria?
+
+Acceptance criteria are a set of conditions that a product or feature must meet to be accepted by the product owner or client.
+
+
+98. Can you explain the process of refining the Product Backlog, and how does the Scrum Team ensure that items are 'Ready' for an upcoming Sprint?
+
+Backlog refinement (also called grooming) is when the Scrum Team reviews and improves items in the Product Backlog.
+
+During refinement, they:
+
+Break big tasks into smaller ones
+
+Add details, estimates, and priorities
+
+Clarify any confusing items
+
+To make sure items are 'Ready' for a Sprint, the team checks if the item is:
+
+Clear (everyone understands it)
+
+Small enough to complete in a Sprint
+
+Testable with clear acceptance criteria
+
+This helps the team start each Sprint with a clear, doable list of tasks.
+
+
 
 
 

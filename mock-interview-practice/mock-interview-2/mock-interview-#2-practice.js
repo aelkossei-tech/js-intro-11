@@ -459,7 +459,7 @@ same.
 
 firstDuplicate([ 3, 7, 10, 0, 3, 10 ])          --> 3
 firstDuplicate([ 5, 7, 7, 0, 5, 10 ])           --> 5
-firstDuplicate([ 5, 5, 3, 7, 4 ])               --> -1
+firstDuplicate([ 5, '5', 3, 7, 4 ])               --> -1
 firstDuplicate([ 123, 'abc', '123', 3, 'abc' ]) --> 'abc'
 firstDuplicate([1, 2, 3])                       --> -1
 firstDuplicate([ 'foo', 'abc', '123', 'bar’ ])  --> -1 
@@ -476,15 +476,16 @@ const firstDuplicate = array => {
     // each time we iterate an element within our array, we will determine if we've seen an element like it before 
         // --> IF we have -> stop our loop and return our first duplicated element 
 
-    for(let i = 0; i < array.length; i++) { // using a for loop to loop through our array parameter 
-        if(seenArr.includes(array[i])) return array[i]; // IF our seenArr includes our array parameter's element [i] --> then return our first duplicate (array[i]) 
-        else seenArr.push(array[i]); // IF NOT seen before --> just push it into our seenArr and keep looping 
+    for(let i = 0; i < array.length; i++) {
+        for(let j = i + 1; j < array.length; j++) {
+            if(array[i] === array[j]) return array[i];
+        }
     }
     return -1; // addresses our edge case --> if there are NO duplicates at all within our parameters ==> return - 1
 }
 console.log(firstDuplicate([ 3, 7, 10, 0, 3, 10 ])); 
 console.log(firstDuplicate([ 5, 7, 7, 0, 5, 10 ])); 
-console.log(firstDuplicate([ 5, 5, 3, 7, 4 ])); 
+console.log(firstDuplicate([ 5, '5', 3, 7, 4 ])); 
 console.log(firstDuplicate([ 123, 'abc', '123', 3, 'abc' ])); 
 console.log(firstDuplicate([1, 2, 3])); 
 console.log(firstDuplicate([ 'foo', 'abc', '123', 'bar'])); 
@@ -553,6 +554,21 @@ console.log(getDuplicates([ 1, 2, 5, 0, 7 ]));
 console.log(getDuplicates(['A', 'foo', '12', 12, 'bar', 'a', 'a', 'foo']));
 console.log(getDuplicates([ 'foo', '12' , 12, 'bar', 'a' ]));
 
+
+const getDuplicates1 = array => {
+    let seen = new Set();
+    let duplicate = new Set();
+
+    for(const ele of array) {
+        if(seen.has(ele)) duplicate.add(ele); 
+        else seen.add(ele); 
+    }
+    return [...duplicate]; 
+}
+console.log(getDuplicates1([ 0, -4, -7, 0, 5, 10, 45, -7, 0 ]));
+console.log(getDuplicates1([ 1, 2, 5, 0, 7 ]));
+console.log(getDuplicates1(['A', 'foo', '12', 12, 'bar', 'a', 'a', 'foo']));
+console.log(getDuplicates1([ 'foo', '12' , 12, 'bar', 'a' ]));
 
 /*
 Count Vowels
