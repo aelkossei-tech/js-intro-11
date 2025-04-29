@@ -1,0 +1,141 @@
+** Questions to be ready for: **
+1. What is Cypress?
+
+Cypress is a modern/next generation front-end, end-to-end testing framework that's mainly used for testing web applications. 
+It's built on Node.js and uses JavaScript for writing tests. It helps developers & QA Engineers write 
+fast, reliable tests for anything that runs in a browser. It's known for being easy to set up, 
+giving real-time reloads, and having a built-in dashboard to see everything happening during the test. 
+
+
+2. Can you discuss the differences between Cypress and Selenium?
+
+Cypress:                                    vs.                 Selenium: 
+- mainly uses JS                                               - supports many languages like Java, Python, C#, etc. 
+- runs inside the browser itself, so                           - operates outside the browser controls it through a driver 
+  it's faster/more aligned with how users                      - can require more setup steps (drivers/frameworks/etc.)
+  interact w/ apps                                             - better if you need to test across multiple browsers 
+- easier to install + gets to running
+  quickly
+- mainly supports Chrome, Edge, and Firefox
+- tests generally run faster b/c of its direct 
+  access to the browser network 
+
+    1. Cypress runs directly inside the browser, while Selenium runs outside of it and communicates w/ it using WebDriver
+    2. Cypress automatically waits for commands/assertions before moving on; it doesn't need explicit waits in tests. This eleminates the need 
+        to manually insert waits/sleeps in test, which is done w/ Selenium. 
+    3. Cypress comes w/ real-time reloading (always reloading w/ new changes you make)
+    4. Cypress' architecture is simpler/more modern than Selenium's - don't use external drivers. 
+    5. Cypress directly interacts w/ DOM and has native acces to browser APIs 
+    6. Cypress has a built-in support for capturing screenshots/recording during test execution 
+
+
+3. Tell me about Cypress architecture.
+
+Cypress has a unique architecture because it runs directly inside the browser, alongside your web application. 
+
+    - Cypress has direct access to everything happening in the browser (the browser is executing your test code + executed in the same run loop)
+    - It listens/responds to your application's events in real-time. 
+    - It handles asynchornous code w/ it's automatic waiting mechanism 
+    - It supports parallel testing 
+    - It's based on a Node.js server process to manage tasks like reading/writing files, but test code itself runs 
+      inside the browser w/ your application, giving Cypress access to things like DOM elements and network traffic. 
+        - Cypress and Node process constantly communicate/synchronize/perform tasks on behalf of each other 
+
+This setup makes Cypress super fast, very reliable, and gives it powerful control over the 
+app being tested. 
+
+
+Cypress has a unique architecture because it runs inside the browser where your web appliation is running. 
+This means it has direct access to everything in the application (like buttons, text field, and page content). 
+    1. Runs in the Browser --> Cypress operates directly within the browser, controlling it and interacting with it in real-time. 
+    2. Test Runner --> While running, Cypress has a built-in test runner that shows you what's happening on the screen, so you can see the tests 
+        run in real-time. 
+    3. Node.js --> Even though the tests run in the browser, Cypress uses a seperate Node.js server to manage some tasks like saving data 
+        and setting up the environment for tests. 
+
+    In short, Cypress has fast and reliable testing because it's directly connected to the browser, which makes it different from tools 
+    like Selenium that rely on external drivers.
+
+
+
+** What is Cypress? ** 
+    - Cypress is an end-to-end web automation tool used to automate test cases for an application under test.
+    - Cypress supports JS programming language and executed w/ Node.js (on the server side). 
+    - Cypress doesn't support any other language at the moment. 
+    - Cypress supports cross-browser testing (can run in multiple browsers such as Chrome, Firefox, Edge) but not Safari 
+    - Cypress handles async code built-in mechanism (implicit)
+    - Default time is 4 seconds (you can customize it)
+    - Cypress has the test-runner which is useful for tracking and debugging tests 
+        - npx cypress open --> this command opens Cypress Test Runner
+
+** Cypress Architecture ** 
+    - Cypress is a bundle of libraries: Mocha*, Chai*, jQuery, Sinon
+        - Mocha --> provides test annotations [it() block + describe() block + beforeEach() block + afterEach() block]
+            - These annotations helps us organize our tests better and increase usability with sey up and teardown blocks. 
+        - Chai --> provides assertions [should() + expect()]
+        - jQuery --> will help us extract the element and use it as a JS object. 
+
+    - Cypress runs IN the browser and interacts w/ DOM directly, which makes it a lot faster comapred to some other automation tools, like 
+        Selenium WebDriver. 
+
+    - Flake Rssitant --> Cypress automatically waits for commands/assertions before moving on. No more sycnhronization issues. (Default is 4 secs.)
+        - Biggest challenge of writing Selenium scripts [Cypress saw this and dealt with this type of issue]
+        - sycnhronization issues: source code is alaways faster than the browsers/drivers 
+
+    - Open Source 
+    - Community Support 
+
+    - Cypess has a paid-dashboard as well. This provides more features like parallel testing, better report results. 
+
+    - Cypress is a bundle of libraries ==> Mocha, Chai, jQuery, Sinon (main ones)
+
+Mocha Components in Cypress we frequently use: 
+    - describe() --> used to group together a bundle of tests for the same feature/component
+    - it() --> represents each test you have (usually this is also represented as test case)
+
+    - HOOKS: 
+        - before --> executed only once and before eveyrthing else in a spec file (test file)
+        - after --> executed only once and after everything else in a spec file (test file)
+        - beforeEach --> executed for each it() block once before the it() block
+        - afterEach --> executed for each it() block once after the it() block
+
+    - EX: 5 tests 
+        - before --> runs once
+        - beforeEach --> runs 5 times
+        - afterEach --> runs 5 times
+        - after --> runs once
+
+Chai: 
+    - used for assertions
+        - should() --> implement auto-waits (flake-resistant)
+        - expect() --> does not implement auto-waits (not flake=resistant)
+
+** Can you talk to me about Cypress navigations? How do you navigate between sites using Cypess? **
+
+    - cy.visit(); // to visit a web application 
+    - cy.go(direction); // back or forward directions are used to navigate to back and forward. -1 and 1 can also be used 
+    - cy.reload; // used to refresh the page 
+
+
+TEST CASE: Validate Register Button 
+    1. Go to Url 
+    2. Click on "Register" buttons
+        - <button class="Button_c_button__TmkRS is-inline undefined" id="register_button" draggable="false">Register</button>
+            - Tag Name: Button 
+            - Attributes: class, id, draggable
+            - Visible Inner Text: Register
+
+    3. Validate "You clicked on Register" is visible
+        - be.visible --> can be used for all elements
+        - be.enabled --> can be used for clickable elements such as buttons/links/radio buttons/checkboxes/dropdowns/input boxes 
+
+
+ID Selector --> most used for all the automation tools 
+    - DO NOT forget # in front of id value when using with all the automation tools 
+
+Class Selector --> is another commonly used selector for all automation tools 
+    - DO NOT forget . in front of class value when with all the automation tools 
+
+- Cypress has 2 commands to find elements (locate elemets)
+    - cy.get(); // can be used with IDs, classes, tag names, and many other attributes/selectors 
+    - cy.contains(); // can be used to locate/select an element by its visible text 
