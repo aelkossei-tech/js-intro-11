@@ -1,0 +1,64 @@
+What are Assertions? 
+    - Assertions ==> is a piece of code that any testing library provides
+    - Chai and Jest provide a range of assertions that can be used to evaluate diff. types of values/behaviors in the code
+    - typically --> returns a Boolean value to show whether a test has passed or not 
+    - using assertions --> quickly/accurately identify bugs/errors in code + ensure that the software works as it's suppossed to 
+    - w/o assertions --> we won't be able to determine if the test has produced the expected output or has any errors 
+    - Cypress ==> Chai (assertion library) [.expect() + .should()]
+
+Default Assertions: 
+- Cypress has a bunch of default assertions that automatically applies when certain commands are run 
+    - .should('exist') ==> will reverse its default assertion and automatically WAIT until the element doesn't exist 
+        - "After finding this element, make sure it actually exists in the DOM"
+        - use this when you're not sure the element will always be there (like a form submit)
+
+Implicit Assertions: 
+- .should() & .and() ==> the preferred way of making assertions in Cypress 
+    - they apply to the currently yielded subject in the command chain 
+    - can chain multiple assertions w/ .and()
+
+Explicit Assertions: 
+    - .expect()
+    - give you more control over the assertion but don't come w/ automatic retries like the .should() method 
+
+Asynchronous JS ==> when JS encounters a task that might take some [like fetching data from a server], it doesn't sit and wait for that 
+    task to complete 
+    - it executes the next operation in its queue immediately 
+    - JS won't pause and wait for that task to finish --> it continues to execute subsequent tasks 
+    - it's an essential topic/concept in JS that allows your code to run in the background w/o blocking the execution of other code 
+    - to handle async operations ==> 1. callbacks  2. Promises  3. async/await 
+
+Asynchronous Nature of Cypress: 
+    - obviously Cypress is based on Node JS --> which means it's asynchronous ==> one of the most crucial concepts to understand 
+    - commands in Cypress don't run immediately when invoked ==> it's asynchronous by default, BUT you don't have to deal w/ that 
+        since Cypress handles it for you 
+    - each command (behind the scenes) returns a PROMISE ==> Cypress manages those promises 
+    - Cypress commands are asynchronous --> returns a "chainable" object [not the actual DOM element or its value]
+    - you need to rextract the result from the chainable object 
+        - .then() ==> behaves similarly to Promises in JS 
+            - actually a Cypress command [NOT a promise] --> can't use this like async/await within Cypress tests
+            - this is the command that helps extract that result from chainable object 
+
+
+RECAP: 
+    - CSS Locators: 
+        1. Attribute Selectors
+            - <input data-testid="element1" value="apple" type="checkbox"> 
+   
+    - Why do we need the Attribute Selectors? 
+        - It helps diversify our ways in trying to find elements. 
+        [data-testid="element1"]
+        [value="apple"]
+        [type="checkbox"]
+
+    <input id="input1">
+    <input id="input2">
+    <input id="input3">
+
+    cy.get('id^="input"') --> targets all of the similar 
+
+    - Pseudo Classes in CSS 
+        - input:checked
+        - input:last-child
+
+** They'll ask you in interviews to find elements and CSS locators, both on sites and developer environments ** 

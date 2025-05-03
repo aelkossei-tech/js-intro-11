@@ -1,0 +1,17 @@
+RECAP: 
+    - Absolute and Relative XPath 
+    - CSS --> tag + id(unique) + class()
+        - properties (attributes) --> id/class/etc. 
+    * Rewatch the recap just to understand the child-parent relationship and how to navigate throughout it 
+    - Adjacent Sibling Selector ==> + 
+    - Only use , --> if you want from diff. locations from the web page [not related - no connections]
+
+What are diff. ways to locate elements w/ Cypress? 
+    - XPath & CSS locators (tags + id + class + attributes + text + etc.)
+        - ** XPath ** 
+    - to fetch the HTML element in Cypress ==> cy.get(); 
+    - in Cypress --> aliases can be assigned to web elements ==> cy.as(); 
+        - aliases help with referencing elements easily + avoids repetitive usage of selectors 
+        - when using an alias ==> use @ 
+
+** Look up Pseudo Class --> might come up in interview as well ** 
