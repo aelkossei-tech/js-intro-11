@@ -1,0 +1,9 @@
+1. Tell me about yourself. 
+
+2. When do you think testing should start in SDLC? (Which phase and why? What can you test in each phase of SDLC?)
+
+3. What is End-to-End Testing and what are the benefits it provides?
+
+4. What is Unit Testing and Integration Testing and what are their differences?
+    - Unit testing ==> type of testing that checks how individual components/functions of the software in isolation
+    - Integration testing ==> type of testing that checks to see how those components work together
